@@ -2,11 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
-  devise_for :users
   resources :restaurants, only: [:show] do
     resources :orders, only: [:show]
   end
-  resources :kits [:new, :create, :edit, :update] do
+  resources :kits, only: [:new, :create, :edit, :update] do
     resources :guides, only: [:new, :create ,:edit, :update]
     resources :kit_ingredients, only: [:create]
     resources :kit_cookwares, only: [:create]
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
   end
   resources :kit_categories, only: [:show]
 
-  resources :orders [:show, :edit, :update] do
+  resources :orders, only: [:show, :edit, :update] do
     resources :guides, only: [:index]
     resources :payments, only: [:create]
     resources :reviews, only: [:create]
@@ -32,5 +31,4 @@ Rails.application.routes.draw do
   # namespace :user do
   #   resources :orders, only: :index
   # end
-end
 end
