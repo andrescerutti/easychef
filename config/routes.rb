@@ -8,17 +8,19 @@ Rails.application.routes.draw do
   end
   resources :kits [:new, :create, :edit, :update] do
     resources :guides, only: [:new, :create ,:edit, :update]
-    resources :ingredients_kits, only: [:create]
-    resources :cookwares_kits, only: [:create]
+    resources :kit_ingredients, only: [:create]
+    resources :kit_cookwares, only: [:create]
     resources :orders, only: [:create]
   end
-  resources :categories, only: [:show]
+  resources :kit_categorie, only: [:show]
 
   resources :orders [:show, :edit, :update] do
     resources :guides, only: [:index]
-    resources :payment, only: [:create]
+    resources :payments, only: [:create]
     resources :reviews, only: [:create]
   end
+
+  get "/components/", to: "pages#components", as: :components
   get "/dashboard/", to: "pages#dashboard", as: :dashboard
 
 
