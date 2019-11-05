@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :orders
   has_many :addresses, as: :addressable
 
-  validates :email, presence: true, uniqueness: true, format: { with: /\A.*@.*\.\w\z/ }
+  validates :email, presence: true, uniqueness: true
   validates :permision_level, presence: true, numericality: true, inclusion: {in: (1..5) }
 
 end
