@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :kit_cookwares, only: [:create]
     resources :orders, only: [:create]
   end
-  resources :kit_categorie, only: [:show]
+  resources :kit_categories, only: [:show]
 
   resources :orders [:show, :edit, :update] do
     resources :guides, only: [:index]
