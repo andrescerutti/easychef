@@ -1,17 +1,27 @@
-<div class="jumbotron jumbotron-fluid bg-primary">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
-<div class="container">
-  <h1>Que hay en el menu</h1>
-  <div class="row">
-    <div class="col-md-6">
-      Categoria 1
+<div class="jumbotron jumbotron-fluid text-center vh-100" style="background-image: url(<%= image_url('bghome.jpg') %>); background-size: cover; background-position: bottom">
+  <div class="container-fluid">
+    <div class="py-2">
+      <%= image_tag( 'easychef_logo.png' , class:"mb-5")%>
+      <p class="lead px-3 text-primary">La comida de tus restaurantes favoritos en tu cocina.</p>
     </div>
-    <div class="col-md-6">
-      Categoria 2
-    </div>
+    <form action="">
+      <div class="form-group">
+        <select class="form-control form-control-lg text-secondary" name="" id="" >
+          <option value="">Elegí tu cuidad</option>
+          <option value="">CABA</option>
+          <option value="">Cordoba</option>
+          <option value="">Pilar</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control  form-control-lg mb-3 text-secondary rounded" placeholder="Ingresá tu dirección">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block py-3 mb-3 rounded">Buscar</button>
+      <button type="submit" class="btn btn- btn-block py-3 text-white border-white rounded d-flex justify-content-between align-items-center" >
+
+        <i class="fas fa-location-arrow "></i>Buscar por Ubicación <i class="fas fa-location"></i>
+
+      </button>
+    </form>
   </div>
 </div>
