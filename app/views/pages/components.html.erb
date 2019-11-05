@@ -7,12 +7,14 @@
     </div>
     <% end %>
   </div>
+
   <h2>Card information</h2>
   <div class="row">
     <div class="col-md-4">
       <%= render("components/card-product") %>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-4">
       <h2>Buttons Pimary</h2>
@@ -26,11 +28,21 @@
         <a href="#" class="btn btn-outline-light">Boton</a>
     </div>
   </div>
-  <h2>Kit Card</h2>
+
+  <h2>Card Kit</h2>
   <div class="row">
     <% (0..2).each do  %>
     <div class="col-md-4">
-      <%= render("components/kit-card") %>
+      <%= render("components/card-kit") %>
+    </div>
+    <% end %>
+  </div>
+
+  <h2>Card Category</h2>
+  <div class="row">
+    <% (0..3).each do  %>
+    <div class="col-md-3">
+      <%= render("components/card-category") %>
     </div>
     <% end %>
   </div>
