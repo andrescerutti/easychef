@@ -1,2 +1,14 @@
-<h1>Kits#edit</h1>
-<p>Find me in app/views/kits/edit.html.erb</p>
+<%= simple_form_for [@kit] do |f| %>
+  <%= f.input :name, label: false, placeholder: 'Name' %>
+  <%= f.input :stock, as: :integer, label: false, placeholder: 'Stock' %>
+  <%= f.input :price, as: :integer, label: false, placeholder: 'Price' %>
+  <%= f.input :size, as: :integer, label: false, placeholder: 'Size' %>
+  <%= f.input :preparation_time, label: false, placeholder: 'Preparation time' %>
+  <%= f.input :description, as: :text, label: false, placeholder: 'Description' %>
+  <%= f.input :photo, label: false %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <div class="links">
+    <%= f.button :submit, class:'bootstrapbutton' %>
+    <%= link_to 'Index', root_path, class: "bootstrapbutton" %>
+  </div>
+<% end %>
