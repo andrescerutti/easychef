@@ -17,7 +17,7 @@ class KitsController < ApplicationController
     @kit = Kit.new(kit_params)
     # kit.user = current_user
     # authorize kit
-    return redirect_to @kit if @kit.save
+    return redirect_to @kit if @kit.save!
 
     render :new
   end
