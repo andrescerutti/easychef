@@ -12,4 +12,11 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 8px;
+  &.card-category-small {
+    text-align: left;
+    justify-content: left;
+    align-items: flex-end;
+    height: 100px;
+    padding: 10px 20px;
+  }
 }
