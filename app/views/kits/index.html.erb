@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <h2>Categorias</h2>
+  <div class="cards-scroll mt-3">
+    <% @categories.each do |category| %>
+      <div class="card-scroll mx-2">
+        <%= link_to kit_category_path(category) do %>
+          <%= render 'components/card-category', category: category.name  %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="cards-scroll">
+    <h2>Sugerencias</h2>
+    <div class="cards-scroll mt-3">
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+    </div>
+  </div>
+  <div class="cards-scroll">
+    <h2>Restaurants</h2>
+    <div class="cards-scroll mt-3">
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+      <div class="card-scroll mx-2 col-md-4">
+        <%= render("components/card-kit") %>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-center my-3">Una comida perfecta sin salir de casa</h2>
+  <h4 class="text-center my-3"><small>Crea magia experimentando paso a paso recetas unicas</small></h4>
+
+  <a href="#" class="btn btn-primary btn-lg btn-block mb-3">Registrate</a>
+</div>
