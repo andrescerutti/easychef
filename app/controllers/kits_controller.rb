@@ -1,5 +1,7 @@
 class KitsController < ApplicationController
-  def new
+  def new # SOLO LOS ADMINS PUEDE CREAR
+    @kit = Kit.new
+    #autorizar que solo los admins puedan acceder
   end
 
   def create
