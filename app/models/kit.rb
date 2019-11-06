@@ -1,6 +1,8 @@
 class Kit < ApplicationRecord
   belongs_to :restaurant
 
+  mount_uploader :photo, PhotoUploader # carrierwave para subir fotos
+
   has_many :kit_cookwares
   has_many :kit_ingredients
   has_many :kit_categories

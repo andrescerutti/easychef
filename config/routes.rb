@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:show] do
     resources :orders, only: [:show]
   end
-  resources :kits, only: [:new, :create, :edit, :update] do
+  resources :kits, only: [:index, :show, :new, :create, :edit, :update] do
     resources :guides, only: [:new, :create ,:edit, :update]
     resources :kit_ingredients, only: [:create]
     resources :kit_cookwares, only: [:create]
