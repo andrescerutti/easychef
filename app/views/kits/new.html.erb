@@ -1,8 +1,8 @@
-%= simple_form_for [@user, @kitchen] do |f| %>
+<%= simple_form_for [@kit] do |f| %>
       <%= f.input :name, label: false, placeholder: 'Name' %>
-      <%= f.input :stock, label: false, placeholder: 'Stock' %>
-      <%= f.input :price, label: false, placeholder: 'Price' %>
-      <%= f.input :size, label: false, placeholder: 'Size' %>
+      <%= f.input :stock, as: :integer, label: false, placeholder: 'Stock' %>
+      <%= f.input :price, as: :integer, label: false, placeholder: 'Price' %>
+      <%= f.input :size, as: :integer, label: false, placeholder: 'Size' %>
       <%= f.input :preparation_time, label: false, placeholder: 'Preparation time' %>
       <%= f.input :description, as: :text, label: false, placeholder: 'Description' %>
       <%= f.input :photo,label: false %>
