@@ -1,29 +1,28 @@
-<div class="jumbotron jumbotron-fluid text-center " style="background-image: url(<%= image_url('bghome.jpg') %>); background-size: auto; background-position: top;">
-  <div class="container-fluid">
+<div class="jumbotron jumbotron-fluid text-center d-flex justify-content-between align-items-center " style="background-image: url(<%= image_url('bghome.jpg') %>); background-size: cover; background-position: top; min-height: 500px;">
+  <div class="container">
     <div class="py-2">
-      <%= image_tag( 'easychef_logo.png' , class:"mb-5")%>
-      <p class="lead px-3 text-primary">La comida de tus restaurantes favoritos en tu cocina.</p>
+      <%= image_tag( 'easychef_logo.png' , class:"mb-4 d-md-none")%>
+      <h2 class="d-xs-none text-white d-none d-md-block font-weight-bold">La comida de tus restaurantes favoritos en tu cocina</h2>
+      <p class="lead px-3 text-primary d-sm-block d-md-none">La comida de tus restaurantes favoritos en tu cocina.</p>
     </div>
     <div class="form-container">
-      <form class="form-inline">
-        <div class="form-group w-sm-100">
-          <select class="form-control form-control-lg text-secondary" name="" id="" >
-            <option value="">Elegí tu cuidad</option>
-            <option value="">CABA</option>
-            <option value="">Cordoba</option>
-            <option value="">Pilar</option>
-          </select>
-        </div>
-        <div class="form-group w-sm-100">
-          <input type="text" class="form-control form-control-lg text-secondary rounded" placeholder="Ingresá tu dirección">
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg px-3 rounded w-sm-100">Buscar</button>
-        <button type="submit" class="btn btn- btn-block py-3 text-white border-white rounded d-flex justify-content-between align-items-center" >
-
-          <i class="fas fa-location-arrow "></i>Buscar por Ubicación <i class="fas fa-location"></i>
-
-        </button>
+      <form class="form-inline mb-4 d-flex">
+          <div class="form-group w-sm-100 ">
+            <select class="form-control form-control-lg text-secondary" name="" id="" >
+              <option value="">Elegí tu cuidad</option>
+              <option value="">CABA</option>
+              <option value="">Cordoba</option>
+              <option value="">Pilar</option>
+            </select>
+          </div>
+          <div class="form-group w-sm-100 flex-grow-1 mx-md-2 ">
+            <input type="text" class="form-control form-control-lg text-secondary rounded w-100" placeholder="Ingresá tu dirección">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg px-3 rounded w-sm-100 ">Buscar</button>
       </form>
+        <button type="submit" class="btn btn- btn-block py-3 text-white border-white rounded d-flex justify-content-between align-items-center" >
+          <i class="fas fa-location-arrow "></i>Buscar por Ubicación <i class="fas fa-location"></i>
+        </button>
     </div>
 
   </div>
@@ -31,29 +30,36 @@
 
 <div class="container">
   <h4 class="my-5 font-weight-bold">¿Que hay en nuestro menú?</h4>
-  <div class="d-flex bd-highlight home-card">
-    <div class="card-category flex-grow-1 bd-highlight" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Comida tradicional
+  <div class="d-flex bd-highlight home-card ">
+    <div class=" bd-highlight mb-4">
+      <%= render("components/card", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
+      <p>Esos grandes clásicos a los que siempre vuelven porque nunca fallan.</p>
     </div>
-    <div class="card-category bd-highlight ml-3 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Sabroso pero economico
+    <div class="flex-grow-1 bd-highlight ml-md-3 mb-4">
+      <%= render("components/card", {category: "Sabroso pero economico", img: "economico.jpg"}) %>
+      <p>Una prueba de que puedes disfrutar de la mejor comida cada día a precios asequibles para tu bolsillo.</p>
     </div>
   </div>
-  <div class="d-flex bd-highlight home-card">
-    <div class="card-category bd-highlight mr-3 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Para compartir
+  <div class="d-flex bd-highlight home-card ">
+    <div class="flex-grow-1 bd-highlight mr-md-3 mb-4">
+      <%= render("components/card", {category: "Para compartir", img: "para-compartir.jpg"}) %>
+      <p>¿Necesitas un motivo para reunirte con amigos? Aqui te dejamos las mejores excusas para compartir y disfrutar.</p>
     </div>
-    <div class="card-category flex-grow-1 bd-highlight" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Recomendaciones locales
+    <div class="bd-highlight mb-4" >
+      <%= render("components/card", {category: "Para compartir", img: "rec-loc.jpg"}) %>
+      <p>Descubre las mejores comidas recomendadas por los que mas saben.</p>
+
     </div>
   </div>
 
-  <div class="d-flex bd-highlight home-card">
-    <div class="card-category flex-grow-1 bd-highlight" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Cocina saludable
+  <div class="d-flex bd-highlight home-card ">
+    <div class=" bd-highlight mb-4">
+      <%= render("components/card", {category: "Cocina saludable", img: "saludable.jpg"}) %>
+      <p>Platos deliciosos y nutritivos para recargar pilas.</p>
     </div>
-    <div class="card-category bd-highlight ml-3 p-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Exclusivo Easychef
+    <div class="flex-grow-1 bd-highlight ml-md-3 mb-4">
+      <%= render("components/card", {category: "Exclusivo Easychef", img: "exclusivo.jpg"}) %>
+      <p>No sigas buscando, sólo lo encontrarás aquí.</p>
     </div>
   </div>
 
