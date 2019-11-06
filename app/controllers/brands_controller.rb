@@ -7,6 +7,7 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.new
+    @brand = Brand.find(params[:id])
   end
 
   def new
@@ -18,7 +19,6 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
     # @brand.user = current_user
     # authorize @brand
-    raise
     return redirect_to @brand if @brand.save
 
     render :new
@@ -41,7 +41,6 @@ class BrandsController < ApplicationController
 
   def set_brand
     @brand = Brand.find(params[:id])
-      # authorize @brand
   end
 
   def brand_params
