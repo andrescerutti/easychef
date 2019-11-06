@@ -18,6 +18,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
     # @brand.user = current_user
     # authorize @brand
+    raise
     return redirect_to @brand if @brand.save
 
     render :new
