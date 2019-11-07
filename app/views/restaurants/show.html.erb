@@ -1,2 +1,31 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="jumbotron jumbotron-fluid text-center d-flex justify-content-between align-items-center " style="background-image: url(<%= @restaurant.image %>); background-size: cover; background-position: top; min-height: 500px;">
+  <div class="container">
+    <div class="py-2">
+      <%= cl_image_tag( @restaurant.brand.logo , class:"mb-4")%>
+      <h2 class="text-white font-weight-bold"><%= @restaurant.name %></h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <% @restaurant.kits.each do |kit| %>
+      <div class="col-md-4">
+        <%= link_to kit_path(kit) do %>
+          <div class="card-kit border">
+            <img src=<%= kit.image %>  />
+            <div class="card-body">
+              <div>
+                <h5 class="card-title mb-1"><%= kit.name %></h5>
+                <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> kit.address</p>
+                <p class="card-text card-price"><%= kit.price %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
