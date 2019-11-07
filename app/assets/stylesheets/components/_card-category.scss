@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 180px;
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 8px;
+
   &.card-category-small {
     text-align: left;
     justify-content: left;
