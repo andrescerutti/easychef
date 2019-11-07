@@ -8,6 +8,9 @@ class KitsController < ApplicationController
   end
 
   def show
+    @kit = Kit.new
+    @kit = Kit.find(params[:id])
+    @order = Order.new
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
