@@ -1,8 +1,12 @@
 class GuidesController < ApplicationController
-  def index
+  before_action :set_guide, only: [:show, :edit, :update]
+
+  def show
+    @kit = @guide.kit
   end
 
   def new
+    @guide = Guide.new(params)
   end
 
   def create
@@ -12,5 +16,16 @@ class GuidesController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def set_guide
+    @guide = Guide.find(params[:id])
+    # autorhize @guide
+  end
+
+  def guide_params
+    params.require(:guides).permit(:video)
   end
 end
