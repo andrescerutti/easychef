@@ -22,4 +22,8 @@ class Kit < ApplicationRecord
   validates :preparation_time, presence: true
   validates :description, presence: true
   validates :image, presence: true
+
+  def average_rating
+    reviews.average(:rating).to_f.round(1)
+  end
 end
