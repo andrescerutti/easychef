@@ -296,5 +296,3 @@ enzo_second_review = Review.create!(order_id: enzo_second_order.id, content: "No
 alejo_first_review = Review.create!(order_id: alejo_first_order.id, content: "Lo voy a sumar a mi dieta dominical", rating: 5, image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg")
 alejo_second_review = Review.create!(order_id: alejo_second_order.id, content: "Salio excelente, ya me puedo considerar como chef.", rating: 4, image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg")
 
-
-

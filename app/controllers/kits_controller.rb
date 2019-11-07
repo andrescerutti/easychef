@@ -6,6 +6,8 @@ class KitsController < ApplicationController
   end
 
   def show
+    @kit = Kit.new
+    @kit = Brand.find(params[:id])
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
