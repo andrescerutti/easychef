@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :edit, :update] do
     resources :guides, only: [:index]
-    resources :payments, only: [:create]
+    resources :payments, only: [:create, :show]
     resources :reviews, only: [:create]
   end
 
