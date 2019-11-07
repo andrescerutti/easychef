@@ -60,3 +60,16 @@ vkitatun_fresco = KitIngredient.create!(kit_id: sushikitvillaurquiza.id, quantit
 vkitpalitos_cangrejo = KitIngredient.create!(kit_id: sushikitvillaurquiza.id, quantity: 30, unit: 'g', ingredient_id: palitos_cangrejo.id)
 vkitsemillas_sesamo = KitIngredient.create!(kit_id: sushikitvillaurquiza.id, quantity: 5, unit: 'g', ingredient_id: semillas_sesamo.id)
 vkitwasabi = KitIngredient.create!(kit_id: sushikitvillaurquiza.id, quantity: 20, unit: 'g', ingredient_id: wasabi.id)
+
+Order.create!(user_id: santiago.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR1")
+Order.create!(user_id: santiago.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR2")
+# Andres order
+Order.create!(user_id: andres.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR3")
+Order.create!(user_id: andres.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR4")
+# Enzo order
+Order.create!(user_id: enzo.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR5")
+Order.create!(user_id: enzo.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR6")
+# Alejo order
+Order.create!(user_id: alejo.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR7")
+Order.create!(user_id: alejo.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR8")
+
