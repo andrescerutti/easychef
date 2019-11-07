@@ -4,6 +4,7 @@ class KitsController < ApplicationController
   def index
     @kits = Kit.all
     @categories = Category.all
+    @restaurants = Restaurant.all
   end
 
   def show
