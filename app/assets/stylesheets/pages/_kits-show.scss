@@ -1,36 +1,49 @@
-.image-container {
+.kitname {
+    font-size: 32px;
+}
 
-  img{
-    width: 100%;
-    height: 500px;
-    border-radius: 6px;
-
+@media(max-width: 575px) {
+  .kitnamemob {
+    font-size: 10px;
   }
 }
 
-
-.kit-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-
+.kitrest {
+    font-size: 17px;
 }
 
-.description-container {
-  padding: 30px;
-  h1 {
-    font-weight: bold;
+@media(max-width: 575px) {
+  .kitrest {
+    font-size: 10px;
   }
-  h2 {
-    color: rgba(0, 0, 0, 0.48);
-  }
+}
 
-  p {
-   color:  #73B948;
-   width: 163px;
-height: 47px;
-left: 20px;
-top: 526px;
-border-color: black;
+.kitrat {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kitrat {
+    font-size: 10px;
+  }
+}
+
+.kittime {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kittime {
+    font-size: 10px;
+  }
+}
+
+.kitdescr {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kitdescr {
+    font-size: 10px;
   }
 }

@@ -8,7 +8,8 @@ class KitsController < ApplicationController
 
   def show
     @kit = Kit.new
-    @kit = Brand.find(params[:id])
+    @kit = Kit.find(params[:id])
+    @order = Order.new
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
