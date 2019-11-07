@@ -3,6 +3,7 @@ class KitsController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @kits = Kit.all
+    @categories = Category.all
   end
 
   def show
@@ -19,7 +20,7 @@ class KitsController < ApplicationController
     @kit = Kit.new(kit_params)
     # kit.user = current_user
     # authorize kit
-    return redirect_to @kit if @kit.save
+    return redirect_to @kit if @kit.save!
 
     render :new
   end

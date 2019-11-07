@@ -1,0 +1,21 @@
+  <div class="wraper">
+    <div class="container">
+    <div class="form-new ">
+      <div class="title">
+        <h1>Set a new brand</h1>
+      </div>
+      <%= simple_form_for [@user, @brand] do |f| %>
+        <%= f.input :name, label: false, placeholder: 'Nombre' %>
+        <p style= 'font-size: 12px, color: white' class= 'my-1'>Photo:</p>
+        <%= f.input :logo,label: false %>
+        <%= f.input :logo, as: :hidden %>
+        <div class="links">
+          <%= f.button :submit, class:'btn-card' %>
+          <%= link_to 'Home', root_path, class: "btn-home" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

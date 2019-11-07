@@ -5,10 +5,10 @@
   <%= f.input :size, as: :integer, label: false, placeholder: 'Size' %>
   <%= f.input :preparation_time, label: false, placeholder: 'Preparation time' %>
   <%= f.input :description, as: :text, label: false, placeholder: 'Description' %>
-  <%= f.input :photo, label: false %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :logo, label: false %>
+  <%= f.input :logo_cache, as: :hidden %>
   <div class="links">
-    <%= f.button :submit, class:'bootstrapbutton' %>
+    <%= f.button :submit, class:'btn btn-primary' %>
     <%= link_to 'Index', root_path, class: "bootstrapbutton" %>
   </div>
 <% end %>
