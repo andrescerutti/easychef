@@ -2,6 +2,8 @@ class Restaurant < ApplicationRecord
   belongs_to :user
   belongs_to :brand
 
+  mount_uploader :image, ImageUploader
+
   has_one :addresses, as: :addressable
   has_many :kits
   has_many :orders, through: :kits

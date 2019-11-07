@@ -16,7 +16,8 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def create
     @kit = Kit.find(params[:kit_id])
-    @order = Order.new(order_params, user: )
+
+    @order = Order.new(order_params)
     @order.kit = @kit
     @address = Address.new()
     # @order.user = current_user

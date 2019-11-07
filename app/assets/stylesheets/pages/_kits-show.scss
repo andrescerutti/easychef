@@ -1,0 +1,49 @@
+.kitname {
+    font-size: 32px;
+}
+
+@media(max-width: 575px) {
+  .kitnamemob {
+    font-size: 10px;
+  }
+}
+
+.kitrest {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kitrest {
+    font-size: 10px;
+  }
+}
+
+.kitrat {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kitrat {
+    font-size: 10px;
+  }
+}
+
+.kittime {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kittime {
+    font-size: 10px;
+  }
+}
+
+.kitdescr {
+    font-size: 17px;
+}
+
+@media(max-width: 575px) {
+  .kitdescr {
+    font-size: 10px;
+  }
+}
