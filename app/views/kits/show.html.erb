@@ -1,1 +1,49 @@
-<%= cl_image_tag @kit.image %>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="m-0 kitname">Bife de chorizo y panzanella</h1>
+      <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black">Kansas Pilar</strong> </h2>
+      <img class="d-md-none w-100" src="https://previews.123rf.com/images/elenarolau/elenarolau1611/elenarolau161100052/67679926-invierno-fondo-de-la-acuarela-cuadrada-con-el-chapoteo-de-la-nieve-que-cae-la-textura-%C3%A1spera-de-spray-.jpg" alt="imagen del plato de comida">
+      <p class="text-success m-0 kitrat ">El 95% volveria a cocinarlo </p>
+      <%= simple_form_for [@kit, @order], method: :get do |f| %>
+        <%= f.input :amount, colection: (1..@kit.stock) %>
+      <% end %>
+      <div class="botons">
+        <div>
+          <p class="kittime rounded-top border border-secondary" > <small><i class="far fa-clock"></i> 60 min</small> </p>
+        </div>
+        <div class="dropdown">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% (1..@kit.stock).each_with_index do |unit, index| %>
+            <a class="dropdown-item" href="#"><%= index + 1 %></a>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <h4 class='kitdescr mb-5'> Junto a Kansas te traemos esta receta diseñada para personas con horarios ajustados. Para esta “Panzanella italiana” (o ensalada de tostines), tostarás los cubos de pan en la sartén hasta que estén dorados y crujientes, luego los mezclarás con otros ingredientes clásicos como tomates y pepinos para servir junto a un Ojo de Bife a gusto.</h4>
+    <%= link_to "Pedir kit", order_path, class:"btn btn-primary btn-block" %>
+
+  </div>
+  <div class="col-md-6">
+    <img src="https://previews.123rf.com/images/elenarolau/elenarolau1611/elenarolau161100052/67679926-invierno-fondo-de-la-acuarela-cuadrada-con-el-chapoteo-de-la-nieve-que-cae-la-textura-%C3%A1spera-de-spray-.jpg" alt="imagen del plato de comida" class="w-100 d-none d-md-block">
+  </div>
+</div>
+<div class="description-container">
+  <p><strong>Ingredientes:</strong></p>
+</div>
+<div class="image-container d-none d-md-block">
+</div>
+</div>
+<div class="carrousel">
+</div>
+<div class="kit-bottom">
+  <div class="review-container">
+  </div>
+  <div class="recomendation-cards">
+  </div>
+</div>
+</div>
+
+
