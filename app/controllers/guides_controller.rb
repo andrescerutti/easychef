@@ -1,5 +1,9 @@
 class GuidesController < ApplicationController
-  def index
+  before_action :set_guide, only: [:show, :edit, :update]
+
+  def show
+
+    @kit = @guide.kit
   end
 
   def new
@@ -12,5 +16,12 @@ class GuidesController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def set_guide
+    @guide = Guide.find(params[:id])
+    # autorhize @guide
   end
 end

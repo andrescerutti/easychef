@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :brands
   resources :restaurants do
-    resources :orders, only: [:show]
+    resources :orders, only: [:index]
   end
   resources :kits, only: [:index, :show, :new, :create, :edit, :update] do
     resources :guides, only: [:new, :create ,:edit, :update]
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :kit_categories, only: [:show]
 
   resources :orders, only: [:show, :edit, :update] do
-    resources :guides, only: [:index]
+    resources :guides, only: [:show]
     resources :payments, only: [:create]
     resources :reviews, only: [:create]
   end
