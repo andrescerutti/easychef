@@ -1,0 +1,115 @@
+users = [
+  {
+    first_name: 'Alejo',
+    last_name: 'Chaves',
+    permision_level: 4,
+    email: 'alejo@easychef.com',
+    password: 'asdasd',
+    avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDMY14Q5-3615c3435408-512'
+  },
+
+  {
+    first_name: 'Santiago',
+    last_name: 'Llapur',
+    permision_level: 4,
+    email: 'santiago@easychef.com',
+    password: 'asdasd',
+    avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDKPE0D6-3ae91634e71a-72'
+  },
+
+  {
+    first_name: 'Enzo',
+    last_name: 'Monteverdi',
+    permision_level: 4,
+    email: 'enzo@easychef.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDJE9Y1J-2cd2134f004a-72'
+  },
+
+  {
+    first_name: 'Andres',
+    last_name: 'Cerutti',
+    permision_level: 4,
+    email: 'andres@easychef.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDCB0BTN-6e9c411fc926-512'
+  },
+
+  {
+    first_name: 'Sebastian',
+    last_name: 'Buffo',
+    permision_level: 1,
+    email: 'sebastian@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-U56TR1Q0M-fef167a62a5a-72'
+  },
+
+  {
+    first_name: 'Fernando',
+    last_name: 'Silva',
+    permision_level: 1,
+    email: 'fernando@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UK7E344JG-407beaec7aee-72'
+  },
+
+  {
+    first_name: 'Guillermo',
+    last_name: 'Varela',
+    permision_level: 1,
+    email: 'guillermo@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UD4D68QS0-591cb8267b1c-72'
+  },
+
+  {
+    first_name: 'Felipe',
+    last_name: 'Hernandez',
+    permision_level: 1,
+    email: 'felipe@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UP3R424M7-0dc8c8f737e5-512'
+  },
+
+  {
+    first_name: 'Luis',
+    last_name: 'Zhang',
+    permision_level: 1,
+    email: 'luis@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UK84XQMRN-c12de7874ee2-512'
+  },
+
+  {
+    first_name: 'Gerardo',
+    last_name: 'Raiden',
+    permision_level: 1,
+    email: 'gerardo@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://ca.slack-edge.com/T02NE0241-UKCMT2EHY-f941ee395885-512'
+  },
+  {
+    first_name: 'Magali',
+    last_name: 'Pinto',
+    permision_level: 1,
+    email: 'magali@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://media.licdn.com/dms/image/C5603AQEnNutafbuCIw/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=cu0Sr4GREXoTsnf6aEEFeTZkbJl5UTNM8OFf7uOMTfY'
+  },
+  {
+    first_name: 'Natalia',
+    last_name: 'Mori',
+    permision_level: 1,
+    email: 'natalia@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://media.licdn.com/dms/image/C4D03AQFSjBw42GW_Yg/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=40QOkGKTLBzqRGxgU_L0Ipn15OPBcfwqri15rgBhzjw'
+  },
+  {
+    first_name: 'Catalina',
+    last_name: 'FoodTrack',
+    permision_level: 1,
+    email: 'catalina@gmail.com',
+    password: 'asdasd',
+    avatar_image:'https://icon-library.net/images/no-profile-picture-icon-female/no-profile-picture-icon-female-3.jpg'
+  }
+]
