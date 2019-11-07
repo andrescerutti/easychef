@@ -44,12 +44,12 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   private
 
-  def set_brand
+  def set_order
     @order = Order.find(params[:id])
-      # authorize @order
+    # authorize @order
   end
 
-  def order_params
-    params.require(:order).permit(:amount, :state, :code, :address)
+  def orders_params
+    params.require(:order).permit(:amount, :state, :check_out_session_id, :code)
   end
 end
