@@ -15,7 +15,7 @@
           </div>
 
           <div class="" >
-            <%= simple_form_for([@kit, @order]) do |f| %>
+            <%= simple_form_for([@kit, @order], url: new_kit_order_path(@kit), method: :get)  do |f| %>
             <%= f.input :amount, collection: 1..@kit.stock, label: false %>
             <span class="d-none" id="price"><%= @kit.price %></span>
           </div>
