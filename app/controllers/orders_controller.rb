@@ -15,14 +15,16 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @kit = Kit.find(params[:kit_id])
     @order = Order.new(order_params)
-    @order.kit = @kit
-    @address = Address.new()
-    # @order.user = current_user
+    @order.user = current_user
+    @order.kit = Kit.find(params[:kit_id])
+    @order.code = rand(1..1000)
+    order_address = Address.new(address_params)
+    current_user.addresses << order_address unless current_user.addresses.find_by(address: order_address.address)
+    current_user.save
+    @order.address = Address.new(address_params)
     # authorize @order
     if @order.save!
-      @address.save!
       return redirect_to @order
     end
 
@@ -51,5 +53,9 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def orders_params
     params.require(:order).permit(:amount, :state, :check_out_session_id, :code)
+  end
+
+  def address_params
+    params[:order][:address].permit(:address)
   end
 end

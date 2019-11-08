@@ -5,7 +5,7 @@
     <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
         <%= link_to kit_category_path(category) do %>
-          <%= render 'components/card-category', category: category.name  %>
+          <%= render 'components/card-category', category: category.name, img: "tradicional.jpg" %>
         <% end %>
       </div>
     <% end %>
