@@ -4,7 +4,8 @@
       <h1 class="m-0 kitname"> <strong><%= @kit.name %></strong> </h1>
       <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black"><%= @kit.restaurant.name %></strong> </h2>
       <img class="d-md-none w-100 mb-4" src="<%= @kit.image %>" alt="imagen del plato de comida">
-      <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p>
+      <p class="text-success m-0 kitrat mb-2 "> <strong>El 97% volveria a cocinarlo </strong> </p>
+      <!-- <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p> -->
 
       <div class="d-flex justify-content-between mt-3">
 
