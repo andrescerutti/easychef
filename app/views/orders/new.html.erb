@@ -16,7 +16,7 @@
       <%= f.hidden_field :amount %>
       <%= f.input :delivery_provider, collection: Order::PROVIDER, class: "order-form", placeholder: "Método de envío" %>
       <%= f.simple_fields_for Address.new do |ff|%>
-        <%= ff.input :address, class: "order-form", id: "address-form" %>
+        <%= ff.input :address, class: "order-form" %>
       <% end %>
       <%= f.submit "Ingrese dirección y método de envío", class: "btn-primary w-100 disabled", id:"order_delivery_submit", disabled:"disabled" %>
     <% end %>
