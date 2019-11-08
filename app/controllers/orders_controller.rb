@@ -24,12 +24,15 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     current_user.addresses << order_address unless current_user.addresses.find_by(address: order_address.address)
     current_user.save
     @order.address = Address.new(address_params)
+    @payment = Payment.new
+    @payment.order = @order
     # authorize @order
     if @order.save!
-      return redirect_to new_order_payment_path(@order.id)
+      @payment.save!
+      return redirect_to order_payment_path(@order.id, @payment.id)
     end
-
     render :new
+
   end
 
   def edit
