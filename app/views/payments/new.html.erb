@@ -7,7 +7,7 @@
     <h4 id="confirmation-code"><%= rand(1..9) %><%= rand(1..9) %><%= rand(1..9) %><%= rand(1..9) %><%= rand(1..9) %><%= rand(1..9) %></h4>
     <h5 class="font-weight-bold mt-3">Empezá a preparar tu cocina</h5>
     <div class="cookware-cards">
-      <% @cookwares.each do |cookware| %>
+      <% @cookwares.limit(4).each do |cookware| %>
         <img src="<%= cookware.image %>" alt=" <%= cookware.name %>" id="size-image" class="m-3">
       <% end %>
     </div>
