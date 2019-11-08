@@ -1,0 +1,9 @@
+<% kit.average_rating.to_i.times do %>
+    <i class="fas fa-star"></i>
+<% end %>
+<% (kit.average_rating - kit.average_rating.to_i).to_i.times do %>
+    <i class="fas fa-star-half-alt"></i>
+<% end %>
+<% (5 - kit.average_rating.ceil).times do %>
+    <i class="far fa-star"></i>
+<% end %>

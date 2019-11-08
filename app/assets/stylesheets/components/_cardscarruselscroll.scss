@@ -1,0 +1,87 @@
+
+
+.card-kit-showkit {
+  position: relative;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px lightgrey;
+  margin-top: 20px;
+  &:hover{
+  box-shadow: 1px 1px 5px grey;
+  }
+  h5{
+    text-decoration: none;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+//cards recomendations
+
+.card-recomendation{
+   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.card-review{
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  margin-bottom: 5px;
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+    padding: 10px;
+  }
+}
+.review-user{
+  p{
+  margin-left: 5px;
+  font-weight: bold;
+  color: grey;
+  padding: 0px;
+  }
+  img{
+    padding: 0px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+  }
+}
+.review-content{
+  padding: 10px;
+  p{
+    font-size: 12px;
+  }
+}
+.user-mail{
+  margin-left: 4px;
+  margin-top: 11px;
+}
+
+  .kit-bottom{
+    display: flex;
+  }
+
+@media(max-width: 575px){
+  .kit-bottom{
+    display: block;
+  }
+
+.review-container{
+    width: 100%;
+  }
+}

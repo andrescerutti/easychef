@@ -37,14 +37,14 @@
   </div>
 
   <div class="description-container">
-    <p><strong>Ingredientes:</strong></p>
+    <h3><strong>Ingredientes:</strong></h3>
   </div>
-  <div class="image-container d-none d-md-block">
+  <div class="image-container d-md-block">
     <div class="cards-scroll">
         <div class="cards-scroll mt-3">
           <% @kit.ingredients.each do |kit| %>
             <div class="card-scroll col-md-4">
-              <div class="card-kit border">
+              <div class="card-kit-showkit border">
                 <img src=<%= kit.image %>  />
                 <div class="card-body">
                   <div>
@@ -56,14 +56,16 @@
           <% end %>
         </div>
       </div>
-<div class="carrousel mt-5">
-  <p><strong>Cookwares:</strong></p>
+    </div>
+
+<div class="carrousel my-5">
+  <h3><strong>Cookwares:</strong></h3>
   <div class="cards-scroll">
           <div class="cards-scroll mt-3">
             <% @kit.cookware.each do |kit| %>
               <div class="card-scroll col-md-4">
-                <div class="card-kit border">
-                  <img src=<%= kit.image %>  />
+                <div class="card-kit-showkit border">
+                  <img src=<%= kit.image %> >
                   <div class="card-body">
                     <div>
                       <h5 class="card-title mb-1"><%= kit.name %></h5>
@@ -75,13 +77,15 @@
           </div>
         </div>
 </div>
-  <p><strong>Opiniones:</strong></p>
-<div class="kit-bottom d-flex">
-  <div class="review-container w-50 pt-4 mr-3">
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores suscipit deleniti molestiae nostrum corrupti iusto nihil porro, architecto sunt nemo sit qui, recusandae tenetur quibusdam debitis nulla eligendi dolorem ducimus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi in quas sit est natus! Laudantium maiores non suscipit porro, nemo, sed dolorem laborum facilis, accusantium perferendis qui modi voluptatum! Cumque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam eius accusantium asperiores eligendi earum iste beatae praesentium, repellat blanditiis, natus, animi! Cum, qui sapiente maxime nesciunt reiciendis odio ab, vitae?</p>
+  <h3><strong>Opiniones:</strong></h3>
+<div class="kit-bottom">
+  <div class="review-container w-100 w-lg-50  mr-3">
+
+     <%= render 'shared/card_recomendation' %>
+
   </div>
-  <div class="recomendation-cards w-50">
-     <% @kits.limit(4).each do |kit| %>
+  <div class="recomendation-cards w-100 w-lg-50">
+    <% @kits.limit(4).each do |kit| %>
     <%= render 'shared/card_show_index', kit: kit %>
     <% end %>
   </div>
@@ -91,10 +95,9 @@
 
 
 
-    <% @kit.reviews.each do |review| %>
-    <%= review.content %>
+    <% @kit.reviews.limit(4).each do |review| %>
+    <%= render 'shared/card_recomendation', review: review %>
     <% end %>
-
 
 
 
