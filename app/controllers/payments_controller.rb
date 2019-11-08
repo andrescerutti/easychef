@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
   def show
     @cookwares = Cookware.all
-
+    @payment = Payment.last
   end
 
   def create
