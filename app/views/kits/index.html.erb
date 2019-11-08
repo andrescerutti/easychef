@@ -2,13 +2,27 @@
 
     <h2>Categorias</h2>
   <div class="cards-scroll mt-3">
-    <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
-        <%= link_to kit_category_path(category) do %>
-          <%= render 'components/card-category-1', category: category.name, img: "tradicional.jpg" %>
-        <% end %>
+        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
       </div>
-    <% end %>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Sabroso pero economico", img: "economico.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Para compartir", img: "para-compartir.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Para compartir", img: "rec-loc.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Cocina saludable", img: "saludable.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Exclusivo Easychef", img: "exclusivo.jpg"}) %>
+      </div>
   </div>
   <div class="cards-scroll">
     <h2>Sugerencias</h2>
@@ -56,8 +70,8 @@
       <% end %>
     </div>
   </div>
-  <div class="text-center">
-    <%= image_tag("kit.png") %>
+  <div class="text-center my-5">
+    <%= image_tag("kit.png",  width: 350, height: 350) %>
   </div>
   <h2 class="text-center my-3">Una comida perfecta sin salir de casa</h2>
   <h4 class="text-center my-3"><small>Crea magia experimentando paso a paso recetas unicas</small></h4>
