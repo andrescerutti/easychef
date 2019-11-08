@@ -14,10 +14,10 @@
   <div class="mr-md-3 bg-white rounded p-3 mt-3 h-100">
     <%= simple_form_for [@kit, @order] do |f| %>
       <%= f.hidden_field :amount %>
-      <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Método de envío", label: false %>
       <%= f.simple_fields_for Address.new do |ff|%>
         <%= ff.input :address, placeholder: "Ingresá tu dirección", label: false %>
       <% end %>
+      <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Método de envío", label: false %>
       <%= f.submit "Ingrese dirección y método de envío", class: "btn-primary w-100 disabled", id:"order_delivery_submit", disabled:"disabled" %>
     <% end %>
   </div>
