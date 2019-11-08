@@ -9,7 +9,6 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
   end
 
   def new
-    console
     @kit = Kit.find(params[:kit_id])
     @order = Order.new(amount: params[:order][:amount])
     # authorize @order
