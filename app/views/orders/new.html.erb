@@ -1,4 +1,5 @@
 <div class="container-fluid d-flex bg-light">
+
   <div  class="flex-grow-1 mt-3 h-100">
     <h2 class="my-4">¡Ultimo paso!</h2>
 
@@ -21,22 +22,23 @@
       <%= f.submit "Ingrese dirección y método de envío", class: "btn-primary w-100 disabled", id:"order_delivery_submit", disabled:"disabled" %>
     <% end %>
   </div>
+
 </div>
-  <div class="card-kit border d-xs-none d-none d-md-block h-100" style=" width: 40%;">
-    <img src=<%= @kit.image %>  />
-    <div class="card-body">
-      <div>
-        <h5 class="card-title mb-1"><%= @kit.name %></h5>
-        <p class="card-text overflow-ellipsis card-description"><%= @kit.restaurant.name %></p>
-        <div class="d-flex justify-content-between mt-3">
-          <p class="card-text card-address">Metodo de envío</p>
-          <p class="card-text card-price" <%= @order.delivery_provider %></p>
-        </div>
-      </div>
-      <div class="d-flex justify-content-between my-3">
-        <p class="card-text card-address">Total</p>
-        <p class="card-text card-price">$ <%= @kit.price * @order.amount %></p>
-      </div>
-    </div>
-  </div>
+ <div class="card-kit border d-xs-none d-none d-md-block h-100" style=" width: 40%;">
+   <img src=<%= @kit.image %>  />
+   <div class="card-body">
+     <div>
+       <h5 class="card-title mb-1"><%= @kit.name %></h5>
+       <p class="card-text overflow-ellipsis card-description"><%= @kit.restaurant.name %></p>
+       <div class="d-flex justify-content-between mt-3">
+         <p class="card-text card-address">Metodo de envío</p>
+         <p class="card-text card-price" <%= @order.delivery_provider %></p>
+       </div>
+     </div>
+     <div class="d-flex justify-content-between my-3">
+       <p class="card-text card-address">Total</p>
+       <p class="card-text card-price">$ <%= @kit.price * @order.amount %></p>
+     </div>
+   </div>
+ </div>
 </div>
