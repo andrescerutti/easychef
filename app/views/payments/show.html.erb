@@ -1,0 +1,49 @@
+<div class="container my-3">
+  <div class="d-flex flex-column align-items-center">
+    <i class="far fa-check-circle" class="" id="check-button"></i>
+    <h2 class="font-weight-bold my-3 text-center">Tu pedido Fue Aprobado!</h2>
+    <p class="">Te notificamos cuando tu kit este en camino.</p>
+    <h4 class="font-weight-bold">Código de pedido</h5>
+    <h4 id="confirmation-code">0849322</h4>
+    <h5 class="font-weight-bold mt-3">Empezá a preparar tu cocina</h5>
+    <div class="cookware-cards">
+      <% @cookwares.each do |cookware| %>
+        <img src="<%= cookware.image %>" alt=" <%= cookware.name %>" id="size-image" class="m-3">
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<!-- JAVASCRIPT POPUP! -->
+<!-- Central Modal Medium Success -->
+<div id="initialModal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Procesando el pago...</p>
+
+      <!--   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button> -->
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading gif">
+          <p>Tu pago esta siendo procesado, por favor esperar hasta la confirmacion.</p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <!-- <a type="button" class="btn btn-light" data-dismiss="modal">Submit</a> -->
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
