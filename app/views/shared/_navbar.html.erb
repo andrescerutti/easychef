@@ -6,10 +6,14 @@
     <i class="fas fa-bars fa-2x text-primary" id="dropdownMenuButton" data-toggle="dropdown"></i>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <% if user_signed_in? %>
+        <%= link_to "Favoritos", destroy_user_session_path, class: "dropdown-item"%>
+        <%= link_to "Mi Perfil", edit_user_registration_path, class: "dropdown-item"%>
+        <%= link_to "Cerrar Sesion", destroy_user_session_path, class: "dropdown-item"%>
+
       <% else %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-dark mr-3" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-dark" %>
+        <div class="dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Ingresar", new_user_session_path, class: "dropdown-item"%>
+          <%= link_to "Registrarse", new_user_registration_path, class: "dropdown-item" %>
         </div>
       <% end %>
     </div>
@@ -34,22 +38,25 @@
 
 <!-- NAVBAR DESTOCK -->
   <div class="collapse navbar-collapse flex-sm-grow-0" id="navbarSupportedContent">
-    <% if user_signed_in? %>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown ml-2">
-          <i class="fas fa-user-circle fa-2x d-md-none text-primary d-none d-md-block"></i>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      </ul>
-
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-dark mr-3" %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-dark" %>
-    <% end %>
+    <div class="dropdown d-none-md">
+        <i class="fas fa-user-circle fa-2x d-none d-md-block text-primary" id="dropdownMenuButton" data-toggle="dropdown"></i>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% if user_signed_in? %>
+            <div class="dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Favoritos", destroy_user_session_path, class: "dropdown-item"%>
+              <%= link_to "Mi Perfil", edit_user_registration_path, class: "dropdown-item"%>
+              <%= link_to "Cerrar Sesion", destroy_user_session_path, class: "dropdown-item"%>
+            </div>
+          <% else %>
+            <div class="dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Ingresar", new_user_session_path, class: "dropdown-item"%>
+              <%= link_to "Registrarse", new_user_registration_path, class: "dropdown-item" %>
+            </div>
+          <% end %>
+        </div>
+    </div>
   </div>
-    <i class="fas fa-user-circle fa-2x d-md-none text-primary"></i>
 </div>
+
 
 
