@@ -1,10 +1,10 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-6">
-      <h1 class="m-0 kitname"> <strong><%= @kit.name %></strong> </h1>
+      <h1 class="kitname m-0"> <strong><%= @kit.name %></strong> </h1>
       <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black"><%= @kit.restaurant.name %></strong> </h2>
       <img class="d-md-none w-100 mb-4" src="<%= @kit.image %>" alt="imagen del plato de comida">
-      <p class="text-success m-0 kitrat mb-2 "> <strong>El 97% volveria a cocinarlo </strong> </p>
+      <p class="volveria-cocinarlo text-success m-0 kitrat mb-2 "> <strong>El 97% volveria a cocinarlo </strong> </p>
       <!-- <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p> -->
 
       <div class="d-flex justify-content-between mt-3">
@@ -23,7 +23,7 @@
         </div>
 
         <div>
-          <p class="kittime rounded-top border border-secondary m-2 p-1 pl-3 pr-3" > <small><i class="far fa-clock"></i> <%= @kit.preparation_time %> min</small> </p>
+          <p class="kittime rounded-top border border-secondary  p-1 pl-3 pr-3" > <small><i class="far fa-clock"></i> <%= @kit.preparation_time %> min</small> </p>
         </div>
 
       </div>
@@ -38,7 +38,7 @@
   </div>
 
   <div class="description-container">
-    <h3><strong>Ingredientes:</strong></h3>
+    <h3 class="ingredients-title"><strong>Ingredientes:</strong></h3>
   </div>
   <div class="image-container d-md-block">
     <div class="cards-scroll">
@@ -105,7 +105,7 @@
 
 
 <div>
-  <h3><strong>Tambien podrian gustarte:</strong></h3>
+  <h3 class="tambien-title"><strong>Tambien podrian gustarte:</strong></h3>
 
 </div>
   <div class="recomendation-cards w-100 w-lg-50">
