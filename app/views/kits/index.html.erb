@@ -30,7 +30,7 @@
       <% @kits.each do |kit| %>
         <%= link_to kit_path(kit) do  %>
           <div class="card-scroll mx-2 col-md-4">
-           <div class="card-kit border">
+           <div class="card-kit">
             <%= cl_image_tag kit.image, class: "rounded"%>
              <div class="card-body">
                <div>
