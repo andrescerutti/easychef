@@ -1,20 +1,21 @@
-<div class="card-review">
+<% @kit.reviews.each do |review| %>
+  <div class="card-review">
 
-  <div class="review-img">
-    <img src="http://www.demoslavueltaaldia.com/sites/default/files/styles/recetas_listado/public/sushi2.jpg?itok=ULRF3wDX" alt="imagen review" class="w-100 d-none d-md-block" >
-  </div>
-  <div class="review-content">
-    <div class="review-user d-flex align-items-center">
-       <img src="http://liberterre.fr/metahistoire/espagnol/neytirisaldana.jpg" alt="">
-      <p class="user-mail" style="font-size: 14px;">neytiri@gmail.com</p>
+    <div class="review-img">
+      <img src="<%= review.image %>" alt="imagen review" class="w-100 d-none d-md-block" >
     </div>
-    <p>Fantástico. Lejos, lo mejor para para comer cuando uno tiene mucho hambre! 👍El plato me quedo muy rico y fuesúper abundantes (casi para compartir) Excelente relación precio/calidad.</p>
-    <div class="star-rating" style="text-align: right;">
-    <%#= render 'shared/stars', kit: @kit %>
-    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+    <div class="review-content">
+      <div class="review-user d-flex align-items-center">
+         <img src="<%= review.order.user.avatar_image %>" alt="">
+        <p class="user-mail" style="font-size: 14px;"><%= review.order.user.first_name %></p>
+      </div>
+      <p><%= review.content %></p>
+      <div class="star-rating" style="text-align: right;">
+      <%#= render 'shared/stars', kit: @kit %>
+      <p>Rating: <%= review.rating %>/5</p>
+      </div>
     </div>
   </div>
-</div>
-
+<% end %>
 
 
