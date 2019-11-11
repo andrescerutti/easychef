@@ -519,7 +519,7 @@ BRANDS = [
                 ],
     kits: [
             { general_information: {
-                name: 'Bs. As. Roll con langostino -8 piezas. ',
+                name: 'Bs. As. Roll con langostino -8 piezas.',
                 stock: 10,
                 price: 420,
                 size: 1,
@@ -528,18 +528,18 @@ BRANDS = [
                 remote_image_url: 'https://images.deliveryhero.io/image/pedidosya/chains/ar/fabric-sushi-footerImage-16a9c9b4-d6d4-4377-98be-d5911b1a58b4.jpg?quality=90&width=414',
               },
               cooking_ingredients: [
-                  { quantity: 300, unit: 'g', name: "Arroz" },
-                  { quantity: 0.70, unit: 'ml', name: "Salsa de soja" },
-                  { quantity: 3, unit: 'u', name: "Langostinos crudos" },
-                  { quantity: 80, unit: 'g', name: "Palta" },
-                  { quantity: 20, unit: 'g', name: "Pepino" },
-                  { quantity: 100, unit: 'g', name: "Salmón fresco" },
-                  { quantity: 2, unit: 'u', name: "Alga Nori" },
-                  { quantity: 80, unit: 'g', name: "Atún fresco" },
-                  { quantity: 30, unit: 'g', name: "Palitos Cangrejo" },
-                  { quantity: 5, unit: 'g', name: "Semillas de sesamo" },
-                  { quantity: 20, unit: 'g', name: "Wasabi" }
-                  ],
+                                      { quantity: 300, unit: 'g', name: "Arroz" },
+                                      { quantity: 0.70, unit: 'ml', name: "Salsa de soja" },
+                                      { quantity: 3, unit: 'u', name: "Langostinos crudos" },
+                                      { quantity: 80, unit: 'g', name: "Palta" },
+                                      { quantity: 20, unit: 'g', name: "Pepino" },
+                                      { quantity: 100, unit: 'g', name: "Salmón fresco" },
+                                      { quantity: 2, unit: 'u', name: "Alga Nori" },
+                                      { quantity: 80, unit: 'g', name: "Atún fresco" },
+                                      { quantity: 30, unit: 'g', name: "Palitos Cangrejo" },
+                                      { quantity: 5, unit: 'g', name: "Semillas de sesamo" },
+                                      { quantity: 20, unit: 'g', name: "Wasabi" }
+                                    ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Esterilla"],
               categories: ["Pescado", "Los más pedidos"],
               guides: { video: "xtE3_bw8eHA",
@@ -550,7 +550,62 @@ BRANDS = [
                                 { order: 4, content: "Enfriar el arroz: tras el reposo, colocar el arroz en un molde amplio (ideal si es de madera), que sea bien abierto. Volcar el aderezo sobre él e ir con cuidado separándolo con una cuchara y revolviéndolo mientras lo abanicamos con un abanico ad hoc o con una revista Paparazzi. La idea es que el arroz quede a temperatura ambiente a la vez que hacemos llegar el sushi-zu a todo el arroz." },
                                 { order: 5, content: "Armado del sushi: siempre que busques cómo hacer sushi verás lo mismo: el sushi se hace con las manos mojadas. Esto es porque el arroz es súper pegajoso. Hay varios tipos de sushi, les enseño los más comunes. Para ver cómo se arman, háganme el favor de mirarlo en el video, no me hagan a esta altura del año explicar algo tan complejo de decir con palabras." },
                                ]
-                      }
+                      },
+              kit_orders: [
+                            {
+                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              user_email: "santiago@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              state: true,
+                              code: "549934",
+                              review: {
+                                        content: "No soy fanatico del sushi, pero esta bien",
+                                        rating: 3,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
+                            },
+                            {
+                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              user_email: "andres@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              state: true,
+                              code: "432509",
+                              review: {
+                                        content: "Excelente calidad, pude comer muy bien",
+                                        rating: 5,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
+
+                            },
+                            {
+                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              user_email: "enzo@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              state: true,
+                              code: "084638",
+                              review: {
+                                        content: "Me encanto, lo volveria a comprar",
+                                        rating: 4,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
+                            },
+                            {
+                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              user_email: "alejo@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              state: true,
+                              code: "584965",
+                              review: {
+                                        content: "Lo voy a sumar a mi dieta dominical",
+                                        rating: 5,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
+                            }
+                          ],
             }
           ]
   },
@@ -598,7 +653,64 @@ BRANDS = [
                                   { order: 3, content: "Esta mezcla la vamos a extender bien por el costillar de cerdo, lo mejor es hacerlo con las manos para untar bien toda la carne con la misma. Una vez que el horno haya alcanzado los 200ºC, vamos a meter las costillas aliñadas en una bandeja y las vamos a hornear sobre 30 o 35 minutos por cada cara. El tiempo dependerá del grosor de las costillas de cerdo que estemos horneado, ya que no es lo mismo hornear costillas ibéricas que costillas carnudas, que tiene #########################" },
                                   { order: 4, content: "Cuando la carne esté doradita por ambos lados, para lo que es interesante dar un toque final con el grill del horno durante unos minutos, con cuidado de que no se nos quemen, ya podemos sacar las costillas al horno y servirlas siempre en caliente. Se pueden acompañar con alguna guarnición para acompañar, como una ensalada o patatas fritas o asadas, y también con alguna salsa que nos guste, alguna especial para carnes. Y a disfrutar de esta receta tan sencilla y tan apetitosa, que seguro que resulta un éxito entre tus comensales e invitados." },
                                ]
-                      }
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                state: true,
+                                code: "395729",
+                                review: {
+                                          content: "Buenisimo!",
+                                          rating: 3,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "andres@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                state: true,
+                                code: "402759",
+                                review: {
+                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "enzo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                state: true,
+                                code: "586038",
+                                review: {
+                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
+                                          rating: 4,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "alejo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                state: true,
+                                code: "937859",
+                                review: {
+                                          content: "Salio excelente, ya me puedo considerar como chef.",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              }
+                            ],
             }
           ]
   },
@@ -624,7 +736,7 @@ BRANDS = [
 puts "creating users"
 USERS.each do |user|
   u = User.create!(user)
-  # u.remote_avatar_image_url = user[:avatar_image]
+  u.remote_avatar_image_url = user[:avatar_image]
   u.save!
 end
 
@@ -712,6 +824,13 @@ BRANDS.each do |brand_data|
               KitCookware.create!(kit: kit, cookware: cookware)
             end
           end
+          kit_info[:kit_orders].each do |kit_order|
+            puts 'creating kit order'
+            user = User.find_by(email: kit_order[:user_email])
+            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
+            puts "Creating review for order #{order.id}. (content: #{kit_order[:review][:content]})"
+            review = Review.create!(order: order, content: kit_order[:review][:content], rating: kit_order[:review][:rating], remote_image_url: kit_order[:review][:remote_image_url])
+          end
         end
       end
     end
@@ -722,33 +841,8 @@ end
 
 
 
-# # https://www.paulinacocina.net/como-hacer-sushi-casero/9469
 
 
-# puts 'creating steps'
-# sushi_step_one = Step.create!(order: 1, content: "Lavar el arroz: Lavar el arroz en agua unas 5-6 veces hasta que el agua salga transparente o casi. Dejar reposar 30 minutos.", guide_id: belgrano_sushi_guide.id)
-# sushi_step_one = Step.create!(order: 2, content: "Cocinar el arroz: poner en una olla con igual cantidad de agua (2 tazas de arroz, 2 tazas de agua). Tapar. No vamos a sacar la tapa hasta el final de todo el proceso. Poner en máximo hasta que hierva y luego bajar el fuego a mínimo por 13 minutos. ¡No sacar la tapa! ¡Nunca! Tras este tiempo, apagar la hornalla y dejar reposar 10 minutos, siempre tapado. Si lo cocinás como yo en Pressure Cooker, simplemente ponés el arroz con el agua en el programa para hacer arroz de 3 minutos y cuando termina la cocción lo dejás descansar los 10 minutos sin abrir ni descomprimir.", guide_id: belgrano_sushi_guide.id)
-# sushi_step_three = Step.create!(order: 3, content: "Hacer el sushi-zu: mientras reposa el arroz, mezclar las 4 cdas. de vinagre de arroz con las 2 cdas. de azúcar y la cdita. de sal. Revolver hasta que esté el azúcar disuelta.", guide_id: belgrano_sushi_guide.id)
-# sushi_step_four = Step.create!(order: 4, content: "Enfriar el arroz: tras el reposo, colocar el arroz en un molde amplio (ideal si es de madera), que sea bien abierto. Volcar el aderezo sobre él e ir con cuidado separándolo con una cuchara y revolviéndolo mientras lo abanicamos con un abanico ad hoc o con una revista Paparazzi. La idea es que el arroz quede a temperatura ambiente a la vez que hacemos llegar el sushi-zu a todo el arroz.", guide_id: belgrano_sushi_guide.id)
-# sushi_step_five = Step.create!(order: 5, content: "Armado del sushi: siempre que busques cómo hacer sushi verás lo mismo: el sushi se hace con las manos mojadas. Esto es porque el arroz es súper pegajoso. Hay varios tipos de sushi, les enseño los más comunes. Para ver cómo se arman, háganme el favor de mirarlo en el video, no me hagan a esta altura del año explicar algo tan complejo de decir con palabras.", guide_id: belgrano_sushi_guide.id)
-# # Guide Sushi Villa urquiza
-# sushi_step_one = Step.create!(order: 1, content: "Lavar el arroz: Lavar el arroz en agua unas 5-6 veces hasta que el agua salga transparente o casi. Dejar reposar 30 minutos.", guide_id: villaurquiza_sushi_guide.id)
-# sushi_step_one = Step.create!(order: 2, content: "Cocinar el arroz: poner en una olla con igual cantidad de agua (2 tazas de arroz, 2 tazas de agua). Tapar. No vamos a sacar la tapa hasta el final de todo el proceso. Poner en máximo hasta que hierva y luego bajar el fuego a mínimo por 13 minutos. ¡No sacar la tapa! ¡Nunca! Tras este tiempo, apagar la hornalla y dejar reposar 10 minutos, siempre tapado. Si lo cocinás como yo en Pressure Cooker, simplemente ponés el arroz con el agua en el programa para hacer arroz de 3 minutos y cuando termina la cocción lo dejás descansar los 10 minutos sin abrir ni descomprimir.", guide_id: villaurquiza_sushi_guide.id)
-# sushi_step_three = Step.create!(order: 3, content: "Hacer el sushi-zu: mientras reposa el arroz, mezclar las 4 cdas. de vinagre de arroz con las 2 cdas. de azúcar y la cdita. de sal. Revolver hasta que esté el azúcar disuelta.", guide_id: villaurquiza_sushi_guide.id)
-# sushi_step_four = Step.create!(order: 4, content: "Enfriar el arroz: tras el reposo, colocar el arroz en un molde amplio (ideal si es de madera), que sea bien abierto. Volcar el aderezo sobre él e ir con cuidado separándolo con una cuchara y revolviéndolo mientras lo abanicamos con un abanico ad hoc o con una revista Paparazzi. La idea es que el arroz quede a temperatura ambiente a la vez que hacemos llegar el sushi-zu a todo el arroz.", guide_id: villaurquiza_sushi_guide.id)
-# sushi_step_five = Step.create!(order: 5, content: "Armado del sushi: siempre que busques cómo hacer sushi verás lo mismo: el sushi se hace con las manos mojadas. Esto es porque el arroz es súper pegajoso. Hay varios tipos de sushi, les enseño los más comunes. Para ver cómo se arman, háganme el favor de mirarlo en el video, no me hagan a esta altura del año explicar algo tan complejo de decir con palabras.", guide_id: villaurquiza_sushi_guide.id)
-# # Guide Ribs Palermo
-# ribs_step_one = Step.create!(order: 1, content: "Comenzamos con una receta para hacer unas costillas de cerdo al horno de forma sencilla pero a la vez muy sabrosa y apetitosa. Es una forma interesante para comenzar a hacer esta receta si no tienes mucha práctica previa. Para comenzar, antes de nada vamos a limpiar bien nuestro costillar de cerdo y a dejarlo secar bien. Si preferís podéis cortar ya las costillas y hornearlas así cortadas, aunque en nuestro caso vamos a hornear el costillar entero y serpararlo después de estar cocinado. Vamos a encender el horno para que vaya precalentándose a 200ºC durante el tiempo que tardamos en preparar el resto de ingredientes.", guide_id: palermo_ribs_guide.id)
-# ribs_step_two = Step.create!(order: 2, content: "Mientras esperamos que el horno alcance la temperatura adecuada, vamos a pelar los ajos, y los echamos en un recipiente junto con un chorreón de aceite de oliva virgen, un poco de sal, un poco de pimienta negra y perejil, y lo vamos a batir para formar una mezcla cremosa y de aspecto homogéneo. Se le puede añadir un toque de limón o de vino si queréis dar un toque extra de sabor, de forma opcional, o cualquier otro tipo de especia que os guste, aunque para empezar os recomedamos utilizar este simple aliño.", guide_id: palermo_ribs_guide.id)
-# ribs_step_three = Step.create!(order: 3, content: "Esta mezcla la vamos a extender bien por el costillar de cerdo, lo mejor es hacerlo con las manos para untar bien toda la carne con la misma. Una vez que el horno haya alcanzado los 200ºC, vamos a meter las costillas aliñadas en una bandeja y las vamos a hornear sobre 30 o 35 minutos por cada cara. El tiempo dependerá del grosor de las costillas de cerdo que estemos horneado, ya que no es lo mismo hornear costillas ibéricas que costillas carnudas, que tienen mucha más carne.
-# ", guide_id: palermo_ribs_guide.id)
-# ribs_step_four = Step.create!(order: 4, content: "Cuando la carne esté doradita por ambos lados, para lo que es interesante dar un toque final con el grill del horno durante unos minutos, con cuidado de que no se nos quemen, ya podemos sacar las costillas al horno y servirlas siempre en caliente. Se pueden acompañar con alguna guarnición para acompañar, como una ensalada o patatas fritas o asadas, y también con alguna salsa que nos guste, alguna especial para carnes. Y a disfrutar de esta receta tan sencilla y tan apetitosa, que seguro que resulta un éxito entre tus comensales e invitados.", guide_id: palermo_ribs_guide.id)
-# # Guide Pilar Ribs
-# ribs_step_one = Step.create!(order: 1, content: "Comenzamos con una receta para hacer unas costillas de cerdo al horno de forma sencilla pero a la vez muy sabrosa y apetitosa. Es una forma interesante para comenzar a hacer esta receta si no tienes mucha práctica previa. Para comenzar, antes de nada vamos a limpiar bien nuestro costillar de cerdo y a dejarlo secar bien. Si preferís podéis cortar ya las costillas y hornearlas así cortadas, aunque en nuestro caso vamos a hornear el costillar entero y serpararlo después de estar cocinado. Vamos a encender el horno para que vaya precalentándose a 200ºC durante el tiempo que tardamos en preparar el resto de ingredientes.", guide_id: pilar_ribs_category.id)
-# ribs_step_two = Step.create!(order: 2, content: "Mientras esperamos que el horno alcance la temperatura adecuada, vamos a pelar los ajos, y los echamos en un recipiente junto con un chorreón de aceite de oliva virgen, un poco de sal, un poco de pimienta negra y perejil, y lo vamos a batir para formar una mezcla cremosa y de aspecto homogéneo. Se le puede añadir un toque de limón o de vino si queréis dar un toque extra de sabor, de forma opcional, o cualquier otro tipo de especia que os guste, aunque para empezar os recomedamos utilizar este simple aliño.", guide_id: pilar_ribs_category.id)
-# ribs_step_three = Step.create!(order: 3, content: "Esta mezcla la vamos a extender bien por el costillar de cerdo, lo mejor es hacerlo con las manos para untar bien toda la carne con la misma. Una vez que el horno haya alcanzado los 200ºC, vamos a meter las costillas aliñadas en una bandeja y las vamos a hornear sobre 30 o 35 minutos por cada cara. El tiempo dependerá del grosor de las costillas de cerdo que estemos horneado, ya que no es lo mismo hornear costillas ibéricas que costillas carnudas, que tienen mucha más carne.
-# ", guide_id: pilar_ribs_category.id)
-# ribs_step_four = Step.create!(order: 4, content: "Cuando la carne esté doradita por ambos lados, para lo que es interesante dar un toque final con el grill del horno durante unos minutos, con cuidado de que no se nos quemen, ya podemos sacar las costillas al horno y servirlas siempre en caliente. Se pueden acompañar con alguna guarnición para acompañar, como una ensalada o patatas fritas o asadas, y también con alguna salsa que nos guste, alguna especial para carnes. Y a disfrutar de esta receta tan sencilla y tan apetitosa, que seguro que resulta un éxito entre tus comensales e invitados.", guide_id: pilar_ribs_category.id)
 
 # puts 'creating favourites'
 # Favourite.create!(kit_id:ribskitpilar.id , user_id:alejo.id )
@@ -772,20 +866,6 @@ end
 # # Favourite.create!(kit_id:ribskitpalermo.id , user_id:santiago.id )
 # # Favourite.create!(kit_id:sushikitvillaurquiza.id , user_id:andres.id )
 
-# puts 'creating orders'
-# Santiago Order
-# orders =
-# { user_id: santiago.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR1")
-# { user_id: santiago.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR2")
-# Andres order
-# { user_id: andres.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR3")
-# { user_id: andres.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR4")
-# Enzo order
-# { user_id: enzo.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR5")
-# { user_id: enzo.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR6")
-# Alejo order
-# { user_id: alejo.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR7")
-# { user_id: alejo.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR8")
 
 # puts 'creating payments'
 # # Santiago payment
@@ -800,14 +880,3 @@ end
 # # Alejo payment
 # alejo_first_payment = Payment.create!(order_id: alejo_first_order.id)
 # alejo_second_payment = Payment.create!(order_id: alejo_second_order.id)
-
-# puts 'creating reviews'
-# santiago_first_review = Review.create!(order_id: santiago_first_order.id, content: "No soy fanatico del sushi, pero esta bien", rating: 3, image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg")
-# santiago_second_review = Review.create!(order_id: santiago_second_order.id, content: "Buenisimo!", rating: 4, image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg")
-# andres_first_review = Review.create!(order_id: andres_first_order.id, content: "Excelente calidad, pude comer muy bien", rating: 5, image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg")
-# andres_second_review = Review.create!(order_id: andres_second_order.id, content: "La guia esta muy clara y te facilita un monton el procedimiento", rating: 5, image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg")
-# enzo_first_review = Review.create!(order_id: enzo_first_order.id, content: "Me encanto, lo volveria a comprar", rating: 4, image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg")
-# enzo_second_review = Review.create!(order_id: enzo_second_order.id, content: "No hay con que darle a esa barbacoa, muy bueno.", rating: 5, image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg")
-# alejo_first_review = Review.create!(order_id: alejo_first_order.id, content: "Lo voy a sumar a mi dieta dominical", rating: 5, image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg")
-# alejo_second_review = Review.create!(order_id: alejo_second_order.id, content: "Salio excelente, ya me puedo considerar como chef.", rating: 4, image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg")
-

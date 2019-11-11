@@ -1,44 +1,46 @@
-<div class="container-fluid d-flex bg-light">
+  <div class="container-fluid d-flex bg-light" style="background-image: url(<%= image_url('orders-bg.jpg') %>); background-size: cover; background-position: top; min-height: 500px; ">
 
-  <div  class="flex-grow-1 mt-3 h-100">
-    <h2 class="my-4">¡Ultimo paso!</h2>
+    <div  class="flex-grow-1 mt-3 h-100">
+      <h2 class="my-4 text-white">¡Ultimo paso!</h2>
 
-    <div class="card-product d-sm-block d-md-none">
-      <img src=<%= @kit.image %> />
-      <div class="d-flex flex-column p-3 w-100">
-        <%  %>
-        <h2><%= @kit.name %></h2>
-        <p><%= @kit.restaurant.name %></p>
-        <span class="d-flex justify-content-between align-items-center mt-3">x1 <span class="p-2" ><%=@order.amount %></span>$ <%= @kit.price * @order.amount %></span>
+      <div class="card-product  d-md-none">
+        <img src=<%= @kit.image %> />
+        <div class="d-flex flex-column p-3 w-100">
+          <%  %>
+          <h2><%= @kit.name %></h2>
+          <p><%= @kit.restaurant.name %></p>
+          <span class="d-flex justify-content-between align-items-center mt-3"><p>x <%= @order.amount %></p><p>$ <%= @kit.price * @order.amount %></p></span>
+        </div>
       </div>
-    </div>
-  <div class="mr-md-3 bg-white rounded p-3 mt-3 h-100">
-    <%= simple_form_for [@kit, @order] do |f| %>
-      <%= f.hidden_field :amount %>
-      <%= f.simple_fields_for Address.new do |ff|%>
-        <%= ff.input :address, placeholder: "Ingresá tu dirección", label: false %>
+    <div class="mr-md-3 bg-white rounded p-3 mt-3 h-100" style="box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.4);">
+      <h4 class="mt-2 mb-4 font-weight-bold">Detalles del pedido</h4>
+      <%= simple_form_for [@kit, @order] do |f| %>
+        <%= f.hidden_field :amount %>
+        <%= f.simple_fields_for Address.new do |ff|%>
+          <%= ff.input :address, placeholder: "Ingresá tu dirección", label: false, class: "order-form" %>
+        <% end %>
+        <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Método de envío", label: false, class: "order-form" %>
+        <%= f.submit "Ingrese dirección y método de envío", class: "btn-primary w-100 p-1 disabled order-form-btn order-form-btn", id:"order_delivery_submit", disabled:"disabled" %>
       <% end %>
-      <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Método de envío", label: false %>
-      <%= f.submit "Ingrese dirección y método de envío", class: "btn-primary w-100 disabled", id:"order_delivery_submit", disabled:"disabled" %>
-    <% end %>
-  </div>
+    </div>
 
-</div>
- <div class="card-kit border d-xs-none d-none d-md-block h-100" style=" width: 40%;">
-   <img src=<%= @kit.image %>  />
-   <div class="card-body">
-     <div>
-       <h5 class="card-title mb-1"><%= @kit.name %></h5>
-       <p class="card-text overflow-ellipsis card-description"><%= @kit.restaurant.name %></p>
-       <div class="d-flex justify-content-between mt-3">
-         <p class="card-text card-address">Metodo de envío</p>
-         <p class="card-text card-price" <%= @order.delivery_provider %></p>
+  </div>
+   <div class="card-kit d-xs-none d-none d-md-block h-100" style=" width: 40%;">
+     <img src=<%= @kit.image %>  />
+     <div class="card-body">
+       <div>
+         <h5 class="card-title mb-1"><%= @kit.name %></h5>
+         <p class="card-text overflow-ellipsis card-description"><%= @kit.restaurant.name %></p>
+         <div class="d-flex justify-content-between mt-3">
+           <p class="card-text card-address">Metodo de envío</p>
+           <p class="card-text card-price" <%= @order.delivery_provider %></p>
+         </div>
+       </div>
+       <div class="d-flex justify-content-between my-3">
+         <p class="card-text card-address">Total</p>
+         <p class="card-text card-price">$ <%= @kit.price * @order.amount %></p>
        </div>
      </div>
-     <div class="d-flex justify-content-between my-3">
-       <p class="card-text card-address">Total</p>
-       <p class="card-text card-price">$ <%= @kit.price * @order.amount %></p>
-     </div>
    </div>
- </div>
+  </div>
 </div>
