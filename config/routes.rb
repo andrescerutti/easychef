@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :kit_categories, only: [:show]
 
   resources :orders, only: [:index, :show, :edit, :update] do
-    resources :payments, only: [:create, :show]
+    resources :payments, only: [:create, :show, :new]
     resources :guides, only: [:show]
     resources :reviews, only: [:create]
   end

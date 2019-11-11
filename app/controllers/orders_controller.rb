@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :set_brand, only: [:show, :edit, :update, :destroy]
+before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -10,12 +10,12 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def new
     @kit = Kit.find(params[:kit_id])
-    @order = Order.new(amount: params[:amount])
+    @order = Order.new(amount: params[:order][:amount])
     # authorize @order
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(orders_params)
     @order.user = current_user
     @order.kit = Kit.find(params[:kit_id])
     @order.code = rand(1..1000)
@@ -23,12 +23,15 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
     current_user.addresses << order_address unless current_user.addresses.find_by(address: order_address.address)
     current_user.save
     @order.address = Address.new(address_params)
+    @payment = Payment.new
+    @payment.order = @order
     # authorize @order
     if @order.save!
-      return redirect_to @order
+      @payment.save!
+      return redirect_to order_payment_path(@order.id, @payment.id)
     end
-
     render :new
+
   end
 
   def edit
@@ -56,6 +59,6 @@ before_action :set_brand, only: [:show, :edit, :update, :destroy]
   end
 
   def address_params
-    params[:order][:address].permit(:address)
+    params.require(:order).permit(:address)
   end
 end

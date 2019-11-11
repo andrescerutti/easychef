@@ -4,7 +4,9 @@
     <h2 class="font-weight-bold my-3 text-center">Tu pedido Fue Aprobado!</h2>
     <p class="">Te notificamos cuando tu kit este en camino.</p>
     <h4 class="font-weight-bold">Código de pedido</h5>
-    <h4 id="confirmation-code">0849322</h4>
+    <h4 id="confirmation-code">
+      <%= link_to rand(1000..9999), order_guide_path(@payment.order.kit, @payment.order.kit.guide) %>
+      </h4>
     <h5 class="font-weight-bold mt-3">Empezá a preparar tu cocina</h5>
     <div class="cookware-cards">
       <% @cookwares.each do |cookware| %>

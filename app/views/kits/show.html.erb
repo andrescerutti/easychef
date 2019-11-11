@@ -1,10 +1,11 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-6">
-      <h1 class="m-0 kitname"> <strong><%= @kit.name %></strong> </h1>
+      <h1 class="kitname m-0"> <strong><%= @kit.name %></strong> </h1>
       <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black"><%= @kit.restaurant.name %></strong> </h2>
       <img class="d-md-none w-100 mb-4" src="<%= @kit.image %>" alt="imagen del plato de comida">
-      <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p>
+      <p class="volveria-cocinarlo text-success m-0 kitrat mb-2 "> <strong>El 97% volveria a cocinarlo </strong> </p>
+      <!-- <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p> -->
 
       <div class="d-flex justify-content-between mt-3">
 
@@ -15,14 +16,14 @@
           </div>
 
           <div class="" >
-            <%= simple_form_for([@kit, @order]) do |f| %>
+            <%= simple_form_for([@kit, @order], url: new_kit_order_path(@kit), method: :get)  do |f| %>
             <%= f.input :amount, collection: 1..@kit.stock, label: false %>
             <span class="d-none" id="price"><%= @kit.price %></span>
           </div>
         </div>
 
         <div>
-          <p class="kittime rounded-top border border-secondary m-2 p-1 pl-3 pr-3" > <small><i class="far fa-clock"></i> <%= @kit.preparation_time %> min</small> </p>
+          <p class="kittime rounded-top border border-secondary  p-1 pl-3 pr-3" > <small><i class="far fa-clock"></i> <%= @kit.preparation_time %> min</small> </p>
         </div>
 
       </div>
@@ -37,14 +38,14 @@
   </div>
 
   <div class="description-container">
-    <p><strong>Ingredientes:</strong></p>
+    <h3 class="ingredients-title"><strong>Ingredientes:</strong></h3>
   </div>
-  <div class="image-container d-none d-md-block">
+  <div class="image-container d-md-block">
     <div class="cards-scroll">
         <div class="cards-scroll mt-3">
           <% @kit.ingredients.each do |kit| %>
             <div class="card-scroll col-md-4">
-              <div class="card-kit border">
+              <div class="card-kit-showkit border">
                 <img src=<%= kit.image %>  />
                 <div class="card-body">
                   <div>
@@ -56,14 +57,16 @@
           <% end %>
         </div>
       </div>
-<div class="carrousel mt-5">
-  <p><strong>Cookwares:</strong></p>
+    </div>
+
+<div class="carrousel my-5">
+  <h3><strong>Cookwares:</strong></h3>
   <div class="cards-scroll">
           <div class="cards-scroll mt-3">
             <% @kit.cookware.each do |kit| %>
               <div class="card-scroll col-md-4">
-                <div class="card-kit border">
-                  <img src=<%= kit.image %>  />
+                <div class="card-kit-showkit border">
+                  <img src=<%= kit.image %> >
                   <div class="card-body">
                     <div>
                       <h5 class="card-title mb-1"><%= kit.name %></h5>
@@ -75,26 +78,52 @@
           </div>
         </div>
 </div>
-  <p><strong>Opiniones:</strong></p>
-<div class="kit-bottom d-flex">
-  <div class="review-container w-50 pt-4 mr-3">
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores suscipit deleniti molestiae nostrum corrupti iusto nihil porro, architecto sunt nemo sit qui, recusandae tenetur quibusdam debitis nulla eligendi dolorem ducimus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi in quas sit est natus! Laudantium maiores non suscipit porro, nemo, sed dolorem laborum facilis, accusantium perferendis qui modi voluptatum! Cumque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam eius accusantium asperiores eligendi earum iste beatae praesentium, repellat blanditiis, natus, animi! Cum, qui sapiente maxime nesciunt reiciendis odio ab, vitae?</p>
+
+
+
+
+
+
+
+<div class="kit-bottom">
+<div class=" mr-3">
+
+<div>
+
+  <h3><strong>Opiniones:</strong></h3>
+</div>
+  <div class="review-container w-100 w-lg-50  mr-3">
+     <%= render 'shared/card_recomendation' %>
   </div>
-  <div class="recomendation-cards w-50">
-     <% @kits.limit(4).each do |kit| %>
+
+</div>
+
+<div>
+
+
+
+
+
+<div>
+  <h3 class="tambien-title"><strong>Tambien podrian gustarte:</strong></h3>
+
+</div>
+  <div class="recomendation-cards w-100 w-lg-50">
+    <% @kits.limit(4).each do |kit| %>
     <%= render 'shared/card_show_index', kit: kit %>
     <% end %>
+
   </div>
 </div>
 </div>
 </div>
+</div>
 
 
 
-    <% @kit.reviews.each do |review| %>
-    <%= review.content %>
+    <% @kit.reviews.limit(4).each do |review| %>
+    <%= render 'shared/card_recomendation', review: review %>
     <% end %>
-
 
 
 

@@ -2,33 +2,49 @@
 
     <h2>Categorias</h2>
   <div class="cards-scroll mt-3">
-    <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
-        <%= link_to kit_category_path(category) do %>
-          <%= render 'components/card-category', category: category.name, img: "tradicional.jpg" %>
-        <% end %>
+        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
       </div>
-    <% end %>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Sabroso pero economico", img: "economico.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Para compartir", img: "para-compartir.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Para compartir", img: "rec-loc.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Cocina saludable", img: "saludable.jpg"}) %>
+      </div>
+      <div class="card-scroll mx-2">
+        <%= render("components/card-category-1", {category: "Exclusivo Easychef", img: "exclusivo.jpg"}) %>
+      </div>
   </div>
   <div class="cards-scroll">
     <h2>Sugerencias</h2>
     <div class="cards-scroll mt-3">
       <% @kits.each do |kit| %>
-        <div class="card-scroll mx-2 col-md-4">
-         <div class="card-kit border">
-          <%= cl_image_tag "https://images.unsplash.com/photo-1562887189-7c2ae6ace6dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80", class: "rounded"%>
-           <div class="card-body">
-             <div>
-               <h5 class="card-title mb-1"><%= kit.name %></h5>
-               <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
-             </div>
-             <div class="d-flex justify-content-between mt-3">
-               <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
-               <p class="card-text card-price"><%= kit.price %></p>
+        <%= link_to kit_path(kit) do  %>
+          <div class="card-scroll mx-2 col-md-4">
+           <div class="card-kit border">
+            <%= cl_image_tag kit.image, class: "rounded"%>
+             <div class="card-body">
+               <div>
+                 <h5 class="card-title mb-1"><%= kit.name %></h5>
+                 <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
+               </div>
+               <div class="d-flex justify-content-between mt-3">
+                 <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
+                 <p class="card-text card-price"><%= kit.price %></p>
+               </div>
              </div>
            </div>
-         </div>
-        </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
@@ -54,8 +70,12 @@
       <% end %>
     </div>
   </div>
+  <div class="text-center my-5">
+    <%= image_tag("kit.png",  width: 350, height: 350) %>
+  </div>
   <h2 class="text-center my-3">Una comida perfecta sin salir de casa</h2>
   <h4 class="text-center my-3"><small>Crea magia experimentando paso a paso recetas unicas</small></h4>
 
   <a href="#" class="btn btn-primary btn-lg btn-block mb-3">Registrate</a>
 </div>
+

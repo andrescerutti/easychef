@@ -1,54 +1,9 @@
 .kitname {
-    font-size: 32px;
+  font-size: 32px;
 }
-
-@media(max-width: 575px) {
-  .kitnamemob {
-    font-size: 10px;
-  }
+.kitrest{
+  font-size: 18px;
 }
-
-.kitrest {
-    font-size: 17px;
-}
-
-@media(max-width: 575px) {
-  .kitrest {
-    font-size: 10px;
-  }
-}
-
-.kitrat {
-    font-size: 17px;
-}
-
-@media(max-width: 575px) {
-  .kitrat {
-    font-size: 10px;
-  }
-}
-
-.kittime {
-    font-size: 17px;
-}
-
-@media(max-width: 575px) {
-  .kittime {
-    font-size: 10px;
-  }
-}
-
-.kitdescr {
-    font-size: 17px;
-}
-
-@media(max-width: 575px) {
-  .kitdescr {
-    font-size: 10px;
-  }
-}
-
-
 
 .recomendation-cards {
   display: grid;
@@ -64,7 +19,7 @@
   box-shadow: 1px 1px 5px lightgrey;
   margin-top: 20px;
   &:hover{
-  box-shadow: 1px 1px 5px grey;
+    box-shadow: 1px 1px 5px grey;
   }
   a{
     text-decoration: none;
@@ -73,12 +28,43 @@
     width: 100%;
     height: 60%;
     object-fit: cover;
-
   }
+
 }
 @media(max-width: 575px) {
   #ytplayer {
     max-height: 200px;
-
   }
+  .kitnamemob {
+    font-size: 10px;
+  }
+
+  .recomendation-cards{
+    grid-template-columns: 1fr;
+  }
+
+  .volveria-cocinarlo {
+    font-size: 13px;
+  }
+  .kitdescr{
+    font-size: 12px;
+  }
+  .kitrest{
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .kittime{
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
+    border-color: rgba(0,0,0,0.1);
+  }
+ .ingredients-title{
+  margin-top: 10px;
+ }
+ .tambien-title{
+  margin-top: 14px;
+ }
 }
