@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -11,7 +11,6 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
   def new
     @kit = Kit.find(params[:kit_id])
     @order = Order.new(amount: params[:order][:amount])
-    # authorize @order
   end
 
   def create
@@ -25,7 +24,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     @order.address = Address.new(address_params)
     @payment = Payment.new
     @payment.order = @order
-    # authorize @order
+    authorize @order
     if @order.save!
       @payment.save!
       return redirect_to order_payment_path(@order.id, @payment.id)
@@ -51,7 +50,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def set_order
     @order = Order.find(params[:id])
-    # authorize @order
+    authorize @order
   end
 
   def orders_params
