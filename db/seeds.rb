@@ -558,7 +558,12 @@ BRANDS = [
                               check_out_session_id: "nothing",
                               amount: 1,
                               state: true,
-                              code: "261483"
+                              code: "549934",
+                              review: {
+                                        content: "No soy fanatico del sushi, pero esta bien",
+                                        rating: 3,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
                             },
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
@@ -566,7 +571,13 @@ BRANDS = [
                               check_out_session_id: "nothing",
                               amount: 1,
                               state: true,
-                              code: "650232"
+                              code: "432509",
+                              review: {
+                                        content: "Excelente calidad, pude comer muy bien",
+                                        rating: 5,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
+
                             },
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
@@ -574,7 +585,12 @@ BRANDS = [
                               check_out_session_id: "nothing",
                               amount: 1,
                               state: true,
-                              code: "372545"
+                              code: "084638",
+                              review: {
+                                        content: "Me encanto, lo volveria a comprar",
+                                        rating: 4,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
                             },
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
@@ -582,35 +598,14 @@ BRANDS = [
                               check_out_session_id: "nothing",
                               amount: 1,
                               state: true,
-                              code: "182946"
+                              code: "584965",
+                              review: {
+                                        content: "Lo voy a sumar a mi dieta dominical",
+                                        rating: 5,
+                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                      }
                             }
                           ],
-              kit_reviews: [
-                              {
-                                user_email: "santiago@easychef.com",
-                                content: "No soy fanatico del sushi, pero esta bien",
-                                rating: 3,
-                                image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                              },
-                              {
-                                user_email: "andres@easychef.com",
-                                content: "Excelente calidad, pude comer muy bien",
-                                rating: 5,
-                                image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                              },
-                              {
-                                user_email: "enzo@easychef.com",
-                                content: "Me encanto, lo volveria a comprar",
-                                rating: 4,
-                                image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                              },
-                              {
-                                user_email: "alejo@easychef.com",
-                                content: "Lo voy a sumar a mi dieta dominical",
-                                rating: 5,
-                                image: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                              }
-              ]
             }
           ]
   },
@@ -658,7 +653,64 @@ BRANDS = [
                                   { order: 3, content: "Esta mezcla la vamos a extender bien por el costillar de cerdo, lo mejor es hacerlo con las manos para untar bien toda la carne con la misma. Una vez que el horno haya alcanzado los 200ºC, vamos a meter las costillas aliñadas en una bandeja y las vamos a hornear sobre 30 o 35 minutos por cada cara. El tiempo dependerá del grosor de las costillas de cerdo que estemos horneado, ya que no es lo mismo hornear costillas ibéricas que costillas carnudas, que tiene #########################" },
                                   { order: 4, content: "Cuando la carne esté doradita por ambos lados, para lo que es interesante dar un toque final con el grill del horno durante unos minutos, con cuidado de que no se nos quemen, ya podemos sacar las costillas al horno y servirlas siempre en caliente. Se pueden acompañar con alguna guarnición para acompañar, como una ensalada o patatas fritas o asadas, y también con alguna salsa que nos guste, alguna especial para carnes. Y a disfrutar de esta receta tan sencilla y tan apetitosa, que seguro que resulta un éxito entre tus comensales e invitados." },
                                ]
-                      }
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "nothing",
+                                amount: 1,
+                                state: true,
+                                code: "395729",
+                                review: {
+                                          content: "Buenisimo!",
+                                          rating: 3,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "andres@easychef.com",
+                                check_out_session_id: "nothing",
+                                amount: 1,
+                                state: true,
+                                code: "402759",
+                                review: {
+                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "enzo@easychef.com",
+                                check_out_session_id: "nothing",
+                                amount: 1,
+                                state: true,
+                                code: "586038",
+                                review: {
+                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
+                                          rating: 4,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Houstons Barbecue Ribs",
+                                user_email: "alejo@easychef.com",
+                                check_out_session_id: "nothing",
+                                amount: 1,
+                                state: true,
+                                code: "937859",
+                                review: {
+                                          content: "Salio excelente, ya me puedo considerar como chef.",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              }
+                            ],
             }
           ]
   },
@@ -774,15 +826,17 @@ BRANDS.each do |brand_data|
           end
           kit_info[:kit_orders].each do |kit_order|
             puts 'creating kit_order'
-            puts "#{kit_order}"
-            puts "#{kit_order[:user_email]}"
-            puts "#{kit_order[:kit_name]}"
             user = User.find_by(email: kit_order[:user_email])
             kit = Kit.find_by(name: kit_order[:kit_name])
-            code = "#{ user.id ** 2 }"
-            puts "User id: #{user.id}"
-            puts "Kit id: #{kit.id}"
-            order = Order.create!(kit_id: kit.id, user_id: user.id, code: kit_order[:code],  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
+            code = "#{ (user.id ** rand(1...2)) + rand(1..9999) }"
+            puts "Code: #{code}"
+            order = Order.create!(kit_id: kit.id, user_id: user.id, code: code,  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
+            order_review = Order.last
+            puts "Orderid: #{order_review}"
+            puts "content: #{kit_order[:review][:content]}"
+            puts "rating: #{kit_order[:review][:rating]}"
+            puts "image #{kit_order[:review][:remote_image_url]}"
+            review = Review.create!(order_id: order_review.id, content: kit_order[:review][:content], rating: kit_order[:review][:rating], image: kit_order[:review][:remote_image_url])
           end
         end
       end
@@ -821,40 +875,7 @@ end
 
 # puts 'creating orders'
 # Santiago Order
-# orders = [
-#   { user_email: santiago@easychef.com,
-#     check_out_session_id: "nothing",
-#     amount: 1,
-#     state: true,
-#     code: "594305"
-#   },
-#   Andres order
 
-#   { user_email: andres@easychef.com,
-#     check_out_session_id: "nothing",
-#     amount: 1,
-#     state: true,
-#     code: "735067"
-#   },
-#   Enzo order
-#   {
-#   },
-#   { user_email: enzo@easychef.com,
-#     check_out_session_id: "nothing",
-#     amount: 1,
-#     state: true,
-#     code: "928004"
-#   },
-#   Alejo order
-#   {
-#   },
-#   { user_email: alejo@easychef.com,
-#     check_out_session_id: "nothing",
-#     amount: 1,
-#     state: true,
-#     code: "943869"
-#   }
-# ]
 
 # puts 'creating payments'
 # # Santiago payment
@@ -869,42 +890,3 @@ end
 # # Alejo payment
 # alejo_first_payment = Payment.create!(order_id: alejo_first_order.id)
 # alejo_second_payment = Payment.create!(order_id: alejo_second_order.id)
-
-# puts 'creating reviews'
-
-
-# {
-#   order_id: santiago_second_order.id,
-#   content: "Buenisimo!",
-#   rating: 4,
-#   image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg"
-# },
-# {
-
-# },
-# {
-#   order_id: andres_second_order.id,
-#   content: "La guia esta muy clara y te facilita un monton el procedimiento",
-#   rating: 5,
-#   image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg"
-# },
-# {order_id: enzo_first_order.id,
-
-# },
-# {
-#   order_id: enzo_second_order.id,
-#   content: "No hay con que darle a esa barbacoa, muy bueno.",
-#   rating: 5,
-#   image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg"
-# },
-# {
-#   order_id: alejo_first_order.id,
-
-# },
-# {
-#   order_id: alejo_second_order.id,
-#   content: "Salio excelente, ya me puedo considerar como chef.",
-#   rating: 4,
-#   image: "https://d1doqjmisr497k.cloudfront.net/-/media/mccormick-us/recipes/grill-mates/s/800/slow-and-low-memphis-pit-bbq-ribs.jpg"
-# }
-
