@@ -52,12 +52,14 @@
     <h2>Restaurants</h2>
     <div class="cards-scroll mt-3">
       <% @restaurants.each do |restaurant| %>
+        <%= link_to restaurant_path(restaurant) do %>
         <div class="card-scroll col-md-4">
           <div class="card-kit border">
             <img src=<%= restaurant.image %>  />
             <div class="card-body">
               <div>
                 <h5 class="card-title mb-1"><%= restaurant.name %></h5>
+                <p class="card-title mb-1"> <%= restaurant.address %></p>
               </div>
               <div class="card-text d-flex justify-content-between mt-3">
                 <% if restaurant.kits.order(:price).first != nil %>
@@ -67,6 +69,7 @@
             </div>
           </div>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
