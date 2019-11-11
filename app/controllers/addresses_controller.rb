@@ -10,10 +10,10 @@ class AddressesController < ApplicationController
   #   @address = Address.find(params[:id])
   # end
 
-  def new
-    @address = Address.new
-    # authorize @Address
-  end
+  # def new
+  #   @address = Address.new
+  #   # authorize @Address
+  # end
 
   def create
     @address = Address.new(address_params)
@@ -21,7 +21,7 @@ class AddressesController < ApplicationController
     # authorize @address
     return redirect_to @address if @address.save
 
-    render :new
+    # render :new
   end
 
   # def edit
@@ -44,6 +44,6 @@ class AddressesController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:name, :logo)
+    params.require(:address).permit(:address)
   end
 end

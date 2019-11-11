@@ -11,8 +11,7 @@ class KitsController < ApplicationController
     @kits = Kit.all
     @kit = Kit.find(params[:id])
     @order = Order.new
-
-
+    @order.build_address
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
