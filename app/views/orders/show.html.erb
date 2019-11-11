@@ -1,1 +1,40 @@
+  <div class="container-fluid d-flex bg-light" style="background-image: url(<%= image_url('orders-bg.jpg') %>); background-size: cover; background-position: top; min-height: 500px; ">
+
+    <div  class="flex-grow-1 mt-3 h-100">
+      <h2 class="my-4 text-white">Resumen de compra</h2>
+
+      <div class="card-product  d-md-none">
+        <img src=<%= @order.kit.image %> />
+        <div class="d-flex flex-column p-3 w-100">
+          <%  %>
+          <h2><%= @order.kit.name %></h2>
+          <p><%= @order.kit.restaurant.name %></p>
+          <span class="d-flex justify-content-between align-items-center mt-3"><p>x <%= @order.amount %></p><p>$ <%= @order.kit.price * @order.amount %></p></span>
+        </div>
+      </div>
+    <div class="mr-md-3 bg-white rounded p-3 mt-3 h-100" style="box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.4);">
+      <h4 class="mt-2 mb-4 font-weight-bold">Detalles del envío</h4>
+      <p><%= @order.address %></p>
+    </div>
+
+  </div>
+   <div class="card-kit d-xs-none d-none d-md-block h-100" style=" width: 40%;">
+     <img src=<%= @order.kit.image %>  />
+     <div class="card-body">
+       <div>
+         <h5 class="card-title mb-1"><%= @order.kit.name %></h5>
+         <p class="card-text overflow-ellipsis card-description"><%= @order.kit.restaurant.name %></p>
+         <div class="d-flex justify-content-between mt-3">
+           <p class="card-text card-address">Metodo de envío</p>
+           <p class="card-text card-price" <%= @order.delivery_provider %></p>
+         </div>
+       </div>
+       <div class="d-flex justify-content-between my-3">
+         <p class="card-text card-address">Total</p>
+         <p class="card-text card-price">$ <%= @order.kit.price * @order.amount %></p>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
 

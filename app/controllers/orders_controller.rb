@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -21,13 +21,13 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     @order.code = rand(1..1000)
     order_address = Address.new(address_params)
     @order.address = order_address
-    current_user.addresses << order_address unless current_user.addresses.find_by(address: order_address.address)
+    current_user.addresses << Address.new(address_params) unless current_user.addresses.find_by(address: order_address.address)
     current_user.save
     @payment = Payment.new
     @payment.order = @order
     # authorize @order
     if @order.save
-      redirect_to order_payment_path(@order.id, @payment.id)
+      redirect_to @order
     else
       render @order.kit
     end
