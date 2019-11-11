@@ -26,20 +26,20 @@
   </div>
   <div class="cards-scroll">
     <h2>Sugerencias</h2>
-    <div class="cards-scroll mt-3">
+    <div class="cards-scroll mt-3" >
       <% @kits.each do |kit| %>
         <%= link_to kit_path(kit) do  %>
           <div class="card-scroll mx-2 col-md-4">
-           <div class="card-kit border">
+           <div class="card-kit">
             <%= cl_image_tag kit.image, class: "rounded"%>
              <div class="card-body">
                <div>
-                 <h5 class="card-title mb-1"><%= kit.name %></h5>
+                 <h5 class="card-title mb-1 text-wrap" style="height: 50px"><%= kit.name %></h5>
                  <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
                </div>
                <div class="d-flex justify-content-between mt-3">
                  <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
-                 <p class="card-text card-price"><%= kit.price %></p>
+                 <p class="card-text card-price">$ <%= kit.price %></p>
                </div>
              </div>
            </div>
