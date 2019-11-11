@@ -1,7 +1,9 @@
 class PaymentsController < ApplicationController
+
   def show
+    @order = Order.find(params[:order_id])
+    @payment = Payment.find(params[:id])
     @cookwares = Cookware.all
-    @payment = Payment.last
   end
 
   def create
