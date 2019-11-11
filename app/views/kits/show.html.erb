@@ -49,13 +49,12 @@
       <%= f.submit "Seleccione la cantidad de Kits", class:"btn btn-primary btn-block disabled", id:"submit_order_kit", disabled:"disabled" %>
       <% end %>
     </div>
-    <div class="col-md-6 ">
+    <div class="col-md-6 d-none d-md-block">
 
-<div class="product-kit">
-        <img class=".d-none .d-sm-block w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
+      <div class="product-kit">
+        <img class=" w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
         <p class="text-white .d-none .d-sm-block"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
       </div>
-
 
     </div>
   </div>
