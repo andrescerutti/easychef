@@ -95,7 +95,7 @@
   <div class="review-container w-100 w-lg-50  mr-3">
 
     <% @kit.reviews.limit(4).each do |review| %>
-    <%= render 'shared/card_recomendation', review: review %>
+      <%= render 'shared/card_recomendation', review: review %>
     <% end %>
   </div>
 
