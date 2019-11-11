@@ -555,7 +555,7 @@ BRANDS = [
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
                               user_email: "santiago@easychef.com",
-                              check_out_session_id: "nothing",
+                              check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "549934",
@@ -568,7 +568,7 @@ BRANDS = [
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
                               user_email: "andres@easychef.com",
-                              check_out_session_id: "nothing",
+                              check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "432509",
@@ -582,7 +582,7 @@ BRANDS = [
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
                               user_email: "enzo@easychef.com",
-                              check_out_session_id: "nothing",
+                              check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "084638",
@@ -595,7 +595,7 @@ BRANDS = [
                             {
                               kit_name: "Bs. As. Roll con langostino -8 piezas.",
                               user_email: "alejo@easychef.com",
-                              check_out_session_id: "nothing",
+                              check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "584965",
@@ -658,7 +658,7 @@ BRANDS = [
                               {
                                 kit_name: "Houstons Barbecue Ribs",
                                 user_email: "santiago@easychef.com",
-                                check_out_session_id: "nothing",
+                                check_out_session_id: "pending",
                                 amount: 1,
                                 state: true,
                                 code: "395729",
@@ -672,7 +672,7 @@ BRANDS = [
                               {
                                 kit_name: "Houstons Barbecue Ribs",
                                 user_email: "andres@easychef.com",
-                                check_out_session_id: "nothing",
+                                check_out_session_id: "pending",
                                 amount: 1,
                                 state: true,
                                 code: "402759",
@@ -686,7 +686,7 @@ BRANDS = [
                               {
                                 kit_name: "Houstons Barbecue Ribs",
                                 user_email: "enzo@easychef.com",
-                                check_out_session_id: "nothing",
+                                check_out_session_id: "pending",
                                 amount: 1,
                                 state: true,
                                 code: "586038",
@@ -700,7 +700,7 @@ BRANDS = [
                               {
                                 kit_name: "Houstons Barbecue Ribs",
                                 user_email: "alejo@easychef.com",
-                                check_out_session_id: "nothing",
+                                check_out_session_id: "pending",
                                 amount: 1,
                                 state: true,
                                 code: "937859",
@@ -825,18 +825,11 @@ BRANDS.each do |brand_data|
             end
           end
           kit_info[:kit_orders].each do |kit_order|
-            puts 'creating kit_order'
+            puts 'creating kit order'
             user = User.find_by(email: kit_order[:user_email])
-            kit = Kit.find_by(name: kit_order[:kit_name])
-            code = "#{ (user.id ** rand(1...2)) + rand(1..9999) }"
-            puts "Code: #{code}"
-            order = Order.create!(kit_id: kit.id, user_id: user.id, code: code,  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
-            order_review = Order.last
-            puts "Orderid: #{order_review}"
-            puts "content: #{kit_order[:review][:content]}"
-            puts "rating: #{kit_order[:review][:rating]}"
-            puts "image #{kit_order[:review][:remote_image_url]}"
-            review = Review.create!(order_id: order_review.id, content: kit_order[:review][:content], rating: kit_order[:review][:rating], image: kit_order[:review][:remote_image_url])
+            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
+            puts "Creating review for order #{order.id}. (content: #{kit_order[:review][:content]})"
+            review = Review.create!(order: order, content: kit_order[:review][:content], rating: kit_order[:review][:rating], remote_image_url: kit_order[:review][:remote_image_url])
           end
         end
       end
@@ -872,9 +865,6 @@ end
 # # Favourite.create!(kit_id:sushikitbelgrano.id , user_id:santiago.id )
 # # Favourite.create!(kit_id:ribskitpalermo.id , user_id:santiago.id )
 # # Favourite.create!(kit_id:sushikitvillaurquiza.id , user_id:andres.id )
-
-# puts 'creating orders'
-# Santiago Order
 
 
 # puts 'creating payments'
