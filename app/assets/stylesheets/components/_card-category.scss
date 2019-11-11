@@ -20,6 +20,10 @@
     height: 100px;
     padding: 10px 20px;
   }
+  :hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+
+  }
 }
 .card-category-1 {
   background-size: cover;
