@@ -1,7 +1,9 @@
 class PaymentsController < ApplicationController
 
+
     require 'mercadopago'
     $mp = MercadoPago.new(ENV["MERCADO_PAGO_TOKEN"])
+
 
 
 
@@ -11,6 +13,7 @@ class PaymentsController < ApplicationController
     @order = Order.find(params[:order_id])
     @payment = Payment.find(params[:id])
     @cookwares = Cookware.all
+    authorize @payment
   end
 
   def create
@@ -21,6 +24,7 @@ class PaymentsController < ApplicationController
     else
       render @order.new
     end
+    authorize @payment
   end
 end
 

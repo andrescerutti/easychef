@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
   def new
     @kit = Kit.find(params[:kit_id])
     @order = Order.new(amount: params[:order][:amount])
+    authorize @order
   end
 
   def create

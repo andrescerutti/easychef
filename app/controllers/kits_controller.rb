@@ -2,7 +2,7 @@ class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @kits = Kit.all
+    @kits = policy_scope(Kit)
     @categories = Category.all
     @restaurants = Restaurant.all
   end
@@ -24,7 +24,7 @@ class KitsController < ApplicationController
   def create
     @kit = Kit.new(kit_params)
     kit.user = current_user
-    authorize kit
+    # authorize kit
     return redirect_to @kit if @kit.save!
 
     render :new
