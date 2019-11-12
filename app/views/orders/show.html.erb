@@ -16,8 +16,15 @@
       <h4 class="mt-2 mb-4 font-weight-bold">Detalles del envío</h4>
       <p><strong>Lugar de entrega:</strong> <%= @order.address.address %></p>
       <p> <strong>Dia y hora de entrega:</strong> <%= @order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
-      <%= link_to "nombre", www_path, class: "btn btn-primary btn-lg" %>
-    </div>
+
+        <form action="/procesar-pago" method="POST">
+          <script
+            src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
+            data-public-key="TEST-3a5edc9f-e40d-4414-a080-0b948e235758"
+            data-transaction-amount="100.00">
+          </script>
+        </form>
+      </div>
 
   </div>
    <div class="card-kit d-xs-none d-none d-md-block h-100" style=" width: 40%;">
