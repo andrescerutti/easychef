@@ -4,7 +4,8 @@ class Restaurant < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  has_one :address, as: :addressable
+  has_one :address, as: :addressable, :dependent => :destroy
+  accepts_nested_attributes_for :address
   has_many :kits
   has_many :orders, through: :kits
 

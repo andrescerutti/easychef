@@ -254,6 +254,8 @@ puts 'Erasing brands...'
 Brand.destroy_all
 puts 'Erasing users...'
 User.destroy_all
+puts 'Erasing addresses...'
+Address.destroy_all
 
 puts 'creating categories'
 ["Los más pedidos", "Comida rápida", "Opciones Saludables", "Pollo", "Pescado", "Carne", "Vegetariano"].each do |name|
@@ -511,10 +513,20 @@ BRANDS = [
                   {
                     name: 'Fabric Sushi Belgrano',
                     remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/10/73/40/47/fachada-sobre-ciudad.jpg',
+                    address_attributes: {
+                                          address: "Cdad. de La Paz 569",
+                                          latitude: -34.572223,
+                                          longitude: -58.444355,
+                                        }
                   },
                   {
                     name: 'Fabric Sushi Villa Urquiza',
                     remote_image_url: 'https://restorando-res.cloudinary.com/image/upload/c_fill,f_auto,g_auto,h_174,q_auto:eco,w_305/v1/restaurant_photos/l//13427/127584/restaurante_fabric-villa-urquiza_villa-urquiza_23004746_1904846489555736_5734207852698321964_o.jpg',
+                    address_attributes: {
+                                          address: "Av. Olazábal 4504",
+                                          latitude: -34.573081,
+                                          longitude: -58.479923,
+                                        }
                   }
                 ],
     kits: [
@@ -617,10 +629,20 @@ BRANDS = [
     restaurants: [ {
                     name: 'Kansas Palermo',
                     remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/09/a3/8f/b1/kansas-1-largejpg.jpg',
+                    address_attributes: {
+                                          address: "Av. del Libertador 4625",
+                                          latitude: -34.565529,
+                                          longitude: -58.432580,
+                                        }
                   },
                   {
                     name: 'Kansas Pilar',
                     remote_image_url: 'https://kansasgrillandbar.com.ar/gfx/tmp/lo_slide_06b.jpg',
+                    address_attributes: {
+                                          address: "Ruta Panamericana Km. 43,5, y las Amapolas",
+                                          latitude: -34.437458,
+                                          longitude: -58.799377,
+                                        }
                   }
                 ],
     kits: [

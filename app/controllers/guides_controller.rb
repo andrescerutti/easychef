@@ -3,6 +3,7 @@ class GuidesController < ApplicationController
 
   def show
     @kit = @guide.kit
+    @review = Review.new
   end
 
   def new

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_141838) do
+ActiveRecord::Schema.define(version: 2019_11_12_211446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,6 @@ ActiveRecord::Schema.define(version: 2019_11_12_141838) do
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "cp"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
@@ -125,10 +122,10 @@ ActiveRecord::Schema.define(version: 2019_11_12_141838) do
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "date_delivery"
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.string "delivery_provider"
+    t.datetime "date_delivery"
     t.index ["addressable_type", "addressable_id"], name: "index_orders_on_addressable_type_and_addressable_id"
     t.index ["kit_id"], name: "index_orders_on_kit_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
@@ -148,9 +145,6 @@ ActiveRecord::Schema.define(version: 2019_11_12_141838) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "addressable_type"
-    t.bigint "addressable_id"
-    t.index ["addressable_type", "addressable_id"], name: "index_restaurants_on_addressable_type_and_addressable_id"
     t.index ["brand_id"], name: "index_restaurants_on_brand_id"
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end

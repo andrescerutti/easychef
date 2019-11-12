@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
     @order = Order.new(orders_params)
     @order.user = current_user
     @order.kit = Kit.find(params[:kit_id])
-    @order.code = rand(1..1000)
+    @order.code = "#{@order.kit_id}-#{@order.user_id}-#{rand(0..1000000)}"
     order_address = Address.new(address_params)
     @order.address = order_address
     current_user.addresses << Address.new(address_params) unless current_user.addresses.find_by(address: order_address.address)
@@ -30,9 +30,7 @@ class OrdersController < ApplicationController
       redirect_to @order
     else
       render @order.kit
-
     end
-
   end
 
   def edit
