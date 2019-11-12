@@ -17,11 +17,17 @@
       <p><strong>Lugar de entrega:</strong> <%= @order.address.address %></p>
       <p> <strong>Dia y hora de entrega:</strong> <%= @order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
 
-        <form action="/procesar-pago" method="POST">
+        <form action="<%= order_payments_path(@order) %>" method="POST">
           <script
             src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
-            data-public-key="TEST-3a5edc9f-e40d-4414-a080-0b948e235758"
-            data-transaction-amount="100.00">
+            data-public-key="<%= ENV['MP_PUBLIC_TOKEN'] %>"
+            data-transaction-amount="<%= @order.kit.price * @order.amount %>"
+            data-button-label="Confirmar y pagar"
+            <% if current_user.mpcustomer_id? %>
+              data-customer-id="<%= current_user.mpcustomer_id %>"
+              data-card-ids="<%= current_user.mpcard_id %>">
+            <% end %>
+            >
           </script>
         </form>
       </div>

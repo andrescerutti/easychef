@@ -10,7 +10,7 @@
       <%= link_to "Ver instrucciones", guide_path(@order.kit.guide), class: 'mt-3 btn btn-primary'  %>
     <h5 class="font-weight-bold mt-3">Empezá a preparar tu cocina</h5>
     <div class="cookware-cards">
-      <% @cookwares.each do |cookware| %>
+      <% @cookwares.limit(4).each do |cookware| %>
         <img src="<%= cookware.image %>" alt=" <%= cookware.name %>" id="size-image" class="m-3">
       <% end %>
     </div>
@@ -20,33 +20,33 @@
 
 <!-- JAVASCRIPT POPUP! -->
 <!-- Central Modal Medium Success -->
-<div id="initialModal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-success" role="document">
+<!-- <div id="initialModal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" -->
+  <!-- aria-hidden="true"> -->
+  <!-- <div class="modal-dialog modal-notify modal-success" role="document"> -->
     <!--Content-->
-    <div class="modal-content">
+    <!-- <div class="modal-content"> -->
       <!--Header-->
-      <div class="modal-header">
-        <p class="heading lead">Procesando el pago...</p>
+      <!-- <div class="modal-header"> -->
+        <!-- <p class="heading lead">Procesando el pago...</p> -->
 
-      <!--   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button> -->
-      </div>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+          <!-- <span aria-hidden="true" class="white-text">&times;</span> -->
+        <!-- </button> -->
+      <!-- </div> -->
 
       <!--Body-->
-      <div class="modal-body">
-        <div class="text-center">
-          <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading gif">
-          <p>Tu pago esta siendo procesado, por favor esperar hasta la confirmacion.</p>
-        </div>
-      </div>
+      <!-- <div class="modal-body"> -->
+        <!-- <div class="text-center"> -->
+          <!-- <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading gif"> -->
+          <!-- <p>Tu pago esta siendo procesado, por favor esperar hasta la confirmacion.</p> -->
+        <!-- </div> -->
+      <!-- </div> -->
 
       <!--Footer-->
-      <div class="modal-footer justify-content-center">
+      <!-- <div class="modal-footer justify-content-center"> -->
         <!-- <a type="button" class="btn btn-light" data-dismiss="modal">Submit</a> -->
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
     <!--/.Content-->
-  </div>
-</div>
+  <!-- </div> -->
+<!-- </div> -->
