@@ -1,4 +1,4 @@
-  <div class="container-fluid d-flex bg-light" style="background-image: url(<%= image_url('orders-bg.jpg') %>); background-size: cover; background-position: top; min-height: 500px; ">
+  <div class="container d-flex bg-light" style="background-image: url(<%= image_url('orders-bg.jpg') %>); background-size: cover; background-position: top; min-height: 500px; ">
 
     <div  class="flex-grow-1 mt-3 h-100">
       <h2 class="my-4 text-white">Resumen de compra</h2>
@@ -14,7 +14,9 @@
       </div>
     <div class="mr-md-3 bg-white rounded p-3 mt-3 h-100" style="box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.4);">
       <h4 class="mt-2 mb-4 font-weight-bold">Detalles del envío</h4>
-      <p><%= @order.address %></p>
+      <p><strong>Lugar de entrega:</strong> <%= @order.address.address %></p>
+      <p> <strong>Dia y hora de entrega:</strong> <%= @order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
+      <%= link_to "nombre", www_path, class: "btn btn-primary btn-lg" %>
     </div>
 
   </div>
@@ -25,7 +27,6 @@
          <h5 class="card-title mb-1"><%= @order.kit.name %></h5>
          <p class="card-text overflow-ellipsis card-description"><%= @order.kit.restaurant.name %></p>
          <div class="d-flex justify-content-between mt-3">
-           <p class="card-text card-address">Metodo de envío</p>
            <p class="card-text card-price" <%= @order.delivery_provider %></p>
          </div>
        </div>

@@ -55,7 +55,7 @@ class OrdersController < ApplicationController
   end
 
   def orders_params
-    params.require(:order).permit(:amount, :state, :check_out_session_id, :code, addresses_atributes: [:address])
+    params.require(:order).permit(:amount, :state, :check_out_session_id, :date_delivery, :code, addresses_atributes: [:address])
   end
 
   def address_params
