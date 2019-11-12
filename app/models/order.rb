@@ -7,6 +7,7 @@ class Order < ApplicationRecord
   has_one :address, as: :addressable
 
   validates :code, uniqueness: true, presence: true
+  accepts_nested_attributes_for :address
 
   PROVIDER = ["Rappi", "Glovo", "Pedidos Ya"]
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
   resources :brands
+  resources :addresses
   resources :restaurants do
     resources :orders, only: [:index]
   end
@@ -18,13 +19,12 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :edit, :update] do
     resources :payments, only: [:create, :show, :new]
-    resources :guides, only: [:show]
     resources :reviews, only: [:create]
   end
+  resources :guides, only: [:show]
 
   get "/components/", to: "pages#components", as: :components
   get "/dashboard/", to: "pages#dashboard", as: :dashboard
-
 
 
   # /dashboard/orders

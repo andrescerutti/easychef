@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -11,7 +11,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
   def new
     @kit = Kit.find(params[:kit_id])
     @order = Order.new(amount: params[:order][:amount])
-    # authorize @order
+    authorize @order
   end
 
   def create
@@ -20,17 +20,18 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     @order.kit = Kit.find(params[:kit_id])
     @order.code = rand(1..1000)
     order_address = Address.new(address_params)
-    current_user.addresses << order_address unless current_user.addresses.find_by(address: order_address.address)
+    @order.address = order_address
+    current_user.addresses << Address.new(address_params) unless current_user.addresses.find_by(address: order_address.address)
     current_user.save
-    @order.address = Address.new(address_params)
     @payment = Payment.new
     @payment.order = @order
-    # authorize @order
-    if @order.save!
-      @payment.save!
-      return redirect_to order_payment_path(@order.id, @payment.id)
+    authorize @order
+    if @order.save
+      redirect_to @order
+    else
+      render @order.kit
+
     end
-    render :new
 
   end
 
@@ -51,14 +52,14 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def set_order
     @order = Order.find(params[:id])
-    # authorize @order
+    authorize @order
   end
 
   def orders_params
-    params.require(:order).permit(:amount, :state, :check_out_session_id, :code)
+    params.require(:order).permit(:amount, :state, :check_out_session_id, :date_delivery, :code, addresses_atributes: [:address])
   end
 
   def address_params
-    params.require(:order).permit(:address)
+    params[:order][:addresses].permit(:address)
   end
 end

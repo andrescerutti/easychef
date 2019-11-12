@@ -15,7 +15,6 @@ class Kit < ApplicationRecord
   has_many :steps, through: :guides
   has_many :reviews, through: :orders
 
-
   validates :name, presence: true
   validates :stock, presence: true, numericality: true
   validates :size, presence: true, numericality: true
