@@ -7,4 +7,10 @@ class PagesController < ApplicationController
   def components
 
   end
+
+  def dashboard
+    @brands = Brand.all
+    @restaurants = Restaurant.all
+    @kits = Kit.all
+  end
 end

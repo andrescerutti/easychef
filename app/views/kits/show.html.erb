@@ -3,37 +3,51 @@
     <div class="col-md-6">
       <h1 class="kitname m-0"> <strong><%= @kit.name %></strong> </h1>
       <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black"><%= @kit.restaurant.name %></strong> </h2>
-      <img class="d-md-none w-100 mb-4" src="<%= @kit.image %>" alt="imagen del plato de comida">
-      <p class="volveria-cocinarlo text-success m-0 kitrat mb-2 "> <strong>El 97% volveria a cocinarlo </strong> </p>
-      <!-- <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p> -->
-
+      <div class="product-kit">
+        <img class="d-md-none w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
+        <p class="text-white d-md-none"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
+      </div>
+      <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p>
+      <%= simple_form_for([@kit, @order])  do |f| %>
       <div class="d-flex justify-content-between mt-3">
-
         <div class="d-flex align-items-center">
-
           <div class="mb-3 mr-3 ml-1">
             Para <i class="fas fa-user"></i>
           </div>
-
           <div class="" >
-            <%= simple_form_for([@kit, @order], url: new_kit_order_path(@kit), method: :get)  do |f| %>
             <%= f.input :amount, collection: 1..@kit.stock, label: false %>
             <span class="d-none" id="price"><%= @kit.price %></span>
           </div>
         </div>
-
-        <div>
-          <p class="kittime rounded-top border border-secondary  p-1 pl-3 pr-3" > <small><i class="far fa-clock"></i> <%= @kit.preparation_time %> min</small> </p>
-        </div>
-
       </div>
 
-      <h4 class='kitdescr mb-5'><%= @kit.description %></h4>
+      <div class="date_delivery d-flex">
+        <div class="mr-3">
+          <p style="font-size: 25px;"><i class="fas fa-calendar-alt"></i></p>
+        </div>
+        <div>
+          <%= f.input :date_delivery, as: :string, required: false, input_html: {class: "datepicker"}, label:false %>
+        </div>
+      </div>
+
+
+      <!-- form direccion  -->
+
+      <%= f.simple_fields_for :addresses do |a| %>
+      <%= a.input :address, placeholder: "Ingresá tu dirección", input_html: { id: "order_address_address", class: 'w-100' }, wrapper_html: { class: 'w-100 mb-md-0' }, label: false %>
+      <% end %>
+
+      <h4 class='kitdescr my-2'><%= @kit.description %></h4>
       <%= f.submit "Seleccione la cantidad de Kits", class:"btn btn-primary btn-block disabled", id:"submit_order_kit", disabled:"disabled" %>
       <% end %>
     </div>
-    <div class="col-md-6 ">
-      <img src="<%= @kit.image %>" alt="imagen del plato de comida" class=" rounded w-100 d-none d-md-block">
+    <div class="col-md-6 d-none d-md-block">
+
+      <div class="product-kit">
+        <img class=" w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
+        <p class="text-white .d-none .d-sm-block"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
+      </div>
+
     </div>
   </div>
 
@@ -42,83 +56,66 @@
   </div>
   <div class="image-container d-md-block">
     <div class="cards-scroll">
-        <div class="cards-scroll mt-3">
-          <% @kit.ingredients.each do |kit| %>
-            <div class="card-scroll col-md-4">
-              <div class="card-kit-showkit border">
-                <img src=<%= kit.image %>  />
-                <div class="card-body">
-                  <div>
-                    <h5 class="card-title mb-1"><%= kit.name %></h5>
-                  </div>
-                </div>
+      <div class="cards-scroll mt-3">
+        <% @kit.ingredients.each do |kit| %>
+        <div class="card-scroll col-md-4">
+          <div class="card-kit-showkit border">
+            <img src=<%= kit.image %>  />
+            <div class="card-body">
+              <div>
+                <h5 class="card-title mb-1"><%= kit.name %></h5>
               </div>
             </div>
-          <% end %>
+          </div>
         </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="carrousel my-5">
+    <h3><strong>Cookwares:</strong></h3>
+    <div class="cards-scroll">
+      <div class="cards-scroll mt-3">
+        <% @kit.cookware.each do |kit| %>
+        <div class="card-scroll col-md-4">
+          <div class="card-kit-showkit border">
+            <img src=<%= kit.image %> >
+            <div class="card-body">
+              <div>
+                <h5 class="card-title mb-1"><%= kit.name %></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="kit-bottom">
+    <div class=" mr-3">
+      <div>
+        <h3><strong>Opiniones:</strong></h3>
+      </div>
+      <div class="review-container w-100 w-lg-50  mr-3">
+        <% @kit.reviews.limit(4).each do |review| %>
+        <%= render 'shared/card_recomendation', review: review %>
+        <% end %>
       </div>
     </div>
 
-<div class="carrousel my-5">
-  <h3><strong>Cookwares:</strong></h3>
-  <div class="cards-scroll">
-          <div class="cards-scroll mt-3">
-            <% @kit.cookware.each do |kit| %>
-              <div class="card-scroll col-md-4">
-                <div class="card-kit-showkit border">
-                  <img src=<%= kit.image %> >
-                  <div class="card-body">
-                    <div>
-                      <h5 class="card-title mb-1"><%= kit.name %></h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-</div>
-
-
-
-
-
-
-
-<div class="kit-bottom">
-<div class=" mr-3">
-
-<div>
-
-  <h3><strong>Opiniones:</strong></h3>
-</div>
-  <div class="review-container w-100 w-lg-50  mr-3">
-
-    <% @kit.reviews.limit(4).each do |review| %>
-      <%= render 'shared/card_recomendation', review: review %>
-    <% end %>
+    <div>
+      <div>
+        <h3 class="tambien-title"><strong>Tambien podrian gustarte:</strong></h3>
+      </div>
+      <div class="recomendation-cards w-100 w-lg-50">
+        <% @kits.limit(4).each do |kit| %>
+        <%= render 'shared/card_show_index', kit: kit %>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-</div>
-
-<div>
-
-
-
-
-
-<div>
-  <h3 class="tambien-title"><strong>Tambien podrian gustarte:</strong></h3>
-
-</div>
-  <div class="recomendation-cards w-100 w-lg-50">
-    <% @kits.limit(4).each do |kit| %>
-    <%= render 'shared/card_show_index', kit: kit %>
-    <% end %>
-
-  </div>
-</div>
-</div>
 </div>
 </div>
 

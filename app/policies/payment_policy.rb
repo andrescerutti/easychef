@@ -6,7 +6,7 @@ class PaymentPolicy < ApplicationPolicy
   end
 
   def create?
-
+    return true
   end
 
   def show?
