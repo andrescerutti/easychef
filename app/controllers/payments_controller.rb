@@ -1,9 +1,9 @@
 class PaymentsController < ApplicationController
-
   def show
     @order = Order.find(params[:order_id])
     @payment = Payment.find(params[:id])
     @cookwares = Cookware.all
+    authorize @payment
   end
 
   def create
@@ -14,5 +14,6 @@ class PaymentsController < ApplicationController
     else
       render @order.new
     end
+    authorize @payment
   end
 end

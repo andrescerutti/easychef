@@ -22,7 +22,7 @@ class GuidesController < ApplicationController
 
   def set_guide
     @guide = Guide.find(params[:id])
-    # autorhize @guide
+    authorize @guide
   end
 
   def guide_params
