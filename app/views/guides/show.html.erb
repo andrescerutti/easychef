@@ -9,7 +9,7 @@
   </div>
   <div class="steps">
     <h3 class="font-weight-bold">Pasos a seguir:</h3>
-    <% @guide.steps.each do |step| %>
+    <% @guide.steps.reverse.each do |step| %>
       <div class="d-flex align-items-center">
         <p class="stepnumber font-weight-bold mr-3" style="font-size: 70px"><%= step.order %>.</p>
         <p class="text-muted"><%= step.content %></p>
