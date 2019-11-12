@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_212040) do
+ActiveRecord::Schema.define(version: 2019_11_12_141838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -121,7 +121,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_212040) do
     t.bigint "user_id"
     t.string "check_out_session_id"
     t.integer "amount"
-    t.boolean "state"
+    t.boolean "state", default: false
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -184,7 +184,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_212040) do
     t.string "first_name"
     t.string "last_name"
     t.string "avatar_image"
-    t.integer "permision_level"
+    t.integer "permision_level", default: 1
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.index ["addressable_type", "addressable_id"], name: "index_users_on_addressable_type_and_addressable_id"
