@@ -18,9 +18,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :edit, :update] do
     resources :payments, only: [:create, :show, :new]
-    resources :guides, only: [:show]
     resources :reviews, only: [:create]
   end
+  resources :guides, only: [:show]
 
   get "/components/", to: "pages#components", as: :components
   get "/dashboard/", to: "pages#dashboard", as: :dashboard

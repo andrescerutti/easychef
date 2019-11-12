@@ -1,6 +1,6 @@
 class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
-  # skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @kits = Kit.all
     @categories = Category.all
@@ -11,7 +11,9 @@ class KitsController < ApplicationController
     @kits = Kit.all
     @kit = Kit.find(params[:id])
     @order = Order.new
+
     @order.build_address
+
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
@@ -21,8 +23,8 @@ class KitsController < ApplicationController
 
   def create
     @kit = Kit.new(kit_params)
-    # kit.user = current_user
-    # authorize kit
+    kit.user = current_user
+    authorize kit
     return redirect_to @kit if @kit.save!
 
     render :new
@@ -41,7 +43,7 @@ class KitsController < ApplicationController
 
   def set_kit
     @kit = Kit.find(params[:id])
-    # authorize @kit
+    authorize @kit
   end
 
   def kit_params

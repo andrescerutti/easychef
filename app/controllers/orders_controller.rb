@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   def new
     @kit = Kit.find(params[:kit_id])
     @order = Order.new(amount: params[:order][:amount])
-    # authorize @order
   end
 
   def create
@@ -25,11 +24,12 @@ class OrdersController < ApplicationController
     current_user.save
     @payment = Payment.new
     @payment.order = @order
-    # authorize @order
+    authorize @order
     if @order.save
       redirect_to @order
     else
       render @order.kit
+
     end
 
   end
@@ -51,7 +51,7 @@ class OrdersController < ApplicationController
 
   def set_order
     @order = Order.find(params[:id])
-    # authorize @order
+    authorize @order
   end
 
   def orders_params
