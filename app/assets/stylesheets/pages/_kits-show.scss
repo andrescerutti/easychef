@@ -12,6 +12,26 @@
 
 }
 
+.product-kit {
+    position: relative;
+  p {
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    border-radius: 0px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: white;
+    padding: 2px 8px;
+    color: $primary !important;
+    font-weight: bold;
+    i {
+      color: $primary !important;
+    }
+  }
+}
+
 .card-kit-kit-show{
   position: relative;
   background-color: white;
@@ -24,12 +44,11 @@
   a{
     text-decoration: none;
   }
-  img {
+  div > img {
     width: 100%;
     height: 60%;
     object-fit: cover;
   }
-
 }
 @media(max-width: 575px) {
   #ytplayer {
@@ -47,7 +66,7 @@
     font-size: 13px;
   }
   .kitdescr{
-    font-size: 12px;
+    font-size: 14px;
   }
   .kitrest{
     margin-top: 20px;
