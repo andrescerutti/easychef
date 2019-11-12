@@ -22,6 +22,10 @@ class KitPolicy < ApplicationPolicy
     true
   end
 
+  def category?
+    true
+  end
+
   private
 
   def allow_user?

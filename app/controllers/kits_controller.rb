@@ -1,6 +1,6 @@
 class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :category]
   def index
     @kits = policy_scope(Kit)
     @categories = Category.all
@@ -39,6 +39,7 @@ class KitsController < ApplicationController
 
   def category
     @kits = Kit.joins(:kit_categories).joins(:categories).where("categories.name = ?", params[:name])
+    authorize @kits
   end
 
   private
