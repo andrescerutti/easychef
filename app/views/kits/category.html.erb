@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <% @kits.each do |kit| %>
+      <%= link_to kit_path(kit), class: "col-md-6" do %>
+         <div class="card-kit ">
+          <%= cl_image_tag kit.image, class: "rounded"%>
+           <div class="card-body">
+             <div>
+               <h5 class="card-title mb-1 text-wrap" style="height: 50px"><%= kit.name %></h5>
+               <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
+             </div>
+             <div class="d-flex justify-content-between mt-3">
+               <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
+               <p class="card-text card-price">$ <%= kit.price %></p>
+             </div>
+           </div>
+         </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

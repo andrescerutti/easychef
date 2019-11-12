@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-dark navbar-mobile py-3 bg-white justify-content-between">
+<div class="navbar fixed-top navbar-expand-sm navbar-dark navbar-mobile py-3 bg-white justify-content-between">
   <div>
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag('logo.png') %>
@@ -6,23 +6,11 @@
   </div>
 
   <div>
-    <div class="d-none d-md-block" style="width: 450px">
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group m-0">
-          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> Search
-          </button>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div>
     <% if user_signed_in? %>
       <div class="dropdown">
-        <% if current_user&.avatar_image.nil? %>
-          <img src="current_user.avatar_image" class="avatar border border-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+        <% if current_user.avatar_image? %>
+          <%= cl_image_tag current_user.avatar_image, class: "avatar dropdown-toggle ", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <!-- <img src="current_user.avatar_image" class="avatar border border-dark dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"> -->
         <% else %>
           <i class="fas fa-user-circle fa-2x text-primary" id="dropdownMenuButton" data-toggle="dropdown"></i>
         <% end %>

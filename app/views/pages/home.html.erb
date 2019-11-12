@@ -21,37 +21,22 @@
 
 <div class="container">
   <h4 class="my-5 font-weight-bold">¿Que hay en nuestro menú?</h4>
-  <div class="d-flex bd-highlight home-card ">
-    <div class=" bd-highlight mb-4">
-      <%= render("components/card-category", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
-      <p>Esos grandes clásicos a los que siempre vuelven porque nunca fallan.</p>
-    </div>
-    <div class="flex-grow-1 bd-highlight ml-md-3 mb-4">
-      <%= render("components/card-category", {category: "Sabroso pero economico", img: "economico.jpg"}) %>
-      <p>Una prueba de que puedes disfrutar de la mejor comida cada día a precios asequibles para tu bolsillo.</p>
-    </div>
+  <div class="row">
+    <% @categories.first(6).each_with_index do |category, index| %>
+      <% if [1, 2, 5].include? index %>
+        <%= link_to category_kits_path(name: category.name), class: "bd-highlight col-md-4 mt-3 text-decoration-none" do  %>
+          <div class="" %>
+            <%= render("components/card-category", {category: "#{category.name}", img: "#{category.name.downcase.tr(' ',"_")}.jpg"}) %>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to category_kits_path(name: category.name), class: "bd-highlight col-md-8 mt-3 text-decoration-none" do  %>
+          <div class="" %>
+            <%= render("components/card-category", {category: "#{category.name}", img: "#{category.name.downcase.tr(' ',"_")}.jpg"}) %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
-  <div class="d-flex bd-highlight home-card ">
-    <div class="flex-grow-1 bd-highlight mr-md-3 mb-4">
-      <%= render("components/card-category", {category: "Para compartir", img: "para-compartir.jpg"}) %>
-      <p>¿Necesitas un motivo para reunirte con amigos? Aqui te dejamos las mejores excusas para compartir y disfrutar.</p>
-    </div>
-    <div class="bd-highlight mb-4" >
-      <%= render("components/card-category", {category: "Para compartir", img: "rec-loc.jpg"}) %>
-      <p>Descubre las mejores comidas recomendadas por los que mas saben.</p>
-    </div>
-  </div>
-
-  <div class="d-flex bd-highlight home-card ">
-    <div class=" bd-highlight mb-4">
-      <%= render("components/card-category", {category: "Cocina saludable", img: "saludable.jpg"}) %>
-      <p>Platos deliciosos y nutritivos para recargar pilas.</p>
-    </div>
-    <div class="flex-grow-1 bd-highlight ml-md-3 mb-4">
-      <%= render("components/card-category", {category: "Exclusivo Easychef", img: "exclusivo.jpg"}) %>
-      <p>No sigas buscando, sólo lo encontrarás aquí.</p>
-    </div>
-  </div>
-
 </div>
 

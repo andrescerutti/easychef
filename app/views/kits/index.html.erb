@@ -1,28 +1,14 @@
-<div class="container-fluid">
+<div class="container">
 
     <h2>Categorias</h2>
   <div class="cards-scroll mt-3">
+    <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
+        <%= link_to category_kits_path(name: category.name), class: "text-decoration-none" do  %>
+          <%= render("components/card-category-1", {category: "#{category.name}", img: "#{category.name.downcase.tr(' ',"_")}.jpg"}) %>
+        <% end %>
       </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Sabroso pero economico", img: "economico.jpg"}) %>
-      </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Para compartir", img: "para-compartir.jpg"}) %>
-      </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Para compartir", img: "rec-loc.jpg"}) %>
-      </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Comida tradicional", img: "tradicional.jpg"}) %>
-      </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Cocina saludable", img: "saludable.jpg"}) %>
-      </div>
-      <div class="card-scroll mx-2">
-        <%= render("components/card-category-1", {category: "Exclusivo Easychef", img: "exclusivo.jpg"}) %>
-      </div>
+    <% end %>
   </div>
   <div class="cards-scroll">
     <h2>Sugerencias</h2>

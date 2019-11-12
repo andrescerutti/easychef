@@ -1,6 +1,6 @@
 class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :category]
   def index
     @kits = policy_scope(Kit)
     @categories = Category.all
@@ -11,9 +11,7 @@ class KitsController < ApplicationController
     @kits = Kit.all
     @kit = Kit.find(params[:id])
     @order = Order.new
-
     @order.build_address
-
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
@@ -37,6 +35,11 @@ class KitsController < ApplicationController
     return redirect_to @kit if @kit.update(kit_params)
 
     render :edit
+  end
+
+  def category
+    @kits = Kit.joins(:kit_categories).joins(:categories).where("categories.name = ?", params[:name])
+    authorize @kits
   end
 
   private
