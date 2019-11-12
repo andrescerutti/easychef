@@ -389,7 +389,7 @@ USERS = [
   {
     first_name: 'Alejo',
     last_name: 'Chaves',
-    permision_level: 4,
+    permision_level: 5,
     email: 'alejo@easychef.com',
     password: 'asdasd',
     avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDMY14Q5-3615c3435408-512'
@@ -398,7 +398,7 @@ USERS = [
   {
     first_name: 'Santiago',
     last_name: 'Llapur',
-    permision_level: 4,
+    permision_level: 5,
     email: 'santiago@easychef.com',
     password: 'asdasd',
     avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDKPE0D6-3ae91634e71a-72'
@@ -407,7 +407,7 @@ USERS = [
   {
     first_name: 'Enzo',
     last_name: 'Monteverdi',
-    permision_level: 4,
+    permision_level: 5,
     email: 'enzo@easychef.com',
     password: 'asdasd',
     avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDJE9Y1J-2cd2134f004a-72'
@@ -416,7 +416,7 @@ USERS = [
   {
     first_name: 'Andres',
     last_name: 'Cerutti',
-    permision_level: 4,
+    permision_level: 5,
     email: 'andres@easychef.com',
     password: 'asdasd',
     avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDCB0BTN-6e9c411fc926-512'
