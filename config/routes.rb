@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :brands
   resources :addresses
-  resources :payments
   resources :restaurants do
     resources :orders, only: [:index]
   end
