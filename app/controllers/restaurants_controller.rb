@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
 
   def set_brand
     @restaurant = Restaurant.find(params[:id])
-      # authorize @restaurant
+      authorize @restaurant
   end
 
   def restaurant_params
