@@ -2,9 +2,13 @@ class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show, :category]
   def index
-    @kits = policy_scope(Kit)
     @categories = Category.all
-    @restaurants = Restaurant.all
+    @kits = if params[:query].present?
+              Kit.search(params[:query])
+            else
+              Kit.all
+            end
+    policy_scope(Kit)
   end
 
   def show

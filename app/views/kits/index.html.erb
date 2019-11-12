@@ -1,7 +1,7 @@
 <div class="container">
 
     <h2>Categorias</h2>
-  <div class="cards-scroll mt-3">
+  <div class="cards-scroll mt-5">
     <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
         <%= link_to category_kits_path(name: category.name), class: "text-decoration-none" do  %>
@@ -15,7 +15,7 @@
     <div class="cards-scroll mt-3" >
       <% @kits.each do |kit| %>
         <%= link_to kit_path(kit) do  %>
-          <div class="card-scroll mx-2 col-md-4">
+          <div class="card-scroll pr-0 pl-2 mr-2 col-md-4">
            <div class="card-kit">
             <%= cl_image_tag kit.image, class: "rounded"%>
              <div class="card-body">
@@ -37,19 +37,20 @@
   <div class="cards-scroll">
     <h2>Restaurants</h2>
     <div class="cards-scroll mt-3">
-      <% @restaurants.each do |restaurant| %>
-        <%= link_to restaurant_path(restaurant) do %>
+      <% @kits.each do |kit| %>
+        <%= link_to restaurant_path(kit.restaurant) do %>
         <div class="card-scroll col-md-4">
           <div class="card-kit border">
-            <img src=<%= restaurant.image %>  />
+            <img src=<%= kit.restaurant.image %>  />
+
             <div class="card-body">
               <div>
-                <h5 class="card-title mb-1"><%= restaurant.name %></h5>
-                <p class="card-title mb-1"> <%= restaurant.address %></p>
+                <h5 class="card-title mb-1"><%= kit.restaurant.name %></h5>
+                <p class="card-title mb-1"> <%= kit.restaurant.address %></p>
               </div>
               <div class="card-text d-flex justify-content-between mt-3">
-                <% if restaurant.kits.order(:price).first != nil %>
-                <p class="card-text card-price">Desde $<%= restaurant.kits.order(:price).first.price %></p>
+                <% if kit.restaurant.kits.order(:price).first != nil %>
+                <p class="card-text card-price">Desde $<%= kit.restaurant.kits.order(:price).first.price %></p>
                 <% end %>
               </div>
             </div>

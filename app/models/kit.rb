@@ -1,6 +1,16 @@
 class Kit < ApplicationRecord
   belongs_to :restaurant
 
+  include PgSearch::Model
+  pg_search_scope :search,
+    against: [:name],
+    associated_against: {
+      restaurant: [:name]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   mount_uploader :image, ImageUploader # carrierwave para subir fotos
 
   has_many :kit_cookwares
