@@ -9,8 +9,10 @@ const calculateKit = () => {
       button.disabled = ""
       if (amount.value > 1) {
         button.value = `Pedir ${amount.value} kits ($${amount.value * price.innerText})`
+        button.dataset.disableWith = button.value;
       } else {
         button.value = `Pedir 1 kit ($${amount.value * price.innerText})`
+        button.dataset.disableWith = button.value;
       }
     } else {
       button.classList.add("disabled")
@@ -20,7 +22,7 @@ const calculateKit = () => {
   }
 
   if (amount) {
-    amount.addEventListener("change", event => updatePrice())
+    amount.addEventListener("click", event => updatePrice())
   }
 }
 
