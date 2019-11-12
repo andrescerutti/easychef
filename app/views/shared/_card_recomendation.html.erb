@@ -1,21 +1,20 @@
-<% @kit.reviews.each do |review| %>
   <div class="card-review">
 
     <div class="review-img">
-      <img src="<%= review.image %>" alt="imagen review" class="w-100 d-none d-md-block" >
+      <img src="<%= review.image %>" alt="imagen review" class="d-none d-md-block" style="width: 130px; height: 130px;">
     </div>
     <div class="review-content">
       <div class="review-user d-flex align-items-center">
-         <img src="<%= review.order.user.avatar_image %>" alt="">
+        <img src="<%= review.order.user.avatar_image %>" alt="">
         <p class="user-mail" style="font-size: 14px;"><%= review.order.user.first_name %></p>
       </div>
       <p><%= review.content %></p>
       <div class="star-rating" style="text-align: right;">
-      <%#= render 'shared/stars', kit: @kit %>
-      <p>Rating: <%= review.rating %>/5</p>
+      <%= render 'shared/stars', kit: @kit %>
+      <!-- <p>Rating: <%= review.rating %>/5</p> -->
+
       </div>
     </div>
   </div>
-<% end %>
 
 
