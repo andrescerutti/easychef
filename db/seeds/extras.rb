@@ -130,3 +130,13 @@ Order.create!(user_id: alejo.id, kit_id: sushikitbelgrano.id, check_out_session_
 # { user_id: alejo.id, kit_id: ribskitpalermo.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR7")
 # { user_id: alejo.id, kit_id: sushikitbelgrano.id, check_out_session_id: "nothing", amount: 1, state: true, code: "QR8")
 
+<!-- <div class="mt-5">
+    <% # if 1 == 1 %>
+      <h2>Write a Review</h2>
+      <%= # simple_form_for [@guide., @review] do |f| %>
+        <%= # f.input :content %>
+        <%= # f.input :rating, collection: [0, 1, 2, 3, 4, 5] %>
+        <%= # f.button :submit, class: "btn btn-primary" %>
+      <% # end %>
+    <% # end %>
+  </div> -->
