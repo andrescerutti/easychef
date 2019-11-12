@@ -11,8 +11,10 @@ Rails.application.routes.draw do
     resources :kit_ingredients, only: [:create]
     resources :kit_cookwares, only: [:create]
     resources :orders, only: [:create, :new]
+    collection do
+      get "category"
+    end
   end
-  resources :kit_categories, only: [:show]
 
   resources :orders, only: [:index, :show, :edit, :update] do
     resources :payments, only: [:create, :show, :new]

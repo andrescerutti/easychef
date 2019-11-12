@@ -11,8 +11,6 @@ class KitsController < ApplicationController
     @kits = Kit.all
     @kit = Kit.find(params[:id])
     @order = Order.new
-
-    console
   end
 
   def new # SOLO LOS ADMINS PUEDE CREAR
@@ -36,6 +34,10 @@ class KitsController < ApplicationController
     return redirect_to @kit if @kit.update(kit_params)
 
     render :edit
+  end
+
+  def category
+    @kits = Kit.joins(:kit_categories).joins(:categories).where("categories.name = ?", params[:name])
   end
 
   private
