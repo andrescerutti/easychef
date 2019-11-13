@@ -531,7 +531,7 @@ BRANDS = [
                 ],
     kits: [
             { general_information: {
-                name: 'Bs. As. Roll con langostino -8 piezas.',
+                name: 'Bs. As. Roll con langostino - 8 piezas.',
                 stock: 10,
                 price: 420,
                 size: 1,
@@ -565,7 +565,7 @@ BRANDS = [
                       },
               kit_orders: [
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "santiago@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -584,7 +584,7 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -604,7 +604,7 @@ BRANDS = [
 
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -619,7 +619,7 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "alejo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
