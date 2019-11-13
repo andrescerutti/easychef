@@ -9,6 +9,7 @@ class KitsController < ApplicationController
               Kit.all
             end
     policy_scope(Kit)
+    @kit = Kit.all
   end
 
   def show

@@ -531,7 +531,7 @@ BRANDS = [
                 ],
     kits: [
             { general_information: {
-                name: 'Bs. As. Roll con langostino -8 piezas.',
+                name: 'Bs. As. Roll con langostino - 8 piezas.',
                 stock: 10,
                 price: 420,
                 size: 1,
@@ -565,13 +565,18 @@ BRANDS = [
                       },
               kit_orders: [
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "santiago@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "549934",
                               date_delivery: "2019/04/19 07:00",
+                              address_attributes: {
+                                                    address: "Washington 1940, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.571301,
+                                                    longitude: -58.468190,
+                                                  },
                               review: {
                                         content: "No soy fanatico del sushi, pero esta bien",
                                         rating: 3,
@@ -579,13 +584,18 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "432509",
                               date_delivery: "2019/12/19 07:00",
+                              address_attributes: {
+                                                    address: "Avenida Libertador 3380, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.571301,
+                                                    longitude: -58.468190,
+                                                  },
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
@@ -594,13 +604,18 @@ BRANDS = [
 
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "084638",
                               date_delivery: "2019/07/19 07:00",
+                              address_attributes: {
+                                                    address: "Cuba 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.563270,
+                                                    longitude: -58.452563,
+                                                  },
                               review: {
                                         content: "Me encanto, lo volveria a comprar",
                                         rating: 4,
@@ -608,13 +623,18 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino -8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
                               user_email: "alejo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               state: true,
                               code: "584965",
                               date_delivery: "2019/11/19 07:00",
+                              address_attributes: {
+                                                    address: "Gorriti 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.620763,
+                                                    longitude: -58.364867,
+                                                  },
                               review: {
                                         content: "Lo voy a sumar a mi dieta dominical",
                                         rating: 5,
@@ -689,6 +709,11 @@ BRANDS = [
                                 state: true,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.589252,
+                                                      longitude: -58.387530,
+                                                    },
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 3,
@@ -704,6 +729,11 @@ BRANDS = [
                                 state: true,
                                 code: "402759",
                                 date_delivery: "2019/09/19 18:00",
+                                address_attributes: {
+                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588697,
+                                                      longitude: -58.390416,
+                                                    },
                                 review: {
                                           content: "La guia esta muy clara y te facilita un monton el procedimiento",
                                           rating: 5,
@@ -719,6 +749,11 @@ BRANDS = [
                                 state: true,
                                 code: "586038",
                                 date_delivery: "2019/05/19 01:00",
+                                address_attributes: {
+                                                      address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588468,
+                                                      longitude: -58.388461,
+                                                    },
                                 review: {
                                           content: "No hay con que darle a esa barbacoa, muy bueno.",
                                           rating: 4,
@@ -734,6 +769,11 @@ BRANDS = [
                                 state: true,
                                 code: "937859",
                                 date_delivery: "2019/10/19 12:00",
+                                address_attributes: {
+                                                      address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.582266,
+                                                      longitude: -58.399956,
+                                                    },
                                 review: {
                                           content: "Salio excelente, ya me puedo considerar como chef.",
                                           rating: 5,
@@ -857,7 +897,7 @@ BRANDS.each do |brand_data|
           kit_info[:kit_orders].each do |kit_order|
             puts 'creating kit order'
             user = User.find_by(email: kit_order[:user_email])
-            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  date_delivery: kit_order[:date_delivery], amount: kit_order[:amount], state: kit_order[:state])
+            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  date_delivery: kit_order[:date_delivery], amount: kit_order[:amount], state: kit_order[:state], address_attributes: kit_order[:address_attributes])
             puts "Creating review for order #{order.id}. (content: #{kit_order[:review][:content]})"
             review = Review.create!(order: order, content: kit_order[:review][:content], rating: kit_order[:review][:rating], remote_image_url: kit_order[:review][:remote_image_url])
           end

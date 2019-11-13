@@ -1,6 +1,6 @@
 <div class="container d-flex justify-content-center mt-5">
   <div class="col-md-6">
-    <h2>Sign up</h2>
+    <h2>Registro</h2>
 
     <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -22,18 +22,21 @@
         <%= f.input :email,
                     required: true,
                     autofocus: true,
-                    input_html: { autocomplete: "email" }%>
+                    label: "Email" ,
+                    input_html: {  autocomplete: "email" }%>
         <%= f.input :password,
                     required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
+                      label: "Nueva contraseña" ,
+                    hint: ("#{@minimum_password_length} caracteres minimos" if @minimum_password_length),
+                    input_html: { autocomplete: "nueva contraseña" } %>
         <%= f.input :password_confirmation,
+                    label: "Nueva contraseña" ,
                     required: true,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "nueva contraseña" } %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
+        <%= f.button :submit, "Registro", class: "btn btn-primary" %>
       </div>
     <% end %>
 

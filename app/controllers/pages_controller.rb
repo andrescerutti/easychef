@@ -12,6 +12,16 @@ class PagesController < ApplicationController
     # @restaurants = Restaurant.all
     @kits = Kit.all
     @orders = Order.where(user: current_user)
-    # @order = Order.find(params[:id])
+  end
+
+  def admin_dashboard
+    @orders = Order.all
+
+    @markers = @orders.map do |order|
+        {
+          lat: order.address.latitude,
+          lng: order.address.longitude
+        }
+    end
   end
 end

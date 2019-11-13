@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   resources :guides, only: [:show]
 
   get "/components/", to: "pages#components", as: :components
-  get "/user-dashboard/", to: "pages#user_dashboard", as: :user_dashboard
+  get "/user_dashboard/", to: "pages#user_dashboard", as: :user_dashboard
+  get "/admin_dashboard/", to: "pages#admin_dashboard", as: :admin_dashboard
 
 
   # /dashboard/orders
