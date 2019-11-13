@@ -18,12 +18,10 @@ class PagesController < ApplicationController
     @orders = Order.all
 
     @markers = @orders.map do |order|
-      if order.address
         {
           lat: order.address.latitude,
           lng: order.address.longitude
         }
-      end
     end
   end
 end
