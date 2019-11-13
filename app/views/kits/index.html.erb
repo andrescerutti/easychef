@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h2>Categorias</h2>
+    <h2 class="mt-3">Categorias</h2>
   <div class="cards-scroll mt-5">
     <% @categories.each do |category| %>
       <div class="card-scroll mx-2">
@@ -11,11 +11,11 @@
     <% end %>
   </div>
   <div class="cards-scroll">
-    <h2>Sugerencias</h2>
+    <h2 class="mt-3">Sugerencias</h2>
     <div class="cards-scroll mt-3" >
       <% @kits.each do |kit| %>
         <%= link_to kit_path(kit) do  %>
-          <div class="card-scroll pr-0 pl-2 mr-2 col-md-4">
+          <div class="card-scroll pr-0 pl-2 mr-3 col-md-4">
            <div class="card-kit">
             <%= cl_image_tag kit.image, class: "rounded"%>
              <div class="card-body">
@@ -35,13 +35,13 @@
     </div>
   </div>
   <div class="cards-scroll">
-    <h2>Restaurants</h2>
+    <h2 class="mt-3">Restaurants</h2>
     <div class="cards-scroll mt-3">
       <% @kits.each do |kit| %>
         <%= link_to restaurant_path(kit.restaurant) do %>
-        <div class="card-scroll col-md-4">
-          <div class="card-kit border">
-            <img src=<%= kit.restaurant.image %>  />
+        <div class="card-scroll pr-0 pl-2 mr-3 col-md-4">
+          <div class="card-kit rounded">
+            <img src=<%= kit.restaurant.image %> />
 
             <div class="card-body">
               <div>
