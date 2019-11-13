@@ -44,6 +44,7 @@ class KitsController < ApplicationController
   def category
     @kits = Kit.joins(:kit_categories).joins(:categories).where("categories.name = ?", params[:name])
     authorize @kits
+    @category = params["name"]
   end
 
   private
