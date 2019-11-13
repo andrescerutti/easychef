@@ -4,7 +4,7 @@
       <h2 class="text-white font-weight-bold w-100"><%= @restaurant.name %></h2>
       <div class="restaurant-info">
         <h4>Direccion</h4>
-        <p class="border ">@restaurant.address </p>
+        <p class="border "><%= @restaurant.address.address %>  </p>
         <h4>Opiniones</h4>
         <p>@restaurant.kits.reviews </p>
         <h4>Recomendaciones</h4>

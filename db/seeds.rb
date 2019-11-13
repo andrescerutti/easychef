@@ -571,6 +571,7 @@ BRANDS = [
                               amount: 1,
                               state: true,
                               code: "549934",
+                              date_delivery: "2019/04/19 07:00",
                               review: {
                                         content: "No soy fanatico del sushi, pero esta bien",
                                         rating: 3,
@@ -584,6 +585,7 @@ BRANDS = [
                               amount: 1,
                               state: true,
                               code: "432509",
+                              date_delivery: "2019/12/19 07:00",
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
@@ -598,6 +600,7 @@ BRANDS = [
                               amount: 1,
                               state: true,
                               code: "084638",
+                              date_delivery: "2019/07/19 07:00",
                               review: {
                                         content: "Me encanto, lo volveria a comprar",
                                         rating: 4,
@@ -611,6 +614,7 @@ BRANDS = [
                               amount: 1,
                               state: true,
                               code: "584965",
+                              date_delivery: "2019/11/19 07:00",
                               review: {
                                         content: "Lo voy a sumar a mi dieta dominical",
                                         rating: 5,
@@ -684,6 +688,7 @@ BRANDS = [
                                 amount: 1,
                                 state: true,
                                 code: "395729",
+                                date_delivery: "2019/11/18 08:00",
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 3,
@@ -698,6 +703,7 @@ BRANDS = [
                                 amount: 1,
                                 state: true,
                                 code: "402759",
+                                date_delivery: "2019/09/19 18:00",
                                 review: {
                                           content: "La guia esta muy clara y te facilita un monton el procedimiento",
                                           rating: 5,
@@ -712,6 +718,7 @@ BRANDS = [
                                 amount: 1,
                                 state: true,
                                 code: "586038",
+                                date_delivery: "2019/05/19 01:00",
                                 review: {
                                           content: "No hay con que darle a esa barbacoa, muy bueno.",
                                           rating: 4,
@@ -726,6 +733,7 @@ BRANDS = [
                                 amount: 1,
                                 state: true,
                                 code: "937859",
+                                date_delivery: "2019/10/19 12:00",
                                 review: {
                                           content: "Salio excelente, ya me puedo considerar como chef.",
                                           rating: 5,
@@ -849,7 +857,7 @@ BRANDS.each do |brand_data|
           kit_info[:kit_orders].each do |kit_order|
             puts 'creating kit order'
             user = User.find_by(email: kit_order[:user_email])
-            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  check_out_session_id: kit_order[:check_out_session_id], amount: kit_order[:amount], state: kit_order[:state])
+            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  date_delivery: kit_order[:date_delivery], amount: kit_order[:amount], state: kit_order[:state])
             puts "Creating review for order #{order.id}. (content: #{kit_order[:review][:content]})"
             review = Review.create!(order: order, content: kit_order[:review][:content], rating: kit_order[:review][:rating], remote_image_url: kit_order[:review][:remote_image_url])
           end

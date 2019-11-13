@@ -6,12 +6,12 @@ class PagesController < ApplicationController
   end
 
   def components
-
   end
 
-  def dashboard
-    @brands = Brand.all
-    @restaurants = Restaurant.all
+  def user_dashboard
+    # @restaurants = Restaurant.all
     @kits = Kit.all
+    @orders = Order.where(user: current_user)
+    # @order = Order.find(params[:id])
   end
 end
