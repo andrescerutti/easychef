@@ -6,6 +6,7 @@ class Order < ApplicationRecord
   has_one :payment
   has_one :address, as: :addressable
 
+  accepts_nested_attributes_for :address
   validates :code, uniqueness: true, presence: true
   accepts_nested_attributes_for :address
 

@@ -13,4 +13,17 @@ class PagesController < ApplicationController
     @kits = Kit.all
     @orders = Order.where(user: current_user)
   end
+
+  def admin_dashboard
+    @orders = Order.all
+
+    @markers = @orders.map do |order|
+      if order.address
+        {
+          lat: order.address.latitude,
+          lng: order.address.longitude
+        }
+      end
+    end
+  end
 end

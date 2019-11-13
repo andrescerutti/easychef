@@ -572,6 +572,11 @@ BRANDS = [
                               state: true,
                               code: "549934",
                               date_delivery: "2019/04/19 07:00",
+                              address_attributes: {
+                                address: 'Washington 1940, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina',
+                                latitude: -34.571301,
+                                longitude: -58.468190,
+                              },
                               review: {
                                         content: "No soy fanatico del sushi, pero esta bien",
                                         rating: 3,
@@ -586,6 +591,11 @@ BRANDS = [
                               state: true,
                               code: "432509",
                               date_delivery: "2019/12/19 07:00",
+                              address_attributes: {
+                                                    address: "Avenida Libertador 3380, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.571301,
+                                                    longitude: -58.468190,
+                                                    },
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
@@ -601,6 +611,7 @@ BRANDS = [
                               state: true,
                               code: "084638",
                               date_delivery: "2019/07/19 07:00",
+                              address_attributes: { address: "Cuba 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                               review: {
                                         content: "Me encanto, lo volveria a comprar",
                                         rating: 4,
@@ -615,6 +626,7 @@ BRANDS = [
                               state: true,
                               code: "584965",
                               date_delivery: "2019/11/19 07:00",
+                              address_attributes: { address: "Gorriti 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                               review: {
                                         content: "Lo voy a sumar a mi dieta dominical",
                                         rating: 5,
@@ -689,6 +701,7 @@ BRANDS = [
                                 state: true,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
+                                address_attributes: { address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 3,
@@ -704,6 +717,7 @@ BRANDS = [
                                 state: true,
                                 code: "402759",
                                 date_delivery: "2019/09/19 18:00",
+                                address_attributes: { address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                                 review: {
                                           content: "La guia esta muy clara y te facilita un monton el procedimiento",
                                           rating: 5,
@@ -719,6 +733,7 @@ BRANDS = [
                                 state: true,
                                 code: "586038",
                                 date_delivery: "2019/05/19 01:00",
+                                address_attributes: { address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                                 review: {
                                           content: "No hay con que darle a esa barbacoa, muy bueno.",
                                           rating: 4,
@@ -734,6 +749,7 @@ BRANDS = [
                                 state: true,
                                 code: "937859",
                                 date_delivery: "2019/10/19 12:00",
+                                address_attributes: { address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"},
                                 review: {
                                           content: "Salio excelente, ya me puedo considerar como chef.",
                                           rating: 5,
