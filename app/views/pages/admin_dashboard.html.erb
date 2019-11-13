@@ -2,14 +2,28 @@
   <h1>Dashboard</h1>
 </div>
 <div class="d-flex">
-  <div class="col-8">
-
-  </div>
-  <div class="col-4">
+  <div class="col-6">
+    <% @orders.each do |order| %>
+      <div class="card mb-3" style="width: 100%;">
+        <div class="card-header">
+          <h4> Orden <%= order.id %> </h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Estado: <%= order.state %></li>
+          <li class="list-group-item">Direccion: <%= order.address.address %></li>
+          <li class="list-group-item">Usuario <%= order.user_id %></li>
+          <li class="list-group-item">Restaurant: <%= order.kit.restaurant.name %></li>
+          <li class="list-group-item">Kit: <%= order.kit.name %></li>
+        </ul>
+      </div>
+      <% end %>
+    </div>
+  <div class="col-6">
     <div
       id="map"
+      class="position-sticky"
       style="width: 100%;
-      height: 100vh;"
+      height: 100vh; top: 0;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
