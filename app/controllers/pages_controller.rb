@@ -18,10 +18,12 @@ class PagesController < ApplicationController
     @orders = Order.all
 
     @markers = @orders.map do |order|
-        {
-          lat: order.address.latitude,
-          lng: order.address.longitude
-        }
+      {
+        lat: order.address.latitude,
+        lng: order.address.longitude,
+        # infoWindow: render_to_string(partial: "infowindow", locals: { order: order }),
+        color: order.state ? '#4dc433' : '#fd1015',
+      }
     end
   end
 end

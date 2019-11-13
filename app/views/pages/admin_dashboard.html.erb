@@ -1,17 +1,16 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  <h1>Dashboard</h1>
-</div>
+<h2 class="text-center">Todas las ordenes</h2>
 <div class="d-flex">
   <div class="col-6">
     <% @orders.each do |order| %>
       <div class="card mb-3" style="width: 100%;">
-        <div class="card-header">
+        <% color = order.state ? '#4dc433' : '#fd1015' %>
+        <div class="card-header" style="background-color: <%= color %>;">
           <h4> Orden <%= order.id %> </h4>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Estado: <%= order.state %></li>
           <li class="list-group-item">Direccion: <%= order.address.address %></li>
-          <li class="list-group-item">Usuario <%= order.user_id %></li>
+          <li class="list-group-item">Usuario: <%= order.user.first_name %> <%= order.user.last_name %> (<%= order.user_id %>)</li>
           <li class="list-group-item">Restaurant: <%= order.kit.restaurant.name %></li>
           <li class="list-group-item">Kit: <%= order.kit.name %></li>
         </ul>
