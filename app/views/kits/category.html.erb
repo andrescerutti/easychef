@@ -1,7 +1,8 @@
 <div class="container">
+  <h1><%= @category %></h1>
   <div class="row">
     <% @kits.each do |kit| %>
-      <%= link_to kit_path(kit), class: "col-md-6" do %>
+      <%= link_to kit_path(kit), class: "col-md-6 text-decoration-none"   do %>
          <div class="card-kit ">
           <%= cl_image_tag kit.image, class: "rounded"%>
            <div class="card-body">
