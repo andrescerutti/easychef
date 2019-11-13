@@ -1,0 +1,94 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <h1>Todas mis ordenes</h1>
+</div>
+
+<div class="container-fluid mt-2">
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="Ordenes en camino" aria-selected="true">Ordenes en camino</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="Historial de ordenes" aria-selected="false">Historial de ordenes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="Favoritos" aria-selected="false">Favoritos</a>
+    </li>
+  </ul>
+    <div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="d-flex flex-wrap mx-3" >
+          <% @orders.each do |order| %>
+            <% if order.date_delivery > Date.today %>
+                <div class="card-kit border mx-auto" style=" width: 300px">
+                  <div>
+                    <img class="rounded position-absolute"  style="height: 50%" src=<%= order.kit.image %>  />
+                    <img class="rounded-circle position-relative" style="width: 50px; height: 50px" src=<%= order.kit.restaurant.brand.logo %>  />
+                  </div>
+                  <div class="card-body position-relative" style="top: 145px;" >
+                    <div >
+                      <h5 class="card-title mb-1"><%= order.kit.name  %></h5>
+                      <p class="card-title mb-1"><%= order.user.first_name  %> <%= order.user.last_name  %></p>
+                      <p class="card-title mb-1"><%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
+                      <p class="card-text overflow-ellipsis"><%= order.kit.restaurant.name %></p>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="col-12">
+          <div class="d-flex flex-wrap mx-3">
+            <% @orders.each do |order| %>
+              <% if order.date_delivery < Date.today %>
+                  <div class="card-kit border mx-auto" style=" width: 300px">
+                    <div>
+                      <img class="rounded position-absolute"  style="height: 50%" src=<%= order.kit.image %>  />
+                      <img class="rounded-circle position-relative" style="width: auto; height: 50px" src=<%= order.kit.restaurant.brand.logo %>  />
+                    </div>
+                    <div class="card-body position-relative" style="top: 145px;" >
+                      <div >
+                        <h5 class="card-title mb-1"><%= order.kit.name  %></h5>
+                        <p class="card-text overflow-ellipsis"><%= order.kit.restaurant.name %></p>
+                        <p class="card-title mb-1"><%= order.user.first_name  %> <%= order.user.last_name  %></p>
+                        <p class="card-title mb-1"><%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="col-12">
+        <div class="d-flex flex-wrap mx-3 justify-content-around">
+          <% @kits.each do |kit| %>
+            <%= link_to kit_path(kit) do  %>
+              <div class="card-kit mx-auto" style="width: 300px">
+                <%= cl_image_tag kit.image, class: "rounded"%>
+                 <div class="card-body">
+                   <div>
+                     <h5 class="card-title mb-1 text-wrap" style="height: 50px"><%= kit.name %></h5>
+                     <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
+                   </div>
+                   <div class="d-flex justify-content-between mt-3">
+                     <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
+                     <p class="card-text card-price">$ <%= kit.price %></p>
+                   </div>
+                 </div>
+               </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
