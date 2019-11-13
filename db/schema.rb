@@ -122,10 +122,10 @@ ActiveRecord::Schema.define(version: 2019_11_12_211446) do
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "date_delivery"
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.string "delivery_provider"
+    t.datetime "date_delivery"
     t.index ["addressable_type", "addressable_id"], name: "index_orders_on_addressable_type_and_addressable_id"
     t.index ["kit_id"], name: "index_orders_on_kit_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
