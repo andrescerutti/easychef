@@ -46,7 +46,7 @@
             <div class="card-body">
               <div>
                 <h5 class="card-title mb-1"><%= kit.restaurant.name %></h5>
-                <p class="card-title mb-1"> <%= kit.restaurant.address %></p>
+                <p class="card-title mb-1 "> <%= kit.restaurant.address.address %></p>
               </div>
               <div class="card-text d-flex justify-content-between mt-3">
                 <% if kit.restaurant.kits.order(:price).first != nil %>

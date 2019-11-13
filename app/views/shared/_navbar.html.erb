@@ -1,15 +1,24 @@
 <div class="navbar navbar-expand-sm navbar-dark navbar-mobile py-3 bg-white justify-content-between">
-  <div>
+  <div class="d-none d-md-block">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag('logo.png') %>
     <% end %>
   </div>
 
+    <div class="d-md-none d-sd-block">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag('logomob.png') %>
+    <% end %>
+  </div>
+
+
   <div class="d-flex">
     <% if user_signed_in? %>
 
     <div>
-      <%= link_to "Mis ordenes", dashboard_path, class: "btn btn-primary mr-3 d-none d-md-block"%>
+
+      <%= link_to "Mis ordenes", user_dashboard_path, class: "btn btn-primary mr-1 d-none d-md-block"%>
+
       </div>
         <div class="dropdown">
           <% if current_user.avatar_image? %>
@@ -19,14 +28,16 @@
             <i class="fas fa-user-circle fa-2x text-primary" id="dropdownMenuButton" data-toggle="dropdown"></i>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <%= link_to "Favoritos", destroy_user_session_path, class: "dropdown-item"%>
-            <%= link_to "Mis ordenes", dashboard_path, class: "dropdown-item d-block d-md-none"%>
+
+            <%#= link_to "Favoritos", destroy_user_session_path, class: "dropdown-item"%>
+            <%= link_to "Mis ordenes", user_dashboard_path, class: "dropdown-item d-block d-md-none"%>
+
             <%= link_to "Mi Perfil", edit_user_registration_path, class: "dropdown-item"%>
             <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "dropdown-item"%>
           </div>
         </div>
     <% else %>
-        <%= link_to "Ingresar", new_user_session_path, class: "btn btn-primary mr-3"%>
+        <%= link_to "Ingresar", new_user_session_path, class: "btn btn-primary mr-1"%>
         <%= link_to "Registrarse", new_user_registration_path, class: "btn btn-primary" %>
     <% end %>
   </div>
