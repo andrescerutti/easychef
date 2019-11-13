@@ -631,7 +631,7 @@ BRANDS = [
                               code: "584965",
                               date_delivery: "2019/11/19 07:00",
                               address_attributes: {
-                                                    address: "Gorriti 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+                                                    address: "Gorriti 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
                                                     latitude: -34.620763,
                                                     longitude: -58.364867,
                                                   },
