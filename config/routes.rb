@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :edit, :update] do
     resources :payments, only: [:create, :show, :new]
-    resources :reviews, only: [:create]
+    resources :reviews, only: [:new, :create]
   end
   resources :guides, only: [:show]
 

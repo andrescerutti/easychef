@@ -1,11 +1,17 @@
 class ReviewsController < ApplicationController
+  def new
+    @review = Review.new
+    @order = Order.find(params[:order_id])
+    authorize @review
+  end
+
   def create
     @review = Review.new(review_params)
-    @guide = Guide.find(params[:guide_id])
-    @review.order.kit.guide = @guide
+    @order = Order.find(params[:order_id])
+    @review.order = @order
     authorize @review
 
-    return redirect_to @guide.kit if @review.save
+    return redirect_to kit_path(@order.kit) if @review.save
 
     render :new
   end
