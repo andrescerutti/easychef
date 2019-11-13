@@ -2,18 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="imagen.png">
+    <link rel="icon" type="image/png" href="<%= image_path('logomob.png') %>">
 
-    <title>EasyChef | Tu mejor opción para preparar tus comidas como todo un profesional.</title>
+    <title>EasyChef | Tu mejor opción para preparar tus comidas como todo un profesional</title>
     <meta name="description" content="Te brindamos todo lo necesario para que puedas cocinar como todo un chef profesional desde la comodidad de tu casa. No te preocupes si nunca cocinaste, nosotros te damos las herramientas a través de guiás interactivas junto con todos los ingredientes para preparar tu plato. Con la app de EasyChef tenes todo lo necesario a un clic de distancia.">
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
+
     <meta property="og:title" content="EasyChef | Tu mejor opción para preparar tus comidas como todo un profesional.">
-  <meta property="og:image" content="kit.png">
-  <meta property="og:description" content="Te brindamos todo lo necesario para que puedas cocinar como todo un chef profesional desde la comodidad de tu casa. No te preocupes si nunca cocinaste, nosotros te damos las herramientas a través de guiás interactivas junto con todos los ingredientes para preparar tu plato. Con la app de EasyChef tenes todo lo necesario a un clic de distancia.">
-  <meta property="og:site_name" content="EasyChef"/>
+    <meta property="og:image" content="https://www.incimages.com/uploaded_files/image/970x450/getty_502258206_139116.jpg">
+    <meta property="og:description" content="Te brindamos todo lo necesario para que puedas cocinar como todo un chef profesional desde la comodidad de tu casa. No te preocupes si nunca cocinaste, nosotros te damos las herramientas a través de guiás interactivas junto con todos los ingredientes para preparar tu plato. Con la app de EasyChef tenes todo lo necesario a un clic de distancia.">
+    <meta property="og:site_name" content="EasyChef"/>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@EasyChefArg">
+    <meta name="twitter:title" content="EasyChef | Tu mejor opción para preparar tus comidas como todo un profesional">
+    <meta name="twitter:description" content="Te brindamos todo lo necesario para que puedas cocinar como todo un chef profesional desde la comodidad de tu casa. No te preocupes si nunca cocinaste, nosotros te damos las herramientas a través de guiás interactivas junto con todos los ingredientes para preparar tu plato. Con la app de EasyChef tenes todo lo necesario a un clic de distancia.">
+    <meta name="twitter:creator" content="@EasyChefArg">
+    <meta name="twitter:image:src" content="https://www.incimages.com/uploaded_files/image/970x450/getty_502258206_139116.jpg">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
