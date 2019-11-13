@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 
   end
 
-  def dashboard
+  def user_dashboard
     @brands = Brand.all
     @restaurants = Restaurant.all
     @kits = Kit.all
