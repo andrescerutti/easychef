@@ -5,11 +5,15 @@ class ReviewPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    true
+  end
+
   def create?
     allow_user?
   end
 
   def allow_user?
-    record.user == user
+    record.order.user == user
   end
 end
