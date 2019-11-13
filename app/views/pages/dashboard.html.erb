@@ -5,81 +5,49 @@
 <div class="container-fluid mt-2">
   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="All brands" aria-selected="true">Brands</a>
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="My Kitchens" aria-selected="true">My Kitchens</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="All restaurants" aria-selected="false">Restaurants</a>
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="My Appointments" aria-selected="false">My Appointments</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="All kits  " aria-selected="false">Kits</a>
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="My Kitchen Appointments  " aria-selected="false">My Kitchen Appointments</a>
     </li>
   </ul>
     <div class="tab-content" id="myTabContent">
 
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <div class="d-flex flex-wrap mx-3" >
-          <% @brands.each do |brand| %>
-            <div class="card-brand border mx-auto " style=" width: 300px">
-              <img class="rounded"  src=<%= brand.logo %>  />
-              <div class="card-body">
-                <div>
-                  <h5 class="card-title mb-1"><%= brand.name  %></h5>
-                  <% brand.restaurants.each do |restaurant| %>
-                  <li class="card-text overflow-ellipsis"><%= restaurant.name %></li>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+      <div class="cards col-md-8 mt-2">
+          <% @kitchens.each do |kitchen| %>
+             <%= render 'components/dashboard-card', kitchen: kitchen %>
           <% end %>
       </div>
     </div>
 
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="col-12">
-          <div class="d-flex flex-wrap mx-3">
-            <% @restaurants.each do |restaurant| %>
-              <div class="card-kit border mx-auto" style="width: 300px">
-                <img class="rounded w-100" src=<%= restaurant.image %>  />
-                <div class="card-body">
-                  <div>
-                    <h5 class="card-title mb-1"><%= restaurant.name  %></h5>
-                    <h5 class="card-title mb-1"><%= restaurant.address  %></h5>
-                    <% restaurant.kits.each do |kit| %>
-                      <li class="card-text overflow-ellipsis"><%= kit.name %></li>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+      <div class="cards d-flex">
+        <% @appointments.each do |appointment| %>
+          <div class="col-md-4 mt-4">
+            <%= render 'components/appointment-card', appointment: appointment %>
           </div>
-        </div>
-      </div>
-
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <div class="col-12">
-        <div class="d-flex flex-wrap mx-3 justify-content-around">
-          <% @kits.each do |kit| %>
-            <%= link_to kit_path(kit) do  %>
-              <div class="card-kit mx-auto" style="width: 300px">
-                <%= cl_image_tag kit.image, class: "rounded"%>
-                 <div class="card-body">
-                   <div>
-                     <h5 class="card-title mb-1 text-wrap" style="height: 50px"><%= kit.name %></h5>
-                     <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
-                   </div>
-                   <div class="d-flex justify-content-between mt-3">
-                     <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
-                     <p class="card-text card-price">$ <%= kit.price %></p>
-                   </div>
-                 </div>
-               </div>
-            <% end %>
-          <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
+
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="cards d-flex">
+        <% @kitchens.each do |kitchen| %>
+          <% kitchen.appointments.each do |appointment| %>
+            <div class="col-md-4 mt-4">
+              <%= render 'components/kitchen-appointments', appointment: appointment %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+
 
 
