@@ -7,7 +7,7 @@
           <a class="nav-link active" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="Pendientes" aria-selected="true">Pendientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="on_transit-tab" data-toggle="tab" href="#on_transit" role="tab" aria-controls="En transito" aria-selected="false">En transito</a>
+          <a class="nav-link" id="on_transit-tab" data-toggle="tab" href="#on_transit" role="tab" aria-controls="Entregando" aria-selected="false">Entregando</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="delivered-tab" data-toggle="tab" href="#delivered" role="tab" aria-controls="Entregadas" aria-selected="false">Entregadas</a>
@@ -17,21 +17,23 @@
   <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
     <% if !@orders.pending.empty? %>
       <% @orders.pending.each do |order| %>
-        <% if order.status == 'pending' %>
-          <div class="card mb-3" style="width: 100%;">
-            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
-            <div class="card-header" style="background-color: <%= status_color[order.status.to_sym] %>;">
-              <h4> Orden <%= order.id %> </h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Estado: <%= order.state %></li>
-              <li class="list-group-item">Direccion: <%= order.address.address %></li>
-              <li class="list-group-item">Usuario: <%= order.user.first_name %> <%= order.user.last_name %> (<%= order.user_id %>)</li>
-              <li class="list-group-item">Restaurant: <%= order.kit.restaurant.name %></li>
-              <li class="list-group-item">Kit: <%= order.kit.name %></li>
-            </ul>
+      <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
+             <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
+             <p class="font-weight-light"><%= order.address.address %></p>
+             <p><%= order.kit.name %></p>
+             <p><%= order.kit.restaurant.name %></p>
           </div>
-        <% end %>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     <% else %>
       <p>No hay ordenes pendientes</p>
@@ -43,22 +45,26 @@
   <div class="tab-pane fade" id="on_transit" role="tabpanel" aria-labelledby="on_transit-tab">
     <% if !@orders.on_transit.empty? %>
       <% @orders.on_transit.each do |order| %>
-          <div class="card mb-3" style="width: 100%;">
-            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
-            <div class="card-header" style="background-color: <%= status_color[order.status.to_sym] %>;">
-              <h4> Orden <%= order.id %> </h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Estado: <%= order.state %></li>
-              <li class="list-group-item">Direccion: <%= order.address.address %></li>
-              <li class="list-group-item">Usuario: <%= order.user.first_name %> <%= order.user.last_name %> (<%= order.user_id %>)</li>
-              <li class="list-group-item">Restaurant: <%= order.kit.restaurant.name %></li>
-              <li class="list-group-item">Kit: <%= order.kit.name %></li>
-            </ul>
+        <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
+             <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
+             <p class="font-weight-light"><%= order.address.address %></p>
+             <p><%= order.kit.name %></p>
+             <p><%= order.kit.restaurant.name %></p>
           </div>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     <% else %>
-      <p>No hay ordenes en transito</p>
+      <p>No hay ordenes en entrega</p>
     <% end %>
 
 
@@ -67,24 +73,26 @@
   <div class="tab-pane fade" id="delivered" role="tabpanel" aria-labelledby="delivered-tab">
     <% if !@orders.delivered.empty? %>
       <% @orders.each do |order| %>
-        <div class="d-flex">
-          <div>
+            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
              <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
-             <p><%= order.user.address.address %></p>
+             <p class="font-weight-light"><%= order.address.address %></p>
              <p><%= order.kit.name %></p>
              <p><%= order.kit.restaurant.name %></p>
           </div>
-          <div>
-            <%= simple_form_for order do |f| %>
-              <%= f.input :delivery_provider, collection: PROVIDER, prompt: "Proveedor de envío" %>
-              <%= f.input :reference_number %>
-              <%= f.button :submit %>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
             <% end %>
           </div>
         </div>
       <% end %>
     <% else %>
-      <p>No hay ordenes entregadas</p>
+      <p class="mt-5 text-center">No hay ordenes entregadas</p>
     <% end %>
 
 
