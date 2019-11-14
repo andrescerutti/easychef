@@ -1,9 +1,8 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy, :order_assignment]
 
   def index
     @orders = Order.all
-
   end
 
   def show
@@ -38,13 +37,18 @@ class OrdersController < ApplicationController
   end
 
   def update
-    @order.update(order_params)
-    redirect_to orders_path
+    @order.update(orders_params)
+    redirect_to admin_dashboard_path
   end
 
-  def destroy
-    @order.destroy
-    redirect_to orders_path
+  def order_assignment
+    @order.status =+ 1
+    if @order.save
+      flash[:notice] = "La orden a sido asignada a #{@order.delivery_provider} statisfactoriamente."
+      return redirect_to admin_dashboard_path
+    end
+    flash[:alert] = "La orden no pudo ser sido asignada a #{@order.delivery_provider}."
+    return redirect_to admin_dashboard_path
   end
 
   private
@@ -55,7 +59,7 @@ class OrdersController < ApplicationController
   end
 
   def orders_params
-    params.require(:order).permit(:amount, :state, :date_delivery, :code, addresses_atributes: [:address])
+    params.require(:order).permit(:amount, :status, :date_delivery, :code, :reference_number, addresses_atributes: [:address])
   end
 
   def address_params

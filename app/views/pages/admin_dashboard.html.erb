@@ -17,7 +17,7 @@
       <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
         <% if !@orders.pending.empty? %>
           <% @orders.pending.each do |order| %>
-          <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
             <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
               <div class="p-2 w-75">
                  <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
@@ -27,10 +27,10 @@
                  <span>Fecha de entrega: <%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %> </span>
               </div>
              <div class="p-2 w-25">
-                <span class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></span>
-                <%= simple_form_for order, method: :edit do |f| %>
+                <span class="position-relative" style="top: -20px; right: -66px;"> # <%= order.id %></span>
+                <%= simple_form_for :order, url: order_assignment_path(order), method: :patch do |f| %>
                   <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
-                  <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+                  <%= f.input :reference_number, placeholder: "Nº referencia", label: false, required: true %>
                   <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
                 <% end %>
               </div>
@@ -56,10 +56,10 @@
                  <span>Fecha de entrega: <%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %> </span>
               </div>
              <div class="p-2 w-25">
-                <span class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></span>
-                <%= simple_form_for order, method: :edit do |f| %>
+                <span class="position-relative" style="top: -20px; right: -66px;"> # <%= order.id %></span>
+                <%= simple_form_for :order, url: order_assignment_path(order), method: :patch do |f| %>
                   <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
-                  <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+                  <%= f.input :reference_number, placeholder: "Nº referencia", label: false, required: true %>
                   <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
                 <% end %>
               </div>
@@ -75,7 +75,7 @@
       <div class="tab-pane fade" id="delivered" role="tabpanel" aria-labelledby="delivered-tab">
         <% if !@orders.delivered.empty? %>
           <% @orders.each do |order| %>
-                <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
             <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
               <div class="p-2 w-75">
                  <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
@@ -85,10 +85,10 @@
                  <span>Fecha de entrega: <%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %> </span>
               </div>
              <div class="p-2 w-25">
-                <span class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></span>
-                <%= simple_form_for order, method: :edit do |f| %>
+                <span class="position-relative" style="top: -20px; right: -66px;"> # <%= order.id %></span>
+                <%= simple_form_for :order, url: order_assignment_path(order), method: :patch do |f| %>
                   <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
-                  <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+                  <%= f.input :reference_number, placeholder: "Nº referencia", label: false, required: true %>
                   <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
                 <% end %>
               </div>

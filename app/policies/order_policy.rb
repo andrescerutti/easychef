@@ -13,7 +13,11 @@ class OrderPolicy < ApplicationPolicy
   end
 
   def update?
-    allow_user?
+    allow_user? || user_admin?
+  end
+
+  def order_assignment?
+    user_admin?
   end
 
   def destroy?
@@ -24,5 +28,9 @@ class OrderPolicy < ApplicationPolicy
 
   def allow_user?
     record.user == user
+  end
+
+  def user_admin?
+    record.user.permision_level == 5
   end
 end
