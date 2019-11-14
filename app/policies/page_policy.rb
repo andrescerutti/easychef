@@ -5,13 +5,21 @@ class PagePolicy < ApplicationPolicy
     end
   end
 
-  def dashboard
+  def user_dashboard?
     true
+  end
+
+  def admin_dashboard?
+    false
   end
 
   private
 
   def allow_user?
     record.user == user
+  end
+
+  def user_admin?
+    record.user.permision_level == 5
   end
 end

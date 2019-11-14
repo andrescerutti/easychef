@@ -27,19 +27,4 @@ class PagesController < ApplicationController
       }
     end
   end
-
-  def edit
-    @order = Order.find(params[:id])
-  end
-
-  def update
-    @order = Order.find(params[:id])
-    @order.update(params[:id])
-    if @order.save!
-      @order.status =+ 1
-    else
-      render 'admin_dashboard'
-    end
-
-  end
 end

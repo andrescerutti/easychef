@@ -26,8 +26,7 @@ Rails.application.routes.draw do
   get "/components/", to: "pages#components", as: :components
   get "/user_dashboard/", to: "pages#user_dashboard", as: :user_dashboard
   get "/admin_dashboard/", to: "pages#admin_dashboard", as: :admin_dashboard
-  get "/admin_dashboard/:id", to: "pages#edit"
-  post "/admin_dashboard/", to: "pages#update"
+  patch "/orders/:id/order_assignment/", to: "orders#order_assignment", as: :order_assignment
 
 
   # /dashboard/orders
