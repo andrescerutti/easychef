@@ -533,7 +533,7 @@ BRANDS = [
             { general_information: {
                 name: 'Bs. As. Roll con langostino - 8 piezas.',
                 stock: 10,
-                price: 420,
+                price: 2,
                 size: 1,
                 preparation_time: 30,
                 description: 'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.',
