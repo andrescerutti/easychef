@@ -53,7 +53,7 @@
   </div>
 
   <div class="description-container mt-2">
-    <h3 class="ingredients-title"><strong>Ingredientes:</strong></h3>
+    <h4 class="ingredients-title"><strong>Ingredientes:</strong></h4>
   </div>
   <div class="image-container d-md-block">
     <div class="cards-scroll">
@@ -75,7 +75,7 @@
   </div>
 
   <div class="carrousel my-5">
-    <h3><strong>Cookwares:</strong></h3>
+    <h4><strong>Cookwares:</strong></h4>
     <div class="cards-scroll">
       <div class="cards-scroll mt-3">
         <% @kit.cookware.each do |kit| %>
@@ -94,30 +94,29 @@
     </div>
   </div>
 
-  <div class="kit-bottom">
-    <div class=" mr-3">
-      <div>
-        <h3><strong>Opiniones:</strong></h3>
-      </div>
-      <div class="review-container w-60 w-lg-50  mr-3">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="mb-3">Opiniones</h2>
+      <div class="mb-4">
         <% @kit.reviews.limit(4).each do |review| %>
-        <%= render 'shared/card_recomendation', review: review %>
+          <%= render 'shared/card_recomendation', review: review %>
         <% end %>
       </div>
     </div>
-
-    <div>
-      <div class="review-container w-40 w-lg-50  mr-3" >
-        <h3 class="tambien-title"><strong>Tambien podrian gustarte:</strong></h3>
-      </div>
-      <div class="recomendation-cards w-100 w-lg-50">
-        <% @kits.limit(4).each do |kit| %>
-        <%= render 'shared/card_show_index', kit: kit %>
+    <div class="col-md-6">
+      <h2 class="mb-3">También podrían gustarte</h2>
+      <div class="row">
+        <% @kits.limit(3).each do |kit| %>
+          <div class="col-md-6">
+            <%= render 'shared/card_show_index', kit: kit %>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
+
 </div>
+
 </div>
 
 
