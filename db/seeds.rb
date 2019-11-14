@@ -306,8 +306,8 @@ INGREDIENTS = [
   },
 
   {
-    name: "Palitos Cangrejo",
-    remote_image_url: "https://draxe.com/wp-content/uploads/2018/02/Imitation-Crab-Meat_HEADER.jpg"
+    name: "Kanikama",
+    remote_image_url: "https://i.imgur.com/vcFvYZz.jpg"
   },
 
   {
@@ -317,7 +317,7 @@ INGREDIENTS = [
 
   {
     name: "Wasabi",
-    remote_image_url: "https://assets3.thrillist.com/v1/image/2842152/size/tmg-article_default_mobile.jpg"
+    remote_image_url: "https://i.imgur.com/LLyFbnY.jpg"
   },
 
   {
@@ -362,7 +362,27 @@ INGREDIENTS = [
 
   {
     name: "Salsa de BBQ",
-    remote_image_url: "https://www.eatingonadime.com/wp-content/uploads/2014/03/homemade-bbq-sauce-square.jpg"
+    remote_image_url: "https://assets.bonappetit.com/photos/5ac7c75a58c1050ba7ca239a/1:1/h_276,c_limit/Basically_Vanilla-Extract.jpg"
+  },
+
+  {
+    name: "Platanos maduros cortados en rebanadas",
+    remote_image_url:"https://assets.bonappetit.com/photos/5b7efb0334b974168939a33a/1:1/h_276,c_limit/basically-bananas.png"
+  },
+
+  {
+    name: "Queso en hebras",
+    remote_image_url: "https://i.imgur.com/80HY1Jf.jpg"
+  },
+
+  {
+    name: "Carne picada de cerdo",
+    remote_image_url: "https://i.imgur.com/F9lQugK.jpg",
+  },
+
+  {
+    name: "Cebolla",
+    remote_image_url: "https://assets.bonappetit.com/photos/5b3a30b52edfbe34b11d2270/1:1/h_276,c_limit/Basically-red-onion.jpg"
   }
 ]
 
@@ -548,7 +568,7 @@ BRANDS = [
                                       { quantity: 100, unit: 'g', name: "Salmón fresco" },
                                       { quantity: 2, unit: 'u', name: "Alga Nori" },
                                       { quantity: 80, unit: 'g', name: "Atún fresco" },
-                                      { quantity: 30, unit: 'g', name: "Palitos Cangrejo" },
+                                      { quantity: 30, unit: 'g', name: "Kanikama" },
                                       { quantity: 5, unit: 'g', name: "Semillas de sesamo" },
                                       { quantity: 20, unit: 'g', name: "Wasabi" }
                                     ],
@@ -569,7 +589,7 @@ BRANDS = [
                               user_email: "santiago@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              state: true,
+                              status: 5,
                               code: "549934",
                               date_delivery: "2019/04/19 07:00",
                               address_attributes: {
@@ -588,7 +608,7 @@ BRANDS = [
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              state: true,
+                              status: 5,
                               code: "432509",
                               date_delivery: "2019/12/19 07:00",
                               address_attributes: {
@@ -608,7 +628,7 @@ BRANDS = [
                               user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              state: true,
+                              status: 5,
                               code: "084638",
                               date_delivery: "2019/07/19 07:00",
                               address_attributes: {
@@ -627,7 +647,7 @@ BRANDS = [
                               user_email: "alejo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              state: true,
+                              status: 5,
                               code: "584965",
                               date_delivery: "2019/11/19 07:00",
                               address_attributes: {
@@ -706,7 +726,7 @@ BRANDS = [
                                 user_email: "santiago@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                state: true,
+                                status: 5,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -726,7 +746,7 @@ BRANDS = [
                                 user_email: "andres@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                state: true,
+                                status: 5,
                                 code: "402759",
                                 date_delivery: "2019/09/19 18:00",
                                 address_attributes: {
@@ -746,7 +766,7 @@ BRANDS = [
                                 user_email: "enzo@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                state: true,
+                                status: 5,
                                 code: "586038",
                                 date_delivery: "2019/05/19 01:00",
                                 address_attributes: {
@@ -766,7 +786,7 @@ BRANDS = [
                                 user_email: "alejo@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                state: true,
+                                status: 5,
                                 code: "937859",
                                 date_delivery: "2019/10/19 12:00",
                                 address_attributes: {
@@ -784,23 +804,82 @@ BRANDS = [
             }
           ]
   },
-  {
-    brand: {
-      name: 'The Food Track Store',
-      remote_logo_url: 'https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/12140682_1502266113436590_3429758666823955703_n.png?_nc_cat=100&_nc_oc=AQkW4GpnldkyImFacNSYNpBnGCvIB8eeJp-qi1_D-sS7-KOXfAUNm-Pesg82p-qb718&_nc_ht=scontent.faep8-2.fna&oh=d960747b42b58e69584a1a1af00629c6&oe=5E5007CB'
-    },
-    restaurant: [
 
-    ]
-  },
   {
     brand: {
       name: 'La Parolaccia',
       remote_logo_url: 'http://www.laparolaccia.com/img/logo.png'
     },
-    restaurant: [
+    restaurants: [
+                  {
+                    name: 'La Parolaccia Puerto Madero',
+                    remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/10/73/40/47/fachada-sobre-ciudad.jpg',
+                  },
+                ],
+    kits: [
+            { general_information: {
+                                      name: 'Pastel de Platano y Carne de Cerdo',
+                                      stock: 10,
+                                      price: 480,
+                                      size: 1,
+                                      preparation_time: 60,
+                                      description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
+                                      remote_image_url: 'https://i.imgur.com/eHiJ90R.jpg'
+                                    },
+              cooking_ingredients: [
+                                  { quantity: 50, unit: 'g', name: "Cebolla" },
+                                  { quantity: 5, unit: 'g', name: "Platanos maduros cortados en rebanadas" },
+                                  { quantity: 3, unit: 'g', name: "Diente de ajo" },
+                                  { quantity: 300, unit: 'g', name: "Carne picada de cerdo" },
+                                  { quantity: 4, unit: 'g', name: "Perejil" },
+                                  { quantity: 4, unit: 'ml', name: "Queso en hebras" },
+                                ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
+              categories: ["Carne"],
+              guides: { video: "vflA4-G6XTo",
+                        steps: [
+                                  { order: 1, content: "Hervir los plátanos hasta que queden bien cocidos, pelados y en un procesador de alimentos mezclar hasta obtener un puré." },
+                                  { order: 2, content: "En un tazón, revolver el puré de plátano con la mitad del queso tipo Turrialba y sal al gusto. Reservar." },
+                                  { order: 3, content: "En un sartén a fuego medio, calentar el aceite y freír el chile y cebolla." },
+                                  { order: 4, content: "Agregar la carne molida, el sazonador completo y la salsa tipo ranchera. Mezclar hasta que la carne esté bien cocida. Salpimentar a gusto." },
+                                  { order: 5, content: "En un recipiente para horno, colocar la mitad del puré de plátano, luego agregar los frijoles molidos, una capa de la carne y otra de puré."},
+                                  { order: 6, content: "Cubrir con el queso mozzarella y el resto de queso tipo Turrialba."},
+                                  { order: 7, content: "Llevar al horno por 15 minutos a 180 grados hasta que se dore el queso."},
+                               ]
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Pastel de Platano y Carne de Cerdo",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Rodriguez Peña 2833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.589252,
+                                                      longitude: -58.387530,
+                                                    },
+                                review: {
+                                          content: "Me encanto cocinar el plato con la ayuda de la guia de EasyChef",
+                                          rating: 4,
+                                          remote_image_url: "https://i.imgur.com/aMWsO8q.jpg"
+                                        }
+                              },
+                            ],
+            },
+          ]
+  },
+  {
+    brand: {
+      name: 'The Food Track Store',
+      remote_logo_url: 'https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/12140682_1502266113436590_3429758666823955703_n.png?_nc_cat=100&_nc_oc=AQkW4GpnldkyImFacNSYNpBnGCvIB8eeJp-qi1_D-sS7-KOXfAUNm-Pesg82p-qb718&_nc_ht=scontent.faep8-2.fna&oh=d960747b42b58e69584a1a1af00629c6&oe=5E5007CB'
+    },
+    restaurants: [
+
     ]
-  }
+  },
 ]
 
 puts "creating users"
@@ -829,13 +908,14 @@ end
 puts 'Creating brands'
 
 BRANDS.each do |brand_data|
+  puts "- creating brand #{brand_data[:brand][:name]}"
   brand = Brand.create!(brand_data[:brand])
   # b.remote_logo_url = brand[:logo]
   brand.save!
 
   if !brand_data[:restaurants].nil?
     brand_data[:restaurants].each do |restaurant_information|
-      puts '- creating restaurant'
+      puts "- creating restaurant #{restaurant_information[:name]}"
       restaurant = Restaurant.new(restaurant_information)
       restaurant.brand = brand
       restaurant.user = User.first
@@ -897,7 +977,7 @@ BRANDS.each do |brand_data|
           kit_info[:kit_orders].each do |kit_order|
             puts 'creating kit order'
             user = User.find_by(email: kit_order[:user_email])
-            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  date_delivery: kit_order[:date_delivery], amount: kit_order[:amount], state: kit_order[:state], address_attributes: kit_order[:address_attributes])
+            order = Order.create!(kit: kit, user: user, code: "#{kit.id}-#{user.id}-#{rand(0..1000000)}",  date_delivery: kit_order[:date_delivery], amount: kit_order[:amount], status: kit_order[:status], address_attributes: kit_order[:address_attributes])
             puts "Creating review for order #{order.id}. (content: #{kit_order[:review][:content]})"
             review = Review.create!(order: order, content: kit_order[:review][:content], rating: kit_order[:review][:rating], remote_image_url: kit_order[:review][:remote_image_url])
           end
