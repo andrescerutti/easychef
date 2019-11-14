@@ -56,6 +56,13 @@
                         <p class="card-title mb-1"><%= order.user.first_name  %> <%= order.user.last_name  %></p>
                         <p class="card-title mb-1"><%= order.date_delivery.strftime("%A, %d %b %Y %l:%M %p") %></p>
                       </div>
+                      <div class="mt-3 text-center">
+                        <% if order.review.nil? %>
+                          <%= link_to 'Dejar tu comentario', new_order_review_path(order), class: "btn-primary p-2 w-100" %>
+                        <% else %>
+                          <%= link_to 'Gracias por dejar tu comentario', new_order_review_path(order), class: " btn btn-primary p-2 w-100 disabled"%>
+                        <% end %>
+                      </div>
                     </div>
                   </div>
               <% end %>

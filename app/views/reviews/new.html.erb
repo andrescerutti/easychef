@@ -1,10 +1,13 @@
 <div style="background-image: url(<%= image_url('orders-bg.jpg') %>); background-size: cover; background-position: top; min-height: 500px; ">
-  <div class="container bg-light position-relative py-5">
-    <h2 class="">Write a Review</h2>
+  <div class="container bg-light position-relative pb-5">
+    <h2 class="text-center p-3">Dejanos tu comentario sobre la experiencia vivida</h2>
     <%= simple_form_for [@order, @review] do |f| %>
-      <%= f.input :content %>
+      <%= f.input :content, as: :text, html_options: { rows: 10 }, label: false, placeholder: "Describinos tu expreiencia" %>
       <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5] %>
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <%= f.input :image, label: false %>
+      <%= f.input :image_cache, as: :hidden %>
+      <%= f.submit 'Dejar comentario', class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+`
