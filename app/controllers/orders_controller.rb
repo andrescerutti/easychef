@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
   end
 
   def order_assignment
-    @order.status =+ 1
+    @order.update(orders_params) if params[:order].present?
     if @order.save
       flash[:notice] = "La orden a sido asignada a #{@order.delivery_provider} statisfactoriamente."
       return redirect_to admin_dashboard_path
@@ -59,7 +59,7 @@ class OrdersController < ApplicationController
   end
 
   def orders_params
-    params.require(:order).permit(:amount, :status, :date_delivery, :code, :reference_number, addresses_atributes: [:address])
+    params.require(:order).permit(:amount, :delivery_provider, :status, :date_delivery, :code, :reference_number, addresses_atributes: [:address])
   end
 
   def address_params
