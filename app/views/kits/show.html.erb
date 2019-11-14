@@ -4,8 +4,8 @@
       <h1 class="kitname m-0"> <strong><%= @kit.name %></strong> </h1>
       <h2 class='kitrest' style="color: grey">Un producto de <strong style=" color: black"><%= @kit.restaurant.name %></strong> </h2>
       <div class="product-kit">
-        <img class="d-md-none w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
-        <p class="text-white d-md-none"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
+        <img class="d-md-none w-100 mb-4 position-relative rounded" src="<%= @kit.image %>" alt="imagen del plato de comida">
+        <p class="text-white d-md-none mr-2 rounded"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
       </div>
       <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p>
       <%= simple_form_for([@kit, @order])  do |f| %>
@@ -45,8 +45,8 @@
     <div class="col-md-6 d-none d-md-block">
 
       <div class="product-kit">
-        <img class=" w-100 mb-4 position-relative" src="<%= @kit.image %>" alt="imagen del plato de comida">
-        <p class="text-white .d-none .d-sm-block"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
+        <img class=" w-100 mb-4 position-relative rounded" src="<%= @kit.image %>" alt="imagen del plato de comida">
+        <p class="text-white .d-none .d-sm-block mr-2 rounded"> <i class="far fa-clock text-white"></i> Tiempo de preparacion <%= @kit.preparation_time %> min </p>
       </div>
 
     </div>
