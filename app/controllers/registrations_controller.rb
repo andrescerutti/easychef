@@ -9,3 +9,4 @@ class RegistrationsController < ApplicationController
     stored_location_for(resource) || root_path
   end
 end
+
