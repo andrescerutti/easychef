@@ -553,7 +553,7 @@ BRANDS = [
             { general_information: {
                 name: 'Bs. As. Roll con langostino - 8 piezas.',
                 stock: 10,
-                price: 420,
+                price: 2,
                 size: 1,
                 preparation_time: 30,
                 description: 'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.',
@@ -693,7 +693,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Houstons Barbecue Ribs',
                                       stock: 15,
-                                      price: 460,
+                                      price: 2,
                                       size: 1,
                                       preparation_time: 50,
                                       description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.',
