@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><%= @category %></h1>
+  <h1 class="mt-4"><%= @category %></h1>
   <div class="row">
     <% @kits.each do |kit| %>
       <%= link_to kit_path(kit), class: "col-md-6 text-decoration-none"   do %>

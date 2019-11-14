@@ -1,10 +1,11 @@
 const calculateKit = () => {
   const amount = document.querySelector("#order_amount")
+  const address = document.querySelector("#order_address_address")
   const button = document.querySelector("#submit_order_kit")
   const price = document.querySelector("#price")
 
   const updatePrice = () => {
-    if (amount.value > 0) {
+    if (amount.value > 0 && address.value !== "") {
       button.classList.remove("disabled")
       button.disabled = ""
       if (amount.value > 1) {
@@ -23,6 +24,10 @@ const calculateKit = () => {
 
   if (amount) {
     amount.addEventListener("click", event => updatePrice())
+    address.addEventListener("change", event => updatePrice())
+    address.addEventListener("focusin", event => updatePrice())
+    address.addEventListener("blur", event => updatePrice())
+
   }
 }
 
