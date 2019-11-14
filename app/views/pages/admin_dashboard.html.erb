@@ -1,15 +1,125 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  <h1>Dashboard</h1>
-</div>
+<h2 class="text-center">Todas las ordenes</h2>
 <div class="d-flex">
-  <div class="col-8">
+  <div class="col-6">
+    <ul class="list-inline tabs-underlined">
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="Pendientes" aria-selected="true">Pendientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="on_transit-tab" data-toggle="tab" href="#on_transit" role="tab" aria-controls="Entregando" aria-selected="false">Entregando</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="delivered-tab" data-toggle="tab" href="#delivered" role="tab" aria-controls="Entregadas" aria-selected="false">Entregadas</a>
+        </li>
+      </ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+    <% if !@orders.pending.empty? %>
+      <% @orders.pending.each do |order| %>
+      <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
+             <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
+             <p class="font-weight-light"><%= order.address.address %></p>
+             <p><%= order.kit.name %></p>
+             <p><%= order.kit.restaurant.name %></p>
+          </div>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No hay ordenes pendientes</p>
+    <% end %>
 
   </div>
-  <div class="col-4">
+
+
+  <div class="tab-pane fade" id="on_transit" role="tabpanel" aria-labelledby="on_transit-tab">
+    <% if !@orders.on_transit.empty? %>
+      <% @orders.on_transit.each do |order| %>
+        <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
+             <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
+             <p class="font-weight-light"><%= order.address.address %></p>
+             <p><%= order.kit.name %></p>
+             <p><%= order.kit.restaurant.name %></p>
+          </div>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No hay ordenes en entrega</p>
+    <% end %>
+
+
+  </div>
+
+  <div class="tab-pane fade" id="delivered" role="tabpanel" aria-labelledby="delivered-tab">
+    <% if !@orders.delivered.empty? %>
+      <% @orders.each do |order| %>
+            <% status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' } %>
+        <div class="d-flex p-3 mb-3 provider-card" style="border-left: 8px solid <%= status_color[order.status.to_sym]%>; box-shadow: 0 0 1px">
+          <div class="p-2 w-75">
+             <h5><%= order.user.first_name %> <%= order.user.last_name %></h5>
+             <p class="font-weight-light"><%= order.address.address %></p>
+             <p><%= order.kit.name %></p>
+             <p><%= order.kit.restaurant.name %></p>
+          </div>
+         <div class="p-2 w-25">
+            <p class="position-relative" style="top: -20px; right: -66px;"> Order <%= order.id %></p>
+            <%= simple_form_for order, method: :edit do |f| %>
+              <%= f.input :delivery_provider, collection: Order::PROVIDER, prompt: "Proveedor", label: false, required: true %>
+              <%= f.input :reference_number, placeholder: "Numero de referencia", label: false, required: true %>
+              <%= f.submit 'Solicitar', class: 'btn btn-primary p-1 w-100'  %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="mt-5 text-center">No hay ordenes entregadas</p>
+    <% end %>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="col-6">
     <div
       id="map"
+      class="position-sticky"
       style="width: 100%;
-      height: 100vh;"
+      height: 100vh; top: 0;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>

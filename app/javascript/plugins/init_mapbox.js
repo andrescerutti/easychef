@@ -12,10 +12,23 @@ const buildMap = () => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .addTo(map);
+  const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+
+  const element = document.createElement('div');
+  element.className = 'marker';
+  element.style.backgroundColor = `${marker.color}`;
+  element.style.borderRadius = `20px`;
+  element.style.border = `1px solid black`;
+  element.style.width = '20px';
+  element.style.height = '20px';
+
+  // Pass the element as an argument to the new marker
+  new mapboxgl.Marker(element)
+    .setLngLat([marker.lng, marker.lat])
+    .setPopup(popup)
+    .addTo(map);
   });
+
 };
 
 const fitMapToMarkers = (map, markers) => {
@@ -32,5 +45,7 @@ const initMapbox = () => {
     fitMapToMarkers(map, markers);
   }
 };
+
+
 
 export { initMapbox };
