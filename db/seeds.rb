@@ -336,7 +336,7 @@ INGREDIENTS = [
   },
 
   {
-    name: "Costillar de cerdo",
+    name: "Cerdo",
     remote_image_url: "https://production-media.gousto.co.uk/cms/ingredient-image/2-x-150g-British-picanha-rump-steak-x200.jpg"
   },
 
@@ -366,7 +366,7 @@ INGREDIENTS = [
   },
 
   {
-    name: "Platanos maduros cortados en rebanadas",
+    name: "Platanos maduros",
     remote_image_url:"https://assets.bonappetit.com/photos/5b7efb0334b974168939a33a/1:1/h_276,c_limit/basically-bananas.png"
   },
 
@@ -381,9 +381,84 @@ INGREDIENTS = [
   },
 
   {
+    name: "Almendras",
+    remote_image_url: "https://assets.bonappetit.com/photos/59721bae34cdf71ac5825812/1:1/h_276,c_limit/Basically_Almonds-Chopped.jpg"
+  },
+
+  {
+    name: "Limon",
+    remote_image_url: "https://assets.bonappetit.com/photos/598b2425eb58a76ce841b143/1:1/h_276,c_limit/Basically_Lemon.jpg"
+  },
+
+  {
+    name: "Spaghetti",
+    remote_image_url: "https://assets.bonappetit.com/photos/5969388d2b659b48a371c309/1:1/h_276,c_limit/basically-ingredients-spaghetti.jpg"
+  },
+  {
+    name: "Queso rallado",
+    remote_image_url: "https://assets.bonappetit.com/photos/596938815df40d13712705f6/1:1/h_276,c_limit/basically-ingredient-parmesan.jpg"
+  },
+
+  {
+    name: "Comino",
+    remote_image_url: "https://assets.bonappetit.com/photos/59bc2b02810ec3374e2f8bc8/1:1/h_276,c_limit/Basically_Toasted-Sesame-Seeds.jpg"
+  },
+
+  {
+    name: "Pollo",
+    remote_image_url: "https://assets.bonappetit.com/photos/5ce689b1ccd61f96344c2f86/1:1/h_276,c_limit/Basically_chickenbreast.jpg"
+  },
+
+  {
+    name: "Piña",
+    remote_image_url: "https://assets.bonappetit.com/photos/5a8da3353d8ebf78d69f862c/1:1/h_276,c_limit/Basically_Pineapple.jpg"
+  },
+
+  {
+    name: "Cebolla morada",
+    remote_image_url: "https://assets.bonappetit.com/photos/596ce8ee7102712b68401afa/1:1/h_276,c_limit/Basically_Red-Onion.jpg"
+  },
+
+  {
+    name: "Azucar",
+    remote_image_url: "https://assets.bonappetit.com/photos/596ceb276c75df51bc0b9298/1:1/h_276,c_limit/basically-ingredients-granulated-sugar.jpg"
+  },
+
+  {
+    name: "Huevos",
+    remote_image_url: "https://assets.bonappetit.com/photos/59aed1cce1fa821f5140d340/1:1/h_276,c_limit/Basically_Eggs-Large.jpg"
+  },
+
+  {
+    name: "Curcuma",
+    remote_image_url: "https://assets.bonappetit.com/photos/598b23d41ec78a46feca0995/1:1/h_276,c_limit/Basically_Cinnamon.jpg"
+  },
+
+  {
     name: "Cebolla",
-    remote_image_url: "https://assets.bonappetit.com/photos/5b3a30b52edfbe34b11d2270/1:1/h_276,c_limit/Basically-red-onion.jpg"
+    remote_image_url: "https://assets.bonappetit.com/photos/5981ee524f130a49582c2d0a/1:1/h_276,c_limit/Basically_Onions-Yellow-Large.jpg",
+  },
+
+  {
+    name: "Azucar morena",
+    remote_image_url: "https://assets.bonappetit.com/photos/5c5210af2f2fcb652dcd37fb/1:1/h_276,c_limit/BA_OO_S05_Ep004_Basically_ChickenSchnitzelWithRawSalad_Video_stills_01_BREADCRUMBS.jpg"
+  },
+
+  {
+    name: "Zanhaoria",
+    remote_image_url: "https://assets.bonappetit.com/photos/59bc2a79b44d0053ed192701/1:1/h_276,c_limit/Basically_Carrots.jpg"
+  },
+
+  {
+    name: "Cilantro",
+    remote_image_url: "https://assets.bonappetit.com/photos/5981ebc9eeb1571af36e4db4/1:1/h_276,c_limit/Basically_Basil-Leaves.jpg"
+  },
+
+  {
+    name: "Remolacha",
+    remote_image_url: "https://theforkedspoon.com/wp-content/uploads/2017/04/How-to-Cook-Beets-700x1050.jpg"
   }
+
 ]
 
 puts 'creating cookwares'
@@ -539,25 +614,16 @@ BRANDS = [
                                           longitude: -58.444355,
                                         }
                   },
-                  {
-                    name: 'Fabric Sushi Villa Urquiza',
-                    remote_image_url: 'https://restorando-res.cloudinary.com/image/upload/c_fill,f_auto,g_auto,h_174,q_auto:eco,w_305/v1/restaurant_photos/l//13427/127584/restaurante_fabric-villa-urquiza_villa-urquiza_23004746_1904846489555736_5734207852698321964_o.jpg',
-                    address_attributes: {
-                                          address: "Av. Olazábal 4504",
-                                          latitude: -34.573081,
-                                          longitude: -58.479923,
-                                        }
-                  }
                 ],
     kits: [
             { general_information: {
-                name: 'Bs. As. Roll con langostino - 8 piezas.',
+                name: 'Bs. As. Roll con langostino (8 piezas)',
                 stock: 10,
                 price: 2,
                 size: 1,
                 preparation_time: 30,
                 description: 'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.',
-                remote_image_url: 'https://images.deliveryhero.io/image/pedidosya/chains/ar/fabric-sushi-footerImage-16a9c9b4-d6d4-4377-98be-d5911b1a58b4.jpg?quality=90&width=414',
+                remote_image_url: 'https://i.imgur.com/5OZrSHs.jpg',
               },
               cooking_ingredients: [
                                       { quantity: 300, unit: 'g', name: "Arroz" },
@@ -574,7 +640,7 @@ BRANDS = [
                                     ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Esterilla"],
               categories: ["Pescado", "Los más pedidos"],
-              guides: { video: "xtE3_bw8eHA",
+              guides: { video: "aEaCZfucmGQ",
                         steps: [
                                 { order: 1, content: "Lavar el arroz: Lavar el arroz en agua unas 5-6 veces hasta que el agua salga transparente o casi. Dejar reposar 30 minutos." },
                                 { order: 2, content: "Cocinar el arroz: poner en una olla con igual cantidad de agua (2 tazas de arroz, 2 tazas de agua). Tapar. No vamos a sacar la tapa hasta el final de todo el proceso. Poner en máximo hasta que hierva y luego bajar el fuego a mínimo por 13 minutos. ¡No sacar la tapa! ¡Nunca! Tras este tiempo, apagar la hornalla y dejar reposar 10 minutos, siempre tapado. Si lo cocinás como yo en Pressure Cooker, simplemente ponés el arroz con el agua en el programa para hacer arroz de 3 minutos y cuando termina la cocción lo dejás descansar los 10 minutos sin abrir ni descomprimir." },
@@ -585,7 +651,7 @@ BRANDS = [
                       },
               kit_orders: [
                             {
-                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
                               user_email: "santiago@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -604,7 +670,7 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -624,7 +690,7 @@ BRANDS = [
 
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
                               user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -643,7 +709,7 @@ BRANDS = [
                                       }
                             },
                             {
-                              kit_name: "Bs. As. Roll con langostino - 8 piezas.",
+                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
                               user_email: "alejo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -679,15 +745,6 @@ BRANDS = [
                                           longitude: -58.432580,
                                         }
                   },
-                  {
-                    name: 'Kansas Pilar',
-                    remote_image_url: 'https://kansasgrillandbar.com.ar/gfx/tmp/lo_slide_06b.jpg',
-                    address_attributes: {
-                                          address: "Ruta Panamericana Km. 43,5, y las Amapolas",
-                                          latitude: -34.437458,
-                                          longitude: -58.799377,
-                                        }
-                  }
                 ],
     kits: [
             { general_information: {
@@ -697,7 +754,7 @@ BRANDS = [
                                       size: 1,
                                       preparation_time: 50,
                                       description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.',
-                                      remote_image_url: 'https://kansasgrillandbar.com.ar/gfx/manu_plato_ribs.png'
+                                      remote_image_url: 'https://www.traegergrills.com/images/en-us/Recipes/2019/Feb%202019/20190116_BBQ-Ribs-By-Amanda-Haas_RE_HE_M.jpg'
                                     },
               cooking_ingredients: [
                                   { quantity: 8, unit: 'g', name: "Diente de ajo" },
@@ -712,7 +769,7 @@ BRANDS = [
                                 ],
               cooking_cookwares: ["Bandeja", "Plato", "Brocha", "Amazadora", "Espatula de plastico", "Cuchara de madera", "Bowl grande", "Cuchara de medida", "Graduado", "Olla", "Sarten"],
               categories: ["Los más pedidos", "Carne"],
-              guides: { video: "vuRx9blHvAU",
+              guides: { video: "ukMzUCjRjmE",
                         steps: [
                                   { order: 1, content: "Comenzamos con una receta para hacer unas costillas de cerdo al horno de forma sencilla pero a la vez muy sabrosa y apetitosa. Es una forma interesante para comenzar a hacer esta receta si no tienes mucha práctica previa. Para comenzar, antes de nada vamos a limpiar bien nuestro costillar de cerdo y a dejarlo secar bien. Si preferís podéis cortar ya las costillas y hornearlas así cortadas, aunque en nuestro caso vamos a hornear el costillar entero y serpararlo después de estar cocinado. Vamos a encender el horno para que vaya precalentándose a 200ºC durante el tiempo que tardamos en preparar el resto de ingredientes." },
                                   { order: 2, content: "Mientras esperamos que el horno alcance la temperatura adecuada, vamos a pelar los ajos, y los echamos en un recipiente junto con un chorreón de aceite de oliva virgen, un poco de sal, un poco de pimienta negra y perejil, y lo vamos a batir para formar una mezcla cremosa y de aspecto homogéneo. Se le puede añadir un toque de limón o de vino si queréis dar un toque extra de sabor, de forma opcional, o cualquier otro tipo de especia que os guste, aunque para empezar os recomedamos utilizar este simple aliño." },
@@ -801,6 +858,228 @@ BRANDS = [
                                         }
                               }
                             ],
+            },
+            { general_information: {
+                                      name: 'Pollo con Salsa Afrodisiaca',
+                                      stock: 10,
+                                      price: 480,
+                                      size: 1,
+                                      preparation_time: 30,
+                                      description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
+                                      remote_image_url: 'https://i.imgur.com/Anyzbbo.jpg'
+                                    },
+              cooking_ingredients: [
+                                  { quantity: 250, unit: 'g', name: "Pollo" },
+                                  { quantity: 2, unit: 'u', name: "Cebolla" },
+                                  { quantity: 1, unit: 'u', name: "Diente de ajo" },
+                                  { quantity: 2, unit: 'g', name: "Cilantro" },
+                                  { quantity: 2, unit: 'g', name: "Perejil" },
+                                  { quantity: 2, unit: 'u', name: "Comino" },
+                                  { quantity: 2, unit: 'u', name: "Curcuma" },
+                                  { quantity: 2, unit: 'u', name: "Azucar morena" },
+                                ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
+              categories: ["Los más pedidos", "Pollo"],
+              guides: { video: "CNI_7DLckE4",
+                        steps: [
+                                  { order: 1, content: "Cortar los cubos del pollo, pasarlos a una bolsa para nevera y marinarlo con la mezcla de todos los condimentos por 30' en la nevera." },
+                                  { order: 2, content: "Mientras preparar la salsa uniendo todos los ingredientes en un bowl con ayuda de un batidor de mano." },
+                                  { order: 3, content: "En sartén bien caliente con un poco de oliva llevar a dorar la cebolla en tiras, el pollo marinado y una vez dorado por todos sus lados agregar la salsa dejando que tome temperatura y reduzca un poco." },
+                                  { order: 4, content: "Servir con arroz blanco y espolvorear con la parte verde de la cebolla de verdeo." },
+                               ]
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Pollo con Salsa Afrodisiaca",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.589252,
+                                                      longitude: -58.387530,
+                                                    },
+                                review: {
+                                          content: "Buenisimo!",
+                                          rating: 3,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Pollo con Salsa Afrodisiaca",
+                                user_email: "andres@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "402759",
+                                date_delivery: "2019/09/19 18:00",
+                                address_attributes: {
+                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588697,
+                                                      longitude: -58.390416,
+                                                    },
+                                review: {
+                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Pollo con Salsa Afrodisiaca",
+                                user_email: "enzo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "586038",
+                                date_delivery: "2019/05/19 01:00",
+                                address_attributes: {
+                                                      address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588468,
+                                                      longitude: -58.388461,
+                                                    },
+                                review: {
+                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
+                                          rating: 4,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Pollo con Salsa Afrodisiaca",
+                                user_email: "alejo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "937859",
+                                date_delivery: "2019/10/19 12:00",
+                                address_attributes: {
+                                                      address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.582266,
+                                                      longitude: -58.399956,
+                                                    },
+                                review: {
+                                          content: "Salio excelente, ya me puedo considerar como chef.",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              }
+                            ],
+            },
+            { general_information: {
+                                      name: 'Piña Rellena',
+                                      stock: 10,
+                                      price: 380,
+                                      size: 1,
+                                      preparation_time: 30,
+                                      description: '¡Una opción tropical dulce!.',
+                                      remote_image_url: 'https://i.imgur.com/cbIhRBG.jpg'
+                                    },
+              cooking_ingredients: [
+                                  { quantity: 2, unit: 'u', name: "Pollo" },
+                                  { quantity: 2, unit: 'u', name: "Piña" },
+                                  { quantity: 1, unit: 'u', name: "Diente de ajo" },
+                                  { quantity: 2, unit: 'g', name: "Arroz" },
+                                  { quantity: 2, unit: 'u', name: "Perejil" },
+                                  { quantity: 2, unit: 'g', name: "Comino" },
+                                  { quantity: 2, unit: 'u', name: "Limon" },
+                                  { quantity: 2, unit: 'g', name: "Azucar morena" },
+                                ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
+              categories: ["Pollo"],
+              guides: { video: "pKzoVDMqcKk",
+                        steps: [
+                                  { order: 1, content: "Cortar los cubos del pollo, pasarlos a una bolsa para nevera y marinarlo con la mezcla de todos los condimentos por 30' en la nevera." },
+                                  { order: 2, content: "Mientras preparar la salsa uniendo todos los ingredientes en un bowl con ayuda de un batidor de mano." },
+                                  { order: 3, content: "En sartén bien caliente con un poco de oliva llevar a dorar la cebolla en tiras, el pollo marinado y una vez dorado por todos sus lados agregar la salsa dejando que tome temperatura y reduzca un poco." },
+                                  { order: 4, content: "Servir con arroz blanco y espolvorear con la parte verde de la cebolla de verdeo." },
+                               ]
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Piña Rellena",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.589252,
+                                                      longitude: -58.387530,
+                                                    },
+                                review: {
+                                          content: "Buenisimo!",
+                                          rating: 3,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Piña Rellena",
+                                user_email: "andres@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "402759",
+                                date_delivery: "2019/09/19 18:00",
+                                address_attributes: {
+                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588697,
+                                                      longitude: -58.390416,
+                                                    },
+                                review: {
+                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Piña Rellena",
+                                user_email: "enzo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "586038",
+                                date_delivery: "2019/05/19 01:00",
+                                address_attributes: {
+                                                      address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588468,
+                                                      longitude: -58.388461,
+                                                    },
+                                review: {
+                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
+                                          rating: 4,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              },
+
+                              {
+                                kit_name: "Piña Rellena",
+                                user_email: "alejo@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "937859",
+                                date_delivery: "2019/10/19 12:00",
+                                address_attributes: {
+                                                      address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.582266,
+                                                      longitude: -58.399956,
+                                                    },
+                                review: {
+                                          content: "Salio excelente, ya me puedo considerar como chef.",
+                                          rating: 5,
+                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        }
+                              }
+                            ],
             }
           ]
   },
@@ -814,6 +1093,11 @@ BRANDS = [
                   {
                     name: 'La Parolaccia Puerto Madero',
                     remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/10/73/40/47/fachada-sobre-ciudad.jpg',
+                    address_attributes: {
+                                          address: "Av. Alicia Moreau de Justo 1052",
+                                          latitude: -34.609958,
+                                          longitude: -58.366284,
+                                        }
                   },
                 ],
     kits: [
@@ -828,9 +1112,9 @@ BRANDS = [
                                     },
               cooking_ingredients: [
                                   { quantity: 50, unit: 'g', name: "Cebolla" },
-                                  { quantity: 5, unit: 'g', name: "Platanos maduros cortados en rebanadas" },
+                                  { quantity: 5, unit: 'g', name: "Platanos maduros" },
                                   { quantity: 3, unit: 'g', name: "Diente de ajo" },
-                                  { quantity: 300, unit: 'g', name: "Carne picada de cerdo" },
+                                  { quantity: 300, unit: 'g', name: "Cerdo" },
                                   { quantity: 4, unit: 'g', name: "Perejil" },
                                   { quantity: 4, unit: 'ml', name: "Queso en hebras" },
                                 ],
@@ -858,6 +1142,59 @@ BRANDS = [
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
                                                       address: "Rodriguez Peña 2833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.589252,
+                                                      longitude: -58.387530,
+                                                    },
+                                review: {
+                                          content: "Me encanto cocinar el plato con la ayuda de la guia de EasyChef",
+                                          rating: 4,
+                                          remote_image_url: "https://i.imgur.com/aMWsO8q.jpg"
+                                        }
+                              },
+                            ],
+            },
+            { general_information: {
+                                      name: 'Spaghetti con Salsa de Remolacha Asada y Almendras',
+                                      stock: 10,
+                                      price: 480,
+                                      size: 1,
+                                      preparation_time: 60,
+                                      description: 'Con un poco de Nuez y toda la nutrición de la Remolacha, estos Spaghettis son la forma más saludable para disfrutar de una buena pasta.',
+                                      remote_image_url: 'https://i.imgur.com/khcIO2Y.png'
+                                    },
+              cooking_ingredients: [
+                                  { quantity: 200, unit: 'g', name: "Spaghetti" },
+                                  { quantity: 3, unit: 'u', name: "Diente de ajo" },
+                                  { quantity: 10, unit: 'g', name: "Almendras" },
+                                  { quantity: 4, unit: 'u', name: "Perejil" },
+                                  { quantity: 4, unit: 'u', name: "Queso rallado" },
+                                  { quantity: 3, unit: 'u', name: "Remolacha" },
+                                ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
+              categories: ["Vegetariano", "Los más pedidos"],
+              guides: { video: "3lTroLNN5s",
+                        steps: [
+                                  { order: 1, content: "Precalentar el horno a 200 ºC y alinear en una hoja de hornear con papel de aluminio." },
+                                  { order: 2, content: "Preparar las remolachas quitando las hojas, pero manteniendo un poco en la parte superior para que no se sequen durante el tueste. Enjuagar con agua fría para eliminar cualquier exceso de suciedad." },
+                                  { order: 3, content: "Colocar las remolachas en una hoja de papel de aluminio y frotar con aceite de oliva, sazonar con sal y pimienta y colocar en su interior. Verter el agua sobre las remolachas y cerrar la hoja para formar una bolsa. Asar durante 30-40 minutos hasta que estén tiernos pero no se caigan." },
+                                  { order: 4, content: "Dejar enfriar ligeramente. Utilizando toallas de papel para proteger sus manos, frotar suavemente las remolachas para quitar las pieles." },
+                                  { order: 5, content: "Colocar las remolachas en un procesador de alimentos y pulsar hasta que estén suaves. Añadir la mitad de las almendras, el ajo, la ralladura de limón, el jugo de limón, la mitad del parmesano y sazonar con sal y pimienta. Mezclar y agregar las almendras restantes y el aceite de oliva hasta lograr una consistencia suave."},
+                                  { order: 6, content: "Cocinar los espaguetis de acuerdo a las instrucciones del paquete, reservando un ¼-½ de taza del agua de cocción antes de drenar."},
+                                  { order: 7, content: "Calentar una cacerola con mantequilla. Agregar el ajo y la chalote, cocinando hasta que estén tiernos. Cortar las hojas y los tallos de la remolacha y agregar a la sartén, cocinando hasta que se marchiten. Agregar la salsa pesto, la pasta y el agua de la pasta (según sea necesario), revolviendo para cubrir."},
+                                  { order: 8, content: "Servir caliente con perejil picado, cáscara de limón y parmesano."}
+                               ]
+                      },
+              kit_orders: [
+                              {
+                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                user_email: "santiago@easychef.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Rodriguez Peña 2933, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
                                                       latitude: -34.589252,
                                                       longitude: -58.387530,
                                                     },
