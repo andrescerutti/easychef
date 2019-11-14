@@ -27,6 +27,7 @@ const calculateKit = () => {
     address.addEventListener("change", event => updatePrice())
     address.addEventListener("focusin", event => updatePrice())
     address.addEventListener("blur", event => updatePrice())
+
   }
 }
 
