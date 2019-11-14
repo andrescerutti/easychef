@@ -673,7 +673,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Houstons Barbecue Ribs',
                                       stock: 15,
-                                      price: 460,
+                                      price: 2,
                                       size: 1,
                                       preparation_time: 50,
                                       description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.',
