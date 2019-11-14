@@ -8,7 +8,7 @@ class Order < ApplicationRecord
 
   accepts_nested_attributes_for :address
   validates :code, uniqueness: true, presence: true
-  enum status: { pending: 0, on_transit: 1, delivered: 3 }
+  enum status: { pending: 0, on_transit: 1, delivered: 3, canceled: 4, refunded: 5 }
 
   PROVIDER = ["Rappi", "Glovo", "Pedidos Ya"]
 end

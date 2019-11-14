@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def admin_dashboard
-    status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' }
+    status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433', canceled: '#ff9900', refunded: '#23264D' }
     @orders = Order.all
 
     @markers = @orders.map do |order|
