@@ -15,6 +15,7 @@ class PagesController < ApplicationController
   end
 
   def admin_dashboard
+    status_color = { pending: '#fd1015', on_transit: '#eeff00', delivered: '#4dc433' }
     @orders = Order.all
 
     @markers = @orders.map do |order|
@@ -22,7 +23,7 @@ class PagesController < ApplicationController
         lat: order.address.latitude,
         lng: order.address.longitude,
         # infoWindow: render_to_string(partial: "infowindow", locals: { order: order }),
-        color: order.state ? '#4dc433' : '#fd1015',
+        color: status_color[order.status.to_sym]
       }
     end
   end
