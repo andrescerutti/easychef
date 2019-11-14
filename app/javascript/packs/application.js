@@ -3,7 +3,6 @@ import { calculateKit } from "../plugins/init_order_kit";
 import { initAutocomplete } from "../plugins/init_autocomplete";
 import { initMapbox } from '../plugins/init_mapbox';
 import "bootstrap";
-import '../plugins/init_popup';
 import "../plugins/flatpickr"
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
