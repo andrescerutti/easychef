@@ -10,7 +10,7 @@ require("flatpickr/dist/themes/dark.css");
     defaultDate: "today",
     altInput: true,
     altFormat: "D d-M",
-    minDate: "today",
+    // minDate: "today",
     maxDate: new Date().fp_incr(30),
     enableTime: true,
     locale: Spanish
