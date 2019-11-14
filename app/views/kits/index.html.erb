@@ -10,8 +10,8 @@
     <% end %>
   </div>
     <% unless @kits.empty? %>
-  <div class="cards-scroll">
 
+  <div class="cards-scroll">
     <h2 class="mt-3">Sugerencias</h2>
     <div class="cards-scroll mt-3" >
       <% @kits.each do |kit| %>
@@ -31,10 +31,11 @@
                </div>
              </div>
             </div>
+            </div>
           <% end %>
         <% end %>
-      </div>
   </div>
+</div>
   <div class="cards-scroll">
     <h2 class="mt-3">Restaurants</h2>
     <div class="cards-scroll mt-3">
@@ -47,7 +48,7 @@
             <div class="card-body">
               <div>
                 <h5 class="card-title mb-1"><%= kit.restaurant.name %></h5>
-                <p class="card-title mb-1 "> <%= kit.restaurant.address.address %></p>
+                <p class="card-title text-truncate flex-wrap mb-1 "> <%= kit.restaurant.address.address %></p>
               </div>
               <div class="card-text d-flex justify-content-between mt-3">
                 <% if kit.restaurant.kits.order(:price).first != nil %>
@@ -63,7 +64,7 @@
   </div>
     <% else %>
      <h5 class="mt-5 mb-2">No encontramos ningún resultado para tu búsqueda pero quizá podria gustarte</h5>
-      <div class="cards-scroll">
+    <div class="cards-scroll">
       <div class="cards-scroll mt-3" >
         <% @kit.each do |kit| %>
           <%= link_to kit_path(kit) do  %>
