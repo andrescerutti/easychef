@@ -929,7 +929,7 @@ BRANDS = [
     restaurants: [
                   {
                     name: 'La Parolaccia Puerto Madero',
-                    remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/10/73/40/47/fachada-sobre-ciudad.jpg',
+                    remote_image_url: 'https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,q_auto:eco,w_1280/v1/restaurant_photos/s//2800/13106/restaurante_la-parolaccia-casa-tua-puerto-madero_puerto-madero_01.jpg',
                     address_attributes: {
                                           address: "Av. Alicia Moreau de Justo 1052",
                                           latitude: -34.609958,
@@ -991,7 +991,7 @@ BRANDS = [
                             ],
             },
             { general_information: {
-                                      name: 'Spaghetti con Salsa de Remolacha Asada y Almendras',
+                                      name: 'Spaghetti con Salsa de Remolacha',
                                       stock: 10,
                                       price: 410,
                                       size: 1,
@@ -1025,7 +1025,7 @@ BRANDS = [
                       },
               kit_orders: [
                               {
-                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                kit_name: "Spaghetti con Salsa de Remolacha",
                                 user_email: "fernando@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
@@ -1044,7 +1044,7 @@ BRANDS = [
                                         }
                               },
                               {
-                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                kit_name: "Spaghetti con Salsa de Remolacha",
                                 user_email: "guillermo@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
@@ -1063,7 +1063,7 @@ BRANDS = [
                                         }
                               },
                               {
-                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                kit_name: "Spaghetti con Salsa de Remolacha",
                                 user_email: "sebastian@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
@@ -1082,7 +1082,7 @@ BRANDS = [
                                         }
                               },
                               {
-                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                kit_name: "Spaghetti con Salsa de Remolacha",
                                 user_email: "fernando@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
