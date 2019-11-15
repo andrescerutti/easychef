@@ -1138,7 +1138,7 @@ BRANDS = [
                                       { quantity: 4, unit: 'u', name: "Pan integral" },
                                     ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Esterilla"],
-              categories: ["Pescado", "Los más pedidos"],
+              categories: ["Comida rápida", "Los más pedidos"],
               guides: { video: "aEaCZfucmGQ",
                         steps: [
                                 { order: 1, content: "Picar la espinaca limpia y llevar a cocinar 1 minuto en una sartén con una cuchara de manteca, agregar los huevos previamente batidos condimentados                 con sal, pimienta, ají molido y ajo en polvo." },
