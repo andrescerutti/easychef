@@ -10,6 +10,7 @@ class KitsController < ApplicationController
             end
     policy_scope(Kit)
     @kit = Kit.all
+    @restaurants = Restaurant.all
   end
 
   def show
