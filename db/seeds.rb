@@ -670,7 +670,7 @@ BRANDS = [
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              status: 5,
+                              status: 1,
                               code: "432509",
                               date_delivery: "2019/12/19 07:00",
                               address_attributes: {
@@ -690,7 +690,7 @@ BRANDS = [
                               user_email: "alejo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              status: 5,
+                              status: 2,
                               code: "584965",
                               date_delivery: "2019/11/19 07:00",
                               address_attributes: {
@@ -760,7 +760,7 @@ BRANDS = [
                                 user_email: "santiago@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 3,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -780,7 +780,7 @@ BRANDS = [
                                 user_email: "enzo@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 4,
                                 code: "586038",
                                 date_delivery: "2019/05/19 01:00",
                                 address_attributes: {
@@ -851,7 +851,7 @@ BRANDS = [
                                 user_email: "santiago@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 1,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -902,7 +902,7 @@ BRANDS = [
                               user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              status: 5,
+                              status: 2,
                               code: "586038",
                               date_delivery: "2019/05/19 01:00",
                               address_attributes: {
@@ -974,7 +974,7 @@ BRANDS = [
                                 user_email: "enzo@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 3,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -1029,7 +1029,7 @@ BRANDS = [
                                 user_email: "fernando@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 4,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -1048,7 +1048,7 @@ BRANDS = [
                                 user_email: "guillermo@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 1,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -1067,7 +1067,7 @@ BRANDS = [
                                 user_email: "sebastian@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
-                                status: 5,
+                                status: 1,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
@@ -1153,7 +1153,7 @@ BRANDS = [
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
-                              status: 5,
+                              status: 1,
                               code: "432509",
                               date_delivery: "2019/12/19 07:00",
                               address_attributes: {
