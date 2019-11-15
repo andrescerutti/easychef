@@ -376,7 +376,7 @@ INGREDIENTS = [
   },
 
   {
-    name: "Carne picada de cerdo",
+    name: "Costillar de cerdo",
     remote_image_url: "https://i.imgur.com/F9lQugK.jpg",
   },
 
@@ -457,6 +457,21 @@ INGREDIENTS = [
   {
     name: "Remolacha",
     remote_image_url: "https://theforkedspoon.com/wp-content/uploads/2017/04/How-to-Cook-Beets-700x1050.jpg"
+  },
+
+  {
+    name: "Manteca",
+    remote_image_url: "https://assets.bonappetit.com/photos/598b23b667b3c327ec47eacf/1:1/h_276,c_limit/Basically_Butter.jpg"
+  },
+
+  {
+    name: "Pan integral",
+    remote_image_url: "https://i1.wp.com/4.bp.blogspot.com/-EvNbsjE_LbI/W22tabo-FgI/AAAAAAAAMUo/FD_YfhCc0yUiSX2E3iG59sm2rdWtDZQCwCLcBGAs/s1600/pandesemillas.png?ssl=1"
+  },
+
+  {
+    name: "Espinaca",
+    remote_image_url: "https://assets.bonappetit.com/photos/57ad42411b33404414975574/16:9/w_1200,c_limit/sauteed-spinach-with-soy-and-sesame.jpg"
   }
 
 ]
@@ -619,7 +634,7 @@ BRANDS = [
             { general_information: {
                 name: 'Bs. As. Roll con langostino (8 piezas)',
                 stock: 10,
-                price: 2,
+                price: 470,
                 size: 1,
                 preparation_time: 30,
                 description: 'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.',
@@ -652,25 +667,6 @@ BRANDS = [
               kit_orders: [
                             {
                               kit_name: "Bs. As. Roll con langostino (8 piezas)",
-                              user_email: "santiago@easychef.com",
-                              check_out_session_id: "pending",
-                              amount: 1,
-                              status: 5,
-                              code: "549934",
-                              date_delivery: "2019/04/19 07:00",
-                              address_attributes: {
-                                                    address: "Washington 1940, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                    latitude: -34.571301,
-                                                    longitude: -58.468190,
-                                                  },
-                              review: {
-                                        content: "No soy fanatico del sushi, pero esta bien",
-                                        rating: 3,
-                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                      }
-                            },
-                            {
-                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
@@ -685,28 +681,9 @@ BRANDS = [
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
-                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        remote_image_url: "https://t3.kn3.net/taringa/F/2/F/7/0/E/HernanTirado/60B.jpg"
                                       }
 
-                            },
-                            {
-                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
-                              user_email: "enzo@easychef.com",
-                              check_out_session_id: "pending",
-                              amount: 1,
-                              status: 5,
-                              code: "084638",
-                              date_delivery: "2019/07/19 07:00",
-                              address_attributes: {
-                                                    address: "Cuba 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                    latitude: -34.563270,
-                                                    longitude: -58.452563,
-                                                  },
-                              review: {
-                                        content: "Me encanto, lo volveria a comprar",
-                                        rating: 4,
-                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                      }
                             },
                             {
                               kit_name: "Bs. As. Roll con langostino (8 piezas)",
@@ -724,7 +701,7 @@ BRANDS = [
                               review: {
                                         content: "Lo voy a sumar a mi dieta dominical",
                                         rating: 5,
-                                        remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                        remote_image_url: "https://img-global.cpcdn.com/recipes/60996d8cadffb101/1200x630cq70/photo.jpg"
                                       }
                             }
                           ],
@@ -750,7 +727,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Houstons Barbecue Ribs',
                                       stock: 15,
-                                      price: 2,
+                                      price: 500,
                                       size: 1,
                                       preparation_time: 50,
                                       description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.',
@@ -794,27 +771,7 @@ BRANDS = [
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 3,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Houstons Barbecue Ribs",
-                                user_email: "andres@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "402759",
-                                date_delivery: "2019/09/19 18:00",
-                                address_attributes: {
-                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.588697,
-                                                      longitude: -58.390416,
-                                                    },
-                                review: {
-                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
-                                          rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                          remote_image_url: "https://www.recipetineats.com/wp-content/uploads/2016/01/Oven-Pork-Ribs-with-Barbecue-Sauce_4.jpg"
                                         }
                               },
 
@@ -834,7 +791,7 @@ BRANDS = [
                                 review: {
                                           content: "No hay con que darle a esa barbacoa, muy bueno.",
                                           rating: 4,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                          remote_image_url: "https://cafedelites.com/wp-content/uploads/2018/06/Pork-Ribs-IMAGE-13.jpg"
                                         }
                               },
 
@@ -854,7 +811,7 @@ BRANDS = [
                                 review: {
                                           content: "Salio excelente, ya me puedo considerar como chef.",
                                           rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                          remote_image_url: "https://d1alt1wkdk73qo.cloudfront.net/images/guide/b97326af298c4712b697ee8ea26d4a51/478x640_ac.jpg"
                                         }
                               }
                             ],
@@ -862,7 +819,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Pollo con Salsa Afrodisiaca',
                                       stock: 10,
-                                      price: 480,
+                                      price: 440,
                                       size: 1,
                                       preparation_time: 30,
                                       description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
@@ -904,70 +861,10 @@ BRANDS = [
                                                     },
                                 review: {
                                           content: "Buenisimo!",
-                                          rating: 3,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Pollo con Salsa Afrodisiaca",
-                                user_email: "andres@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "402759",
-                                date_delivery: "2019/09/19 18:00",
-                                address_attributes: {
-                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.588697,
-                                                      longitude: -58.390416,
-                                                    },
-                                review: {
-                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
-                                          rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Pollo con Salsa Afrodisiaca",
-                                user_email: "enzo@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "586038",
-                                date_delivery: "2019/05/19 01:00",
-                                address_attributes: {
-                                                      address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.588468,
-                                                      longitude: -58.388461,
-                                                    },
-                                review: {
-                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
                                           rating: 4,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
+                                          remote_image_url: "https://i.imgur.com/DiOx9mp.jpg"
                                         }
                               },
-
-                              {
-                                kit_name: "Pollo con Salsa Afrodisiaca",
-                                user_email: "alejo@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "937859",
-                                date_delivery: "2019/10/19 12:00",
-                                address_attributes: {
-                                                      address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.582266,
-                                                      longitude: -58.399956,
-                                                    },
-                                review: {
-                                          content: "Salio excelente, ya me puedo considerar como chef.",
-                                          rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              }
                             ],
             },
             { general_information: {
@@ -1000,86 +897,26 @@ BRANDS = [
                                ]
                       },
               kit_orders: [
-                              {
-                                kit_name: "Piña Rellena",
-                                user_email: "santiago@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "395729",
-                                date_delivery: "2019/11/18 08:00",
-                                address_attributes: {
-                                                      address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.589252,
-                                                      longitude: -58.387530,
-                                                    },
-                                review: {
-                                          content: "Buenisimo!",
-                                          rating: 3,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Piña Rellena",
-                                user_email: "andres@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "402759",
-                                date_delivery: "2019/09/19 18:00",
-                                address_attributes: {
-                                                      address: "Ayacucho 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.588697,
-                                                      longitude: -58.390416,
-                                                    },
-                                review: {
-                                          content: "La guia esta muy clara y te facilita un monton el procedimiento",
-                                          rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Piña Rellena",
-                                user_email: "enzo@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "586038",
-                                date_delivery: "2019/05/19 01:00",
-                                address_attributes: {
-                                                      address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.588468,
-                                                      longitude: -58.388461,
-                                                    },
-                                review: {
-                                          content: "No hay con que darle a esa barbacoa, muy bueno.",
-                                          rating: 4,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              },
-
-                              {
-                                kit_name: "Piña Rellena",
-                                user_email: "alejo@easychef.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 5,
-                                code: "937859",
-                                date_delivery: "2019/10/19 12:00",
-                                address_attributes: {
-                                                      address: "Avenida Libertador 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.582266,
-                                                      longitude: -58.399956,
-                                                    },
-                                review: {
-                                          content: "Salio excelente, ya me puedo considerar como chef.",
-                                          rating: 5,
-                                          remote_image_url: "https://cdn.idntimes.com/content-images/community/2019/08/img-20190827-032603-ffef90b14a819e9109b26ae7cef9b027_600x400.jpg"
-                                        }
-                              }
-                            ],
+                            {
+                              kit_name: "Piña Rellena",
+                              user_email: "enzo@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              status: 5,
+                              code: "586038",
+                              date_delivery: "2019/05/19 01:00",
+                              address_attributes: {
+                                                    address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.588468,
+                                                    longitude: -58.388461,
+                                                  },
+                              review: {
+                                        content: "Un plato muy loco e innovador",
+                                        rating: 5,
+                                        remote_image_url: "https://i.imgur.com/zOUijnq.jpg"
+                                      }
+                            },
+                          ],
             }
           ]
   },
@@ -1104,7 +941,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Pastel de Platano y Carne de Cerdo',
                                       stock: 10,
-                                      price: 480,
+                                      price: 390,
                                       size: 1,
                                       preparation_time: 60,
                                       description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
@@ -1134,16 +971,16 @@ BRANDS = [
               kit_orders: [
                               {
                                 kit_name: "Pastel de Platano y Carne de Cerdo",
-                                user_email: "santiago@easychef.com",
+                                user_email: "enzo@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 5,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
-                                                      address: "Rodriguez Peña 2833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.589252,
-                                                      longitude: -58.387530,
+                                                      address: "Virrey Loreto 2901, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.572843,
+                                                      longitude: -58.453644,
                                                     },
                                 review: {
                                           content: "Me encanto cocinar el plato con la ayuda de la guia de EasyChef",
@@ -1156,7 +993,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Spaghetti con Salsa de Remolacha Asada y Almendras',
                                       stock: 10,
-                                      price: 480,
+                                      price: 410,
                                       size: 1,
                                       preparation_time: 60,
                                       description: 'Con un poco de Nuez y toda la nutrición de la Remolacha, estos Spaghettis son la forma más saludable para disfrutar de una buena pasta.',
@@ -1164,15 +1001,17 @@ BRANDS = [
                                     },
               cooking_ingredients: [
                                   { quantity: 200, unit: 'g', name: "Spaghetti" },
-                                  { quantity: 3, unit: 'u', name: "Diente de ajo" },
+                                  { quantity: 1, unit: 'u', name: "Diente de ajo" },
                                   { quantity: 10, unit: 'g', name: "Almendras" },
-                                  { quantity: 4, unit: 'u', name: "Perejil" },
-                                  { quantity: 4, unit: 'u', name: "Queso rallado" },
+                                  { quantity: 1, unit: 'u', name: "Perejil" },
+                                  { quantity: 10, unit: 'mg', name: "Queso rallado" },
                                   { quantity: 3, unit: 'u', name: "Remolacha" },
+                                  { quantity: 20, unit: 'ml', name: "Aceite de oliva" },
+                                  { quantity: 5, unit: 'mg', name: "Manteca" },
                                 ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
               categories: ["Vegetariano", "Los más pedidos"],
-              guides: { video: "3lTroLNN5s",
+              guides: { video: "_3lTroLNN5s",
                         steps: [
                                   { order: 1, content: "Precalentar el horno a 200 ºC y alinear en una hoja de hornear con papel de aluminio." },
                                   { order: 2, content: "Preparar las remolachas quitando las hojas, pero manteniendo un poco en la parte superior para que no se sequen durante el tueste. Enjuagar con agua fría para eliminar cualquier exceso de suciedad." },
@@ -1187,35 +1026,150 @@ BRANDS = [
               kit_orders: [
                               {
                                 kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
-                                user_email: "santiago@easychef.com",
+                                user_email: "fernando@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 5,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
                                 address_attributes: {
-                                                      address: "Rodriguez Peña 2933, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.589252,
-                                                      longitude: -58.387530,
+                                                      address: "Washington 1940, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.571026,
+                                                      longitude: -58.468242,
                                                     },
                                 review: {
-                                          content: "Me encanto cocinar el plato con la ayuda de la guia de EasyChef",
-                                          rating: 4,
-                                          remote_image_url: "https://i.imgur.com/aMWsO8q.jpg"
+                                          content: "No soy fanatico de la remolacha, pero me encanto cocinar el plato con la ayuda de la guia de EasyChef",
+                                          rating: 3,
+                                          remote_image_url: "https://res.cloudinary.com/oreegano/image/upload/c_fill,f_auto,g_center,h_800,q_auto,w_800/v1495762676/isj7k620mbvl2dyzmtqf.jpg"
                                         }
                               },
-                            ],
+                              {
+                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                user_email: "guillermo@gmail.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Avenida Cordoba 5443, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.588280,
+                                                      longitude: -58.438932,
+                                                    },
+                                review: {
+                                          content: "Excelente calidad de ingredientes",
+                                          rating: 4,
+                                          remote_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKzIspSN93LNxwLR0joWiKWZxYF8ca-bRzHXiTzyIiFBrvag-Z"
+                                        }
+                              },
+                              {
+                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                user_email: "sebastian@gmail.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Avenida Coronel Niceto Vega 4866, Buenos Aires",
+                                                      latitude: -34.591930,
+                                                      longitude: -58.432318,
+                                                    },
+                                review: {
+                                          content: "BUE-NI-SI-MO, lo volveria a comprar",
+                                          rating: 5,
+                                          remote_image_url: "https://i.ytimg.com/vi/nbow5w3qccM/hqdefault.jpg"
+                                        }
+                              },
+                              {
+                                kit_name: "Spaghetti con Salsa de Remolacha Asada y Almendras",
+                                user_email: "fernando@gmail.com",
+                                check_out_session_id: "pending",
+                                amount: 1,
+                                status: 5,
+                                code: "395729",
+                                date_delivery: "2019/11/18 08:00",
+                                address_attributes: {
+                                                      address: "Juncal 839, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                      latitude: -34.592724,
+                                                      longitude: -58.379128,
+                                                    },
+                                review: {
+                                          content: "Muy divertida la experiencia de cocinar este plato, lo voy a volver a hacer.",
+                                          rating: 4,
+                                          remote_image_url: "https://www.tictacyummy.com/wp-content/uploads/2017/05/IMG_0595.jpg"
+                                        }
+                              },
+                          ],
             },
           ]
   },
   {
     brand: {
-      name: 'The Food Track Store',
-      remote_logo_url: 'https://scontent.faep8-2.fna.fbcdn.net/v/t1.0-9/12140682_1502266113436590_3429758666823955703_n.png?_nc_cat=100&_nc_oc=AQkW4GpnldkyImFacNSYNpBnGCvIB8eeJp-qi1_D-sS7-KOXfAUNm-Pesg82p-qb718&_nc_ht=scontent.faep8-2.fna&oh=d960747b42b58e69584a1a1af00629c6&oe=5E5007CB'
+      name: 'The Food Truck Store',
+      remote_logo_url: 'https://instagram.faep8-1.fna.fbcdn.net/vp/f613968b2ae692dee98d0a9f7e39530a/5E68EADF/t51.2885-19/s150x150/70700038_2595207333855439_4866673626880933888_n.jpg?_nc_ht=instagram.faep8-1.fna.fbcdn.net'
     },
     restaurants: [
-
-    ]
+                    {
+                    name: 'The Food Truck Store Recoleta',
+                    remote_image_url: 'http://www.burger-life.com/wp-content/uploads/2018/07/the_burger_life_Jul-06-202654.jpg',
+                    address_attributes: {
+                                          address: "Avenida Callao 2092, Ciudad Autónoma de Buenos Aires",
+                                          latitude: -34.586584,
+                                          longitude: -58.386296,
+                                        }
+                  },
+                ],
+    kits: [
+            { general_information: {
+                name: 'Sandwich de Espinaca',
+                stock: 10,
+                price: 350,
+                size: 1,
+                preparation_time: 20,
+                description: 'Una opción saludable y deliciosa.',
+                remote_image_url: 'https://i.imgur.com/5lzm0Cx.png',
+              },
+              cooking_ingredients: [
+                                      { quantity: 1, unit: 'u', name: "Espinaca" },
+                                      { quantity: 1, unit: 'u', name: "Queso en hebras" },
+                                      { quantity: 2, unit: 'u', name: "Huevos" },
+                                      { quantity: 1, unit: 'g', name: "Diente de ajo" },
+                                      { quantity: 4, unit: 'u', name: "Pan integral" },
+                                    ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Esterilla"],
+              categories: ["Pescado", "Los más pedidos"],
+              guides: { video: "aEaCZfucmGQ",
+                        steps: [
+                                { order: 1, content: "Picar la espinaca limpia y llevar a cocinar 1 minuto en una sartén con una cuchara de manteca, agregar los huevos previamente batidos condimentados                 con sal, pimienta, ají molido y ajo en polvo." },
+                                { order: 2, content: "Mover con cuchara de madera y cocinar hasta cocinar el huevo" },
+                                { order: 3, content: "Dejar enfriar. Unir con la mozzarella rallada y armar los sandwich." },
+                                { order: 4, content: "Dorar por ambos lados en un sartén con manteca." },
+                               ]
+                      },
+              kit_orders: [
+                            {
+                              kit_name: "Sandwich de Espinaca",
+                              user_email: "andres@easychef.com",
+                              check_out_session_id: "pending",
+                              amount: 1,
+                              status: 5,
+                              code: "432509",
+                              date_delivery: "2019/12/19 07:00",
+                              address_attributes: {
+                                                    address: "Avenida Libertador 3380, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.571301,
+                                                    longitude: -58.468190,
+                                                  },
+                              review: {
+                                        content: "Una comida saludable en un ratito lista!",
+                                        rating: 4,
+                                        remote_image_url: "https://i.imgur.com/eqtCBbk.png"
+                                      }
+                            },
+                          ],
+            }
+          ]
   },
 ]
 

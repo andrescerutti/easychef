@@ -21,10 +21,10 @@
             <%= cl_image_tag kit.image, class: "rounded"%>
              <div class="card-body">
                <div>
-                 <h5 class="card-title mb-1 text-wrap" style="height: 50px"><%= kit.name %></h5>
-                 <p class="card-text overflow-ellipsis card-description"><%= kit.description %></p>
+                 <h5 class="card-title mb-1 text-wrap text-truncate" style="height: 50px"><%= kit.name %> - <small><%= kit.restaurant.name %></small></h5>
+                 <p class="card-text overflow-ellipsis card-description mt-3"><%= kit.description %></p>
                </div>
-               <div class="d-flex justify-content-between mt-3">
+               <div class="d-flex justify-content-between">
                  <p class="card-text card-address"><i class="fas fa-map-marker-alt"></i> A 1.3km</p>
                  <p class="card-text card-price">$ <%= kit.price %></p>
 
@@ -39,20 +39,20 @@
   <div class="cards-scroll">
     <h2 class="mt-3">Restaurants</h2>
     <div class="cards-scroll mt-3">
-      <% @kits.each do |kit| %>
-        <%= link_to restaurant_path(kit.restaurant) do %>
+      <% @restaurants.each do |restaurant| %>
+        <%= link_to restaurant_path(restaurant) do %>
         <div class="card-scroll pr-0 pl-2 mr-3 col-md-4">
           <div class="card-kit rounded">
-            <img src=<%= kit.restaurant.image %> />
+            <img src=<%= restaurant.image %> />
 
             <div class="card-body">
               <div>
-                <h5 class="card-title mb-1"><%= kit.restaurant.name %></h5>
-                <p class="card-title text-truncate flex-wrap mb-1 "> <%= kit.restaurant.address.address %></p>
+                <h5 class="card-title mb-1"><%= restaurant.name %></h5>
+                <p class="card-title text-truncate flex-wrap mb-1 "> <%= restaurant.address.address %></p>
               </div>
               <div class="card-text d-flex justify-content-between mt-3">
-                <% if kit.restaurant.kits.order(:price).first != nil %>
-                <p class="card-text card-price">Desde $<%= kit.restaurant.kits.order(:price).first.price %></p>
+                <% if restaurant.kits.order(:price).first != nil %>
+                <p class="card-text card-price">Desde $<%= restaurant.kits.order(:price).first.price %></p>
                 <% end %>
               </div>
             </div>
