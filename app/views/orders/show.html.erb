@@ -21,7 +21,7 @@
         <form action="<%= order_payments_path(@order) %>" method="POST">
           <script
             src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
-            data-public-key="<%= ENV['MP_PUBLIC_TOKEN'] %>"
+            data-public-key="<%= ENV['MP_PRODUCTION_PUBLIC_KEY'] %>"
             data-transaction-amount="<%= @order.kit.price * @order.amount %>"
             data-button-label="Confirmar y pagar"
             <% if current_user.mpcustomer_id? %>
