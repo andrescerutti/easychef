@@ -36,6 +36,8 @@ class PaymentsController < ApplicationController
 
     if payment_response["status"] == "201" && !current_user.mpcustomer_id
 
+    # logger.debug "respuesta mp #{payment_response}"
+
       search_customer = $mp.get("/v1/customers/search" ,{ email: current_user.email })
 
       if !search_customer["response"]["results"].empty?
@@ -58,8 +60,8 @@ class PaymentsController < ApplicationController
     end
   @payment.order = @order
   @payment.save!
-
   authorize @payment
+raise
 
   redirect_to order_payment_path(@order, @payment)
 end
