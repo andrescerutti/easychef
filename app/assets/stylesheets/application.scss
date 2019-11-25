@@ -14,4 +14,8 @@
 @import "pages/restaurant-show";
 @import "pages/admin_dashboard";
 
-@import "payments/show"
+@import "payments/show";
+
+a {
+  color: $black;
+}
