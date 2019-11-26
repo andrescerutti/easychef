@@ -941,7 +941,7 @@ BRANDS = [
             { general_information: {
                                       name: 'Pastel de Platano y Carne de Cerdo',
                                       stock: 10,
-                                      price: 390,
+                                      price: 2,
                                       size: 1,
                                       preparation_time: 60,
                                       description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
@@ -973,7 +973,7 @@ BRANDS = [
                                 kit_name: "Pastel de Platano y Carne de Cerdo",
                                 user_email: "enzo@easychef.com",
                                 check_out_session_id: "pending",
-                                amount: 1,
+                                amount: 2,
                                 status: 3,
                                 code: "395729",
                                 date_delivery: "2019/11/18 08:00",
