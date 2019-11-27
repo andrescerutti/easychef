@@ -20,6 +20,7 @@ class PaymentsController < ApplicationController
     installments = 1
     issuer_id = params[:issuer_id]
 
+
     payment = {}
     payment[:transaction_amount] = @order.amount
     payment[:token] = token
