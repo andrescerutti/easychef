@@ -62,7 +62,6 @@ class PaymentsController < ApplicationController
   @payment.order = @order
   @payment.save!
   authorize @payment
-# raise
 
   redirect_to order_payment_path(@order, @payment)
 end
