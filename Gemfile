@@ -22,6 +22,7 @@ gem 'geocoder'
 gem 'pundit'
 gem 'mercadopago-sdk'
 gem 'pg_search', '~> 2.3.0'
+gem 'letter_opener', group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
