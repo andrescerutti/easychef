@@ -22,9 +22,9 @@ class PaymentsController < ApplicationController
 
 
     payment = {}
-    payment[:transaction_amount] = @order.amount
+    payment[:transaction_amount] = (@order.kit.price * @order.amount)
     payment[:token] = token
-    payment[:description] = @order.kit.description
+    payment[:description] = @order.kit.name
     payment[:installments] = installments
     payment[:issuer_id] = issuer_id
     payment[:payer] = {
@@ -59,6 +59,7 @@ class PaymentsController < ApplicationController
         current_user.save!
       end
     end
+    # raise
   @payment.order = @order
   @payment.save!
   authorize @payment
