@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   end
   resources :guides, only: [:show]
 
+  get "/failed/", to: "payments#failed", as: :failed
   get "/components/", to: "pages#components", as: :components
   get "/user_dashboard/", to: "pages#user_dashboard", as: :user_dashboard
   get "/admin_dashboard/", to: "pages#admin_dashboard", as: :admin_dashboard
