@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "/components/", to: "pages#components", as: :components
   get "/user_dashboard/", to: "pages#user_dashboard", as: :user_dashboard
   get "/admin_dashboard/", to: "pages#admin_dashboard", as: :admin_dashboard
+  get "/wrong_address/", to: "pages#wrong_address", as: :wrong_address
   patch "/orders/:id/order_assignment/", to: "orders#order_assignment", as: :order_assignment
 
 

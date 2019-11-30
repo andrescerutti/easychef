@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :wrong_address]
 
   def home
     @categories = Category.all
@@ -26,5 +26,13 @@ class PagesController < ApplicationController
         color: status_color[order.status.to_sym]
       }
     end
+  end
+
+  def wrong_address
+    @user = current_user
+    # @markers = {
+    #   lat: @user.address.latitude,
+    #   lng: @user.address.longitude,
+    # }
   end
 end

@@ -13,6 +13,10 @@ class PagePolicy < ApplicationPolicy
     false
   end
 
+  def wrong_address?
+    true
+  end
+
   private
 
   def allow_user?

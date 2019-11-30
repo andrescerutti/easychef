@@ -1,6 +1,7 @@
 class Kit < ApplicationRecord
   belongs_to :restaurant
 
+
   include PgSearch::Model
   pg_search_scope :search,
     against: [:name],

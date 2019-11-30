@@ -2,15 +2,24 @@ class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show, :category]
   def index
-    @categories = Category.all
-    @kits = if params[:query].present?
-              Kit.search(params[:query])
-            else
-              Kit.all
-            end
+    # 1. Geocode Address from params (Mapbox o Nominatum)
+    # 2. Si hay restaurants, proceso normal, sino redirect to wrong_address
     policy_scope(Kit)
     @kit = Kit.all
-    @restaurants = Restaurant.all
+    @categories = Category.all
+    @restaurants = Restaurant.geocoded
+    @user = current_user
+    search = params[:restaurant][:address]
+    addresses = Address.near(search, 100).joins(:restaurant)
+    @restaurants = addresses.map do |address|
+      address.addressable
+    end
+    # return redirect_to wrong_address_path if
+    # @kits = if params[:query].present?
+    #           Kit.search(params[:query])
+    #         else
+    #           Kit.all
+    #         end
   end
 
   def show
