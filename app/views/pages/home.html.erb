@@ -6,7 +6,7 @@
       <p class="lead px-3 text-primary d-sm-block d-md-none" >Cocinar rico nunca fue tan fácil</p>
     </div>
     <div class="container">
-      <%= simple_form_for @restaurants, url: kits_path, method: :get do |f| %>
+      <%= simple_form_for :query, url: kits_path, method: :get do |f| %>
         <div class="d-md-flex align-items-center mx-md-5">
           <div class=" w-sm-100 flex-grow-1 mb-3" >
               <%= f.input :address, placeholder: "Ingresá tu dirección", label: false, class: "order-form order_address_address" %>
