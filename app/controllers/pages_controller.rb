@@ -12,6 +12,8 @@ class PagesController < ApplicationController
     # @restaurants = Restaurant.all
     @kits = Kit.all
     @orders = Order.where(user: current_user)
+    @pages = "asd"
+    authorize :page, :user_dashboard?
   end
 
   def admin_dashboard
@@ -25,6 +27,7 @@ class PagesController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { order: order }),
         color: status_color[order.status.to_sym]
       }
+    authorize :page, :admin_dashboard?
     end
   end
 end
