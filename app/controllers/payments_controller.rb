@@ -1,6 +1,10 @@
 class PaymentsController < ApplicationController
   protect_from_forgery except: :create
 
+  def failed
+    authorize :payment, :failed?
+  end
+
   def show
     @order = Order.find(params[:order_id])
     @payment = Payment.find(params[:id])
@@ -10,7 +14,7 @@ class PaymentsController < ApplicationController
 
   def create
     require 'mercadopago'
-    $mp = MercadoPago.new(ENV["MP_PRIVATE_TOKEN"])
+    $mp = MercadoPago.new(ENV["MP_PRODUCTION_ACCESS_TOKEN"])
 
     @order = Order.find(params[:order_id])
     @payment = Payment.new
@@ -20,31 +24,33 @@ class PaymentsController < ApplicationController
     installments = 1
     issuer_id = params[:issuer_id]
 
-
     payment = {}
-    payment[:transaction_amount] = @order.amount
+    payment[:transaction_amount] = (@order.kit.price * @order.amount)
     payment[:token] = token
-    payment[:description] = @order.kit.description
+    payment[:description] = @order.kit.name
     payment[:installments] = installments
     payment[:issuer_id] = issuer_id
     payment[:payer] = {
       email: current_user.email
     }
 
+    @payment.order = @order
+    @payment.save!
+    authorize @payment
     payment_response = $mp.post("/v1/payments", payment)
-
     # ask for the customer, if not exists the create a new one, else get the customer_id and the card_id
 
-    if payment_response["status"] == "201" && !current_user.mpcustomer_id
+      # raise
+    if payment_response["status"] == "201" && payment_response["response"]["status"] == "approved"
+      # logger.debug "respuesta mp #{payment_response}"
 
-    # logger.debug "respuesta mp #{payment_response}"
-
-      search_customer = $mp.get("/v1/customers/search" ,{ email: current_user.email })
+      search_customer = $mp.get("/v1/customers/search", { email: current_user.email })
 
       if !search_customer["response"]["results"].empty?
         current_user.mpcard_id = search_customer["response"]["results"][0]["cards"][0]["id"]
         current_user.mpcustomer_id = search_customer["response"]["results"][0]["id"]
         current_user.save
+        # redirect_to order_payment_path(@order, @payment)
       else
         # create a customer
         customer_response = $mp.post("/v1/customers", {email: current_user.email})
@@ -58,12 +64,9 @@ class PaymentsController < ApplicationController
         current_user.mpcard_id = card_response["response"]["id"]
         current_user.save!
       end
+      redirect_to order_payment_path(@order, @payment)
+    else
+      redirect_to failed_path
     end
-  @payment.order = @order
-  @payment.save!
-  authorize @payment
-# raise
-
-  redirect_to order_payment_path(@order, @payment)
-end
+  end
 end
