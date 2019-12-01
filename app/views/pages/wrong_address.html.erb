@@ -1,0 +1,28 @@
+<div class="">
+
+  <div
+    id="map"
+    class="position-sticky"
+    style="width: 100%;
+    height: 90vh; top: 0;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+    <div class="card position-absolute " style="top: 150px; left: 50px; width: 520px">
+      <div class="card-header">
+        <h3> Lo sentimos. Aún no llegamos allí,</h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text" style="height: 50px">pero estamos en constante expansión. Intenta con otra dirección de entrega para disfrutar de EasyChef</p>
+        <%= simple_form_for :query, url: kits_path, method: :get do |f| %>
+          <div class="">
+            <div class=" w-100" >
+              <%= f.input :address, placeholder: "Ingresá otra dirección", label: false, class: "order-form order_address_address" %>
+            </div>
+              <%= f.submit "Cambiar dirección", class: "btn btn-primary w-100" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+</div>
