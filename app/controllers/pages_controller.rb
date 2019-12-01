@@ -29,10 +29,11 @@ class PagesController < ApplicationController
   end
 
   def wrong_address
-    @user = current_user
-    # @markers = {
-    #   lat: @user.address.latitude,
-    #   lng: @user.address.longitude,
-    # }
+    coordinates = Geocoder.search(params[:query])
+    @markers = [{
+      lat: coordinates.first.latitude,
+      lng: coordinates.first.longitude,
+      color: '#0A60C4'
+    }]
   end
 end
