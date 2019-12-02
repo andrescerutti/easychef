@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :wrong_address]
 
   def home
     @categories = Category.all
@@ -29,5 +29,14 @@ class PagesController < ApplicationController
       }
     authorize :page, :admin_dashboard?
     end
+  end
+
+  def wrong_address
+    coordinates = Geocoder.search(params[:query])
+    @markers = [{
+      lat: coordinates.first.latitude,
+      lng: coordinates.first.longitude,
+      color: '#0A60C4'
+    }]
   end
 end

@@ -13,6 +13,10 @@ class PagePolicy < ApplicationPolicy
     user_admin?
   end
 
+  def wrong_address?
+    true
+  end
+
   private
 
   def user_admin?

@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
   belongs_to :user
   belongs_to :brand
+  geocoded_by :address
 
   mount_uploader :image, ImageUploader
 
@@ -11,4 +12,5 @@ class Restaurant < ApplicationRecord
 
   validates :name, presence: true
   validates :image, presence: true
+
 end
