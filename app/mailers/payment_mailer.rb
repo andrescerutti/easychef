@@ -6,6 +6,7 @@ class PaymentMailer < ApplicationMailer
   #
   def confirmed
     @user = params[:user]
+    raise
 
     mail(to: @user.email, subject: 'Tu pago fue aprobado!')
   end
