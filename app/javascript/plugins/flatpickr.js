@@ -13,7 +13,8 @@ require("flatpickr/dist/themes/dark.css");
     minDate: "today",
     maxDate: new Date().fp_incr(30),
     enableTime: true,
-    locale: Spanish
+    locale: Spanish,
+    disableMobile: "true"
   })
 
 

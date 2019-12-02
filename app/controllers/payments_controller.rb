@@ -33,7 +33,6 @@ class PaymentsController < ApplicationController
     payment[:payer] = {
       email: current_user.email
     }
-
     @payment.order = @order
     @payment.save!
     authorize @payment
