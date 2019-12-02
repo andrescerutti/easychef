@@ -9,27 +9,31 @@
       </div>
       <p class="text-success m-0 kitrat mb-2 "> <strong>El <%= ((@kit.average_rating.to_i)*100)/5 %>% volveria a cocinarlo </strong> </p>
       <%= simple_form_for([@kit, @order])  do |f| %>
-      <div class="d-flex justify-content-between mt-3">
+      <div class="d-flex justify-content-between mt-1">
 
-        <div class="d-flex align-items-center">
-          <div class="mb-3 mr-2 ml-2">
-            Para <i style="font-size: 20px;" class="fas fa-user"></i>
-          </div>
-          <div class="" >
-            <%= f.input :amount, collection: 1..@kit.stock, label: false %>
-            <span class="d-none" id="price"><%= @kit.price %></span>
+        <div class="align-items-center mt-2">
+          <div class=" d-flex justify-content-between">
+            <div class="">
+              Cantidad de personas <i style="font-size: 20;" class="fas fa-user"></i>
+            </div>
+
+            <div style="width: 120px;">
+              <%= f.input :amount, collection: 1..@kit.stock, label: false %>
+              <span class="d-none" id="price"><%= @kit.price %></span>
+            </div>
           </div>
           <div class="date_delivery d-flex">
-            <div class="ml-5 mr-2">
-              <p style="font-size: 25px;"><i class="fas fa-calendar-alt"></i></p>
+            <div class="mr-2">
+              <p style="font-size: 20px;">Día y hora estimada de entrega  <i class="fas fa-calendar-alt"></i></p>
             </div>
+
             <div style="width: 120px;">
               <%= f.input :date_delivery, as: :string, required: false, input_html: {class: "datepicker"}, label:false %>
             </div>
           </div>
+
         </div>
       </div>
-
 
 
       <!-- form direccion  -->
