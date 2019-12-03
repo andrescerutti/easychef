@@ -730,7 +730,7 @@ BRANDS = [
                                       price: 500,
                                       size: 1,
                                       preparation_time: 50,
-                                      description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.',
+                                      description: 'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas.',
                                       remote_image_url: 'https://www.traegergrills.com/images/en-us/Recipes/2019/Feb%202019/20190116_BBQ-Ribs-By-Amanda-Haas_RE_HE_M.jpg'
                                     },
               cooking_ingredients: [
