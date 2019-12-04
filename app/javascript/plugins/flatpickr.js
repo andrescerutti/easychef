@@ -7,13 +7,14 @@ require("flatpickr/dist/themes/dark.css");
 
 
   flatpickr(".datepicker", {
-    defaultDate: "today",
+    defaultDate: new Date().fp_incr(3),
     altInput: true,
     altFormat: "D d-M",
-    minDate: "today",
-    maxDate: new Date().fp_incr(30),
+    minDate: new Date().fp_incr(3),
+    maxDate: new Date().fp_incr(10),
     enableTime: true,
-    locale: Spanish
+    locale: Spanish,
+    disableMobile: "true"
   })
 
 

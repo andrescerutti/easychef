@@ -14,7 +14,7 @@ class PaymentsController < ApplicationController
 
   def create
     require 'mercadopago'
-    $mp = MercadoPago.new(ENV["MP_PRODUCTION_ACCESS_TOKEN"])
+    $mp = MercadoPago.new(ENV["MP_PRIVATE_TOKEN"])
 
     @order = Order.find(params[:order_id])
     @payment = Payment.new
@@ -33,7 +33,6 @@ class PaymentsController < ApplicationController
     payment[:payer] = {
       email: current_user.email
     }
-
     @payment.order = @order
     @payment.save!
     authorize @payment
