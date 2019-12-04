@@ -150,7 +150,7 @@
 # espatula_plastico = Cookware.create!(name: "Espatula de plastico", image: "https://assets.bonappetit.com/photos/597901f35e52a765a32832ce/1:1/h_276,c_limit/Basically_Rubber-Spatula.jpg")
 # cuchara_medida = Cookware.create!(name: "Cuchara de medida", image: "https://assets.bonappetit.com/photos/596cf407b85671732e0d55ff/1:1/h_276,c_limit/Basically_Tablespoon.jpg")
 # bowl_grande = Cookware.create!(name: "Bowl Grande", image: "https://assets.bonappetit.com/photos/596938717654ad3411665279/1:1/h_276,c_limit/basically-equipment-large-pot.jpg")
-# cuchara_madera = Cookware.create!(name: "Cuchara de madera", image: "https://assets.bonappetit.com/photos/596940436c75df51bc0b91c0/1:1/h_276,c_limit/basically-equipment-wooden-spoon.jpg")
+# cuchara_madera = Cookware.create!(name: "Cuchara", image: "https://assets.bonappetit.com/photos/596940436c75df51bc0b91c0/1:1/h_276,c_limit/basically-equipment-wooden-spoon.jpg")
 # graduado = Cookware.create!(name: "Graduado", image: "https://assets.bonappetit.com/photos/59d7daa6a3542e7d35aabb76/1:1/h_276,c_limit/Basically_Glass-Measuring-2-Cups.jpg")
 # olla = Cookware.create!(name: "Olla", image:"https://assets.bonappetit.com/photos/5a7490a05736e36c6bb6a23e/1:1/h_276,c_limit/Basically_Dutch-Oven-Large-with-Lid.jpg")
 # sarten = Cookware.create!(name: "Sartén", image: "https://assets.bonappetit.com/photos/596940c66c75df51bc0b91c2/1:1/h_276,c_limit/basically-equipment-medium-skillet.jpg")
@@ -472,8 +472,60 @@ INGREDIENTS = [
   {
     name: "Espinaca",
     remote_image_url: "https://assets.bonappetit.com/photos/57ad42411b33404414975574/16:9/w_1200,c_limit/sauteed-spinach-with-soy-and-sesame.jpg"
-  }
+  },
 
+  {
+    name: "Chorizo",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+
+  {
+    name: "Champiñones",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+
+  {
+    name: "Milanesa de pollo",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+
+  {
+    name: "Queso manchengo",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+
+  {
+    name: "Pan molido",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Arroz Carnioli",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Caldo de verduras",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Brocoli",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Pechuga de pollo",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Papas pequeñas",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Tomates chery",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
+  {
+    name: "Hongos secos",
+    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+  },
 ]
 
 puts 'creating cookwares'
@@ -491,7 +543,7 @@ COOKWARES = [
   { name: "Espatula de plastico", remote_image_url: "https://assets.bonappetit.com/photos/597901f35e52a765a32832ce/1:1/h_276,c_limit/Basically_Rubber-Spatula.jpg" },
   { name: "Cuchara de medida", remote_image_url: "https://assets.bonappetit.com/photos/596cf407b85671732e0d55ff/1:1/h_276,c_limit/Basically_Tablespoon.jpg" },
   { name: "Bowl grande", remote_image_url: "https://assets.bonappetit.com/photos/596938717654ad3411665279/1:1/h_276,c_limit/basically-equipment-large-pot.jpg" },
-  { name: "Cuchara de madera", remote_image_url: "https://assets.bonappetit.com/photos/596940436c75df51bc0b91c0/1:1/h_276,c_limit/basically-equipment-wooden-spoon.jpg" },
+  { name: "Cuchara", remote_image_url: "https://assets.bonappetit.com/photos/596940436c75df51bc0b91c0/1:1/h_276,c_limit/basically-equipment-wooden-spoon.jpg" },
   { name: "Graduado", remote_image_url: "https://assets.bonappetit.com/photos/59d7daa6a3542e7d35aabb76/1:1/h_276,c_limit/Basically_Glass-Measuring-2-Cups.jpg" },
   { name: "Olla", remote_image_url:"https://assets.bonappetit.com/photos/5a7490a05736e36c6bb6a23e/1:1/h_276,c_limit/Basically_Dutch-Oven-Large-with-Lid.jpg" },
   { name: "Sarten", remote_image_url: "https://assets.bonappetit.com/photos/596940c66c75df51bc0b91c2/1:1/h_276,c_limit/basically-equipment-medium-skillet.jpg" }
@@ -616,13 +668,13 @@ USERS = [
 BRANDS = [
   {
     brand: {
-      name: 'Fabric Sushi',
-      remote_logo_url: 'https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F603204967013421056%2FA24Y1EqL_400x400.png'
+      name: 'Mano Rota',
+      remote_logo_url: 'https://www.manorota.com/wp-content/uploads/2018/02/logo-manorota-e1529613131810.png'
     },
     restaurants: [
                   {
-                    name: 'Fabric Sushi Belgrano',
-                    remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/10/73/40/47/fachada-sobre-ciudad.jpg',
+                    name: 'Mano Rota',
+                    remote_image_url: 'https://tendencias.tv/wp-content/uploads/2016/07/MANO-ROTA.jpg',
                     address_attributes: {
                                           address: "Cdad. de La Paz 569",
                                           latitude: -34.572223,
@@ -632,47 +684,52 @@ BRANDS = [
                 ],
     kits: [
             { general_information: {
-                name: 'Bs. As. Roll con langostino (8 piezas)',
+                name: 'Pollo relleno de queso fundido y chorizo',
                 stock: 10,
-                price: 470,
+                price: 350,
                 size: 1,
-                preparation_time: 30,
-                description: 'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.',
-                remote_image_url: 'https://i.imgur.com/5OZrSHs.jpg',
+                preparation_time: 25,
+                description: 'Pollo relleno de una combinación entre Queso derretido y Chorizo.',
+                remote_image_url: 'https://i.ytimg.com/vi/7yyIEA3h62Y/maxresdefault.jpg',
               },
               cooking_ingredients: [
-                                      { quantity: 300, unit: 'g', name: "Arroz" },
-                                      { quantity: 0.70, unit: 'ml', name: "Salsa de soja" },
-                                      { quantity: 3, unit: 'u', name: "Langostinos crudos" },
-                                      { quantity: 80, unit: 'g', name: "Palta" },
-                                      { quantity: 20, unit: 'g', name: "Pepino" },
-                                      { quantity: 100, unit: 'g', name: "Salmón fresco" },
-                                      { quantity: 2, unit: 'u', name: "Alga Nori" },
-                                      { quantity: 80, unit: 'g', name: "Atún fresco" },
-                                      { quantity: 30, unit: 'g', name: "Kanikama" },
-                                      { quantity: 5, unit: 'g', name: "Semillas de sesamo" },
-                                      { quantity: 20, unit: 'g', name: "Wasabi" }
+                                      { quantity: 1, unit: 'g', name: "Chorizo" },
+                                      { quantity: 0.5, unit: 'ml', name: "Cebolla" },
+                                      { quantity: 1, unit: 'u', name: "Diente de ajo" },
+                                      { quantity: 2, unit: 'g', name: "Champiñones" },
+                                      { quantity: 2, unit: 'g', name: "Milanesa de pollo" },
+                                      { quantity: 30, unit: 'g', name: "Queso manchengo" },
+                                      { quantity: 2, unit: 'u', name: "Huevos" },
+                                      { quantity: 25, unit: 'g', name: "Pan molido" },
+                                      { quantity: 0.5, unit: 'g', name: "Palta" },
+                                      { quantity: 0.5, unit: 'g', name: "Limon" },
                                     ],
-              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Esterilla"],
-              categories: ["Pescado", "Los más pedidos"],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Sarten"],
+              categories: ["Opciones Saludables", "Los más pedidos"],
               guides: { video: "aEaCZfucmGQ",
                         steps: [
-                                { order: 1, content: "Lavar el arroz: Lavar el arroz en agua unas 5-6 veces hasta que el agua salga transparente o casi. Dejar reposar 30 minutos." },
-                                { order: 2, content: "Cocinar el arroz: poner en una olla con igual cantidad de agua (2 tazas de arroz, 2 tazas de agua). Tapar. No vamos a sacar la tapa hasta el final de todo el proceso. Poner en máximo hasta que hierva y luego bajar el fuego a mínimo por 13 minutos. ¡No sacar la tapa! ¡Nunca! Tras este tiempo, apagar la hornalla y dejar reposar 10 minutos, siempre tapado. Si lo cocinás como yo en Pressure Cooker, simplemente ponés el arroz con el agua en el programa para hacer arroz de 3 minutos y cuando termina la cocción lo dejás descansar los 10 minutos sin abrir ni descomprimir." },
-                                { order: 3, content: "Hacer el sushi-zu: mientras reposa el arroz, mezclar las 4 cdas. de vinagre de arroz con las 2 cdas. de azúcar y la cdita. de sal. Revolver hasta que esté el azúcar disuelta." },
-                                { order: 4, content: "Enfriar el arroz: tras el reposo, colocar el arroz en un molde amplio (ideal si es de madera), que sea bien abierto. Volcar el aderezo sobre él e ir con cuidado separándolo con una cuchara y revolviéndolo mientras lo abanicamos con un abanico ad hoc o con una revista Paparazzi. La idea es que el arroz quede a temperatura ambiente a la vez que hacemos llegar el sushi-zu a todo el arroz." },
-                                { order: 5, content: "Armado del sushi: siempre que busques cómo hacer sushi verás lo mismo: el sushi se hace con las manos mojadas. Esto es porque el arroz es súper pegajoso. Hay varios tipos de sushi, les enseño los más comunes. Para ver cómo se arman, háganme el favor de mirarlo en el video, no me hagan a esta altura del año explicar algo tan complejo de decir con palabras." },
+                                { order: 1, content: "Pelar y cortan los champiñones." },
+                                { order: 2, content: "En un sartén cocinar el chorizo por 3 minutos, agregar la cebolla y los dientes de ajo." },
+                                { order: 3, content: "Salpimentar y agregar los champiñones. Cocinar por 5 minutos." },
+                                { order: 4, content: "Agregar sal, pimienta y perejil picado a las milanesas de pollo." },
+                                { order: 5, content: "Agregar la mezcla de chorizo y queso manchego." },
+                                { order: 6, content: "Realizar rollos." },
+                                { order: 7, content: "Pasar los rollos por harina, huevo y por último pan molido." },
+                                { order: 8, content: "Freír hasta que estén dorados." },
+                                { order: 9, content: "Cortar en rodajas." },
+                                { order: 10, content: "Machacar el aguacate, agregar sal, perejil picado y el limón, mezclar. Colocar en cada rodaja de pollo." },
+                                { order: 11, content: "Espolvorear con un poco de perejil picado." },
                                ]
                       },
               kit_orders: [
                             {
-                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
+                              kit_name: "Pollo relleno de queso fundido y chorizo",
                               user_email: "andres@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               status: 0,
                               code: "432509",
-                              date_delivery: "2019/12/19 07:00",
+                              date_delivery: "2019/12/02 07:00",
                               address_attributes: {
                                                     address: "Avenida Libertador 3380, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
                                                     latitude: -34.571301,
@@ -681,41 +738,71 @@ BRANDS = [
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
-                                        remote_image_url: "https://t3.kn3.net/taringa/F/2/F/7/0/E/HernanTirado/60B.jpg"
+                                        remote_image_url: "https://www.videococina.eu/wp-content/uploads/2019/11/1572965894_maxresdefault-720x380.jpg"
                                       }
-
                             },
+                          ],
+            },
+            { general_information: {
+                                      name: 'Risotto de hongos',
+                                      stock: 10,
+                                      price: 350,
+                                      size: 1,
+                                      preparation_time: 60,
+                                      description: 'Un auténtico Risotto de hongos.',
+                                      remote_image_url: 'https://truffle-assets.imgix.net/1t1bxm43v4e3_3MtBfTVlAkaIuGeO0Mo4QW_risotto-de-hongos_landscapeThumbnail_en-US.png'
+                                    },
+              cooking_ingredients: [
+                                      { quantity: 100, unit: 'g', name: "Arroz Carnioli" },
+                                      { quantity: 1, unit: 'u', name: "Cebolla" },
+                                      { quantity: 1, unit: 'u', name: "Dientes de ajo" },
+                                      { quantity: 200, unit: 'g', name: "Champiñones" },
+                                      { quantity: 50, unit: 'g', name: "Hongos secos" },
+                                      { quantity: 100, unit: 'ml', name: "Vino blanco" },
+                                      { quantity: 1, unit: 'u', name: "Caldo de verduras" },
+                                ],
+              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Sarten", "Olla", "Cuchara"],
+              categories: ["Opciones Saludables"],
+              guides: { video: "pKzoVDMqcKk",
+                        steps: [
+                                  { order: 1, content: "En sartén, rehogar el ajo y la cebolla. Agregar los champiñones fileteados y los hongos de pino picados." },
+                                  { order: 2, content: "Agregar el arroz. Cuando dore, añadir el vino blanco. Bajar el fuego y agregar de a poco el caldo caliente a medida que lo vaya necesitando. Condimentar." },
+                                  { order: 3, content: "Cuando esté al dente, terminar con manteca fría y queso rallado." },
+                                  { order: 4, content: "Espolvorea con perejil picado y servir." },
+                               ]
+                      },
+              kit_orders: [
                             {
-                              kit_name: "Bs. As. Roll con langostino (8 piezas)",
-                              user_email: "alejo@easychef.com",
+                              kit_name: "Risotto de hongos",
+                              user_email: "enzo@easychef.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               status: 1,
-                              code: "584965",
-                              date_delivery: "2019/11/19 07:00",
+                              code: "586038",
+                              date_delivery: "2019/12/01 01:00",
                               address_attributes: {
-                                                    address: "Gorriti 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                    latitude: -34.620763,
-                                                    longitude: -58.364867,
+                                                    address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
+                                                    latitude: -34.588468,
+                                                    longitude: -58.388461,
                                                   },
                               review: {
-                                        content: "Lo voy a sumar a mi dieta dominical",
+                                        content: "Un plato muy loco e innovador",
                                         rating: 5,
-                                        remote_image_url: "https://img-global.cpcdn.com/recipes/60996d8cadffb101/1200x630cq70/photo.jpg"
+                                        remote_image_url: "https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-receta-risotto-hongos-risotto-hongos-receta-risotto-risotto.jpg"
                                       }
-                            }
+                            },
                           ],
             }
           ]
   },
   {
     brand: {
-      name: 'Kansas',
-      remote_logo_url: 'https://kansasgrillandbar.com.ar/gfx/mini_brand.png'
+      name: 'Abantal',
+      remote_logo_url: 'https://www.diariodesevilla.es/2019/09/17/con_cuchillo_y_tenedor/cosas_de_come/mesa-junto-cocina_1392470814_107011889_1994x1024.jpg'
     },
     restaurants: [ {
-                    name: 'Kansas Palermo',
-                    remote_image_url: 'https://media-cdn.tripadvisor.com/media/photo-s/09/a3/8f/b1/kansas-1-largejpg.jpg',
+                    name: 'Abantal',
+                    remote_image_url: 'https://www.diariodesevilla.es/2019/09/17/con_cuchillo_y_tenedor/cosas_de_come/mesa-junto-cocina_1392470814_107011889_1994x1024.jpg',
                     address_attributes: {
                                           address: "Av. del Libertador 4625",
                                           latitude: -34.565529,
@@ -744,7 +831,7 @@ BRANDS = [
                                   { quantity: 20, unit: 'ml', name: "Aceite de oliva" },
                                   { quantity: 25, unit: 'g', name: "Salsa de BBQ" },
                                 ],
-              cooking_cookwares: ["Bandeja", "Plato", "Brocha", "Amazadora", "Espatula de plastico", "Cuchara de madera", "Bowl grande", "Cuchara de medida", "Graduado", "Olla", "Sarten"],
+              cooking_cookwares: ["Bandeja", "Plato", "Brocha", "Amazadora", "Espatula de plastico", "Cuchara", "Bowl grande", "Cuchara de medida", "Graduado", "Olla", "Sarten"],
               categories: ["Los más pedidos", "Carne"],
               guides: { video: "ukMzUCjRjmE",
                         steps: [
@@ -817,43 +904,52 @@ BRANDS = [
                             ],
             },
             { general_information: {
-                                      name: 'Pollo con Salsa Afrodisiaca',
+                                      name: 'Croquetas de Pollo y Brócoli',
                                       stock: 10,
-                                      price: 440,
+                                      price: 230,
                                       size: 1,
-                                      preparation_time: 30,
-                                      description: 'Un auténtico Pastel de Plátano con Carne, Frijoles y Queso.',
-                                      remote_image_url: 'https://i.imgur.com/Anyzbbo.jpg'
+                                      preparation_time: 55,
+                                      description: 'Exquisitas Croquetas de Brócoli',
+                                      remote_image_url: 'https://truffle-assets.imgix.net/916a7d40-croquetas-de-brocoli-con-pollo-l.jpg'
                                     },
               cooking_ingredients: [
-                                  { quantity: 250, unit: 'g', name: "Pollo" },
-                                  { quantity: 2, unit: 'u', name: "Cebolla" },
-                                  { quantity: 1, unit: 'u', name: "Diente de ajo" },
-                                  { quantity: 2, unit: 'g', name: "Cilantro" },
-                                  { quantity: 2, unit: 'g', name: "Perejil" },
-                                  { quantity: 2, unit: 'u', name: "Comino" },
-                                  { quantity: 2, unit: 'u', name: "Curcuma" },
-                                  { quantity: 2, unit: 'u', name: "Azucar morena" },
-                                ],
+                                      { quantity: 1, unit: 'u', name: "Brocoli" },
+                                      { quantity: 0.5, unit: 'u', name: "Cebolla" },
+                                      { quantity: 1, unit: 'u', name: "Diente de ajo" },
+                                      { quantity: 1, unit: 'u', name: "Pechuga de pollo" },
+                                      { quantity: 5, unit: 'u', name: "Papas pequeñas" },
+                                      { quantity: 2, unit: 'u', name: "Huevos" },
+                                      { quantity: 400, unit: 'g', name: "Tomates chery" },
+                                      { quantity: 0.5, unit: 'u', name: "Palta" },
+                                      { quantity: 0.5, unit: 'u', name: "Limon" },
+                                    ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
-              categories: ["Los más pedidos", "Pollo"],
+              categories: ["Los más pedidos", "Opciones Saludables"],
               guides: { video: "CNI_7DLckE4",
                         steps: [
-                                  { order: 1, content: "Cortar los cubos del pollo, pasarlos a una bolsa para nevera y marinarlo con la mezcla de todos los condimentos por 30' en la nevera." },
-                                  { order: 2, content: "Mientras preparar la salsa uniendo todos los ingredientes en un bowl con ayuda de un batidor de mano." },
-                                  { order: 3, content: "En sartén bien caliente con un poco de oliva llevar a dorar la cebolla en tiras, el pollo marinado y una vez dorado por todos sus lados agregar la salsa dejando que tome temperatura y reduzca un poco." },
-                                  { order: 4, content: "Servir con arroz blanco y espolvorear con la parte verde de la cebolla de verdeo." },
+                                  { order: 1, content: "Separar el brócoli." },
+                                  { order: 2, content: "Cocer el brócoli de 2 a 3 minutos" },
+                                  { order: 3, content: "Cocer el pollo y desmenuzar." },
+                                  { order: 4, content: "Licuar el brócoli con la cebolla y ajo." },
+                                  { order: 5, content: "Agregar el pollo desmenuzado y licuar hasta lograr una consistencia espesa." },
+                                  { order: 6, content: "Pelar y cortar las papas." },
+                                  { order: 7, content: "Cocer las papas hasta que estén tiernas." },
+                                  { order: 8, content: "Machacar las papas hasta obtener un puré rústico. Salpimentar." },
+                                  { order: 9, content: "Agregar la mezcla de brócoli y pollo." },
+                                  { order: 10, content: "Salpimentar al gusto." },
+                                  { order: 11, content: "Mezclar hasta incorporar perfectamente." },
+                                  { order: 12, content: "Hacer croquetas y colocar en un sartén con poco aceite, hasta que estén un poco doradas." },
                                ]
                       },
               kit_orders: [
                               {
-                                kit_name: "Pollo con Salsa Afrodisiaca",
+                                kit_name: "Croquetas de Pollo y Brócoli",
                                 user_email: "santiago@easychef.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 0,
                                 code: "395729",
-                                date_delivery: "2019/11/18 08:00",
+                                date_delivery: "2019/12/01 08:00",
                                 address_attributes: {
                                                       address: "Rodriguez Peña 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
                                                       latitude: -34.589252,
@@ -862,62 +958,11 @@ BRANDS = [
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 4,
-                                          remote_image_url: "https://i.imgur.com/DiOx9mp.jpg"
+                                          remote_image_url: "http://yoelijounavidasana.es/wp-content/uploads/2016/03/Screenshot_2016-03-29-12-05-47-1-300x285.png"
                                         }
                               },
                             ],
             },
-            { general_information: {
-                                      name: 'Piña Rellena',
-                                      stock: 10,
-                                      price: 380,
-                                      size: 1,
-                                      preparation_time: 30,
-                                      description: '¡Una opción tropical dulce!.',
-                                      remote_image_url: 'https://i.imgur.com/cbIhRBG.jpg'
-                                    },
-              cooking_ingredients: [
-                                  { quantity: 2, unit: 'u', name: "Pollo" },
-                                  { quantity: 2, unit: 'u', name: "Piña" },
-                                  { quantity: 1, unit: 'u', name: "Diente de ajo" },
-                                  { quantity: 2, unit: 'g', name: "Arroz" },
-                                  { quantity: 2, unit: 'u', name: "Perejil" },
-                                  { quantity: 2, unit: 'g', name: "Comino" },
-                                  { quantity: 2, unit: 'u', name: "Limon" },
-                                  { quantity: 2, unit: 'g', name: "Azucar morena" },
-                                ],
-              cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
-              categories: ["Pollo"],
-              guides: { video: "pKzoVDMqcKk",
-                        steps: [
-                                  { order: 1, content: "Cortar los cubos del pollo, pasarlos a una bolsa para nevera y marinarlo con la mezcla de todos los condimentos por 30' en la nevera." },
-                                  { order: 2, content: "Mientras preparar la salsa uniendo todos los ingredientes en un bowl con ayuda de un batidor de mano." },
-                                  { order: 3, content: "En sartén bien caliente con un poco de oliva llevar a dorar la cebolla en tiras, el pollo marinado y una vez dorado por todos sus lados agregar la salsa dejando que tome temperatura y reduzca un poco." },
-                                  { order: 4, content: "Servir con arroz blanco y espolvorear con la parte verde de la cebolla de verdeo." },
-                               ]
-                      },
-              kit_orders: [
-                            {
-                              kit_name: "Piña Rellena",
-                              user_email: "enzo@easychef.com",
-                              check_out_session_id: "pending",
-                              amount: 1,
-                              status: 1,
-                              code: "586038",
-                              date_delivery: "2019/05/19 01:00",
-                              address_attributes: {
-                                                    address: "Avenida Callao 1833, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                    latitude: -34.588468,
-                                                    longitude: -58.388461,
-                                                  },
-                              review: {
-                                        content: "Un plato muy loco e innovador",
-                                        rating: 5,
-                                        remote_image_url: "https://i.imgur.com/zOUijnq.jpg"
-                                      }
-                            },
-                          ],
-            }
           ]
   },
 
@@ -1185,6 +1230,7 @@ puts 'creating ingredients'
 INGREDIENTS.each do |information|
   ingredient = Ingredient.new(information)
   # ingredient.remote_image_url = information[:image]
+  puts " creating #{information[:name]}"
   ingredient.save!
 end
 
