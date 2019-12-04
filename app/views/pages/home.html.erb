@@ -2,22 +2,17 @@
   <div class="container">
     <div class="py-2">
       <%= image_tag( 'easychef_logo.png' , class:"mb-4 d-md-none w-50")%>
-      <h2 class="d-xs-none text-white d-none d-md-block font-weight-bold">Cocinar rico nunca fue tan fácil</h2>
-      <p class="lead px-3 text-primary d-sm-block d-md-none" >Cocinar rico nunca fue tan fácil</p>
+      <h2 class="d-xs-none text-white d-none d-md-block font-weight-bold">Descubrí lo que la cocina puede lograr</h2>
+      <p class="lead px-3 text-white d-sm-block d-md-none" >Descubrí lo que la cocina puede lograr</p>
     </div>
     <div class="container">
       <%= simple_form_for :query, url: kits_path, method: :get do |f| %>
         <div class="d-md-flex align-items-center mx-md-5">
           <div class=" w-sm-100 flex-grow-1 " >
-<<<<<<< HEAD
-            <%= f.input :address, class: "order-form order_address_address", placeholder: "Ingresá tu dirección", label: false %>
-          </div>
-            <%= f.submit "Buscar", class: "btn btn-primary ml-md-3 w-sm-100 w-md-25 mb-3 disabled", id:"button", disabled:"disabled" %>
-=======
+
             <%= f.input :address, class: "order-form order_address_address", id:"location", placeholder: "Ingresá tu dirección", label: false %>
           </div>
             <%= f.submit "Buscar", class: "btn btn-primary ml-md-3 w-sm-100 w-md-25 mb-3", id:"button", disabled:"disabled" %>
->>>>>>> 98b24e121cd34dab5f750498ca57569c7a421c7b
         </div>
         <% end %>
     </div>
