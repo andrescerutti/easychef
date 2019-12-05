@@ -62,8 +62,8 @@
 # laparolacciapm = Restaurant.create!(user_id: nati.id, name: 'La Parolaccia Puerto Madero', image:'https://www.restaurantpremium.com/uploads/1/0/8/2/108296609/83-2.jpg', brand_id: laparolaccia.id)
 
 # puts 'creating kits'
-# ribskitpalermo = Kit.create!(restaurant_id: kansaspalermo.id, name: 'Houstons Barbecue Ribs', stock: 15, price: 460, size: 1, preparation_time: 50, description:'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.', image: 'https://kansasgrillandbar.com.ar/gfx/manu_plato_ribs.png')
-# ribskitpilar = Kit.create!(restaurant_id: kansaspilar.id, name: 'Houstons Barbecue Ribs', stock: 10, price: 460, size: 1, preparation_time: 50, description:'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.', image: 'https://kansasgrillandbar.com.ar/gfx/manu_plato_ribs.png')
+# ribskitpalermo = Kit.create!(restaurant_id: kansaspalermo.id, name: 'Costillar de cerdo', stock: 15, price: 460, size: 1, preparation_time: 50, description:'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.', image: 'https://kansasgrillandbar.com.ar/gfx/manu_plato_ribs.png')
+# ribskitpilar = Kit.create!(restaurant_id: kansaspilar.id, name: 'Costillar de cerdo', stock: 10, price: 460, size: 1, preparation_time: 50, description:'Costillar de cerdo asado a fuego lento, aderezado con salsa barbacoa, acompañado de papas fritas y cole slaw o papa rellena.', image: 'https://kansasgrillandbar.com.ar/gfx/manu_plato_ribs.png')
 
 # sushikitbelgrano = Kit.create!(restaurant_id: fabricbelgrano.id, name: 'Bs. As. Roll con langostino -8 piezas. ', stock: 10, price: 420, size: 1, preparation_time: 30, description:'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.', image: 'https://images.deliveryhero.io/image/pedidosya/chains/ar/fabric-sushi-footerImage-16a9c9b4-d6d4-4377-98be-d5911b1a58b4.jpg?quality=90&width=414')
 # sushikitvillaurquiza = Kit.create!(restaurant_id: fabricvillaurquiza.id, name: 'Bs. As. Roll con langostino -8 piezas. ', stock: 12, price: 420, size: 1, preparation_time: 30, description:'Atún, langostino, palta y phila, con palitos de cangrejo y sésamo blanco por fuera.', image: 'https://images.deliveryhero.io/image/pedidosya/chains/ar/fabric-sushi-footerImage-16a9c9b4-d6d4-4377-98be-d5911b1a58b4.jpg?quality=90&width=414')
@@ -252,8 +252,8 @@ puts 'Erasing restaurants...'
 Restaurant.destroy_all
 puts 'Erasing brands...'
 Brand.destroy_all
-puts 'Erasing users...'
-User.destroy_all
+puts 'NOT Erasing users...'
+# User.destroy_all
 puts 'Erasing addresses...'
 Address.destroy_all
 
@@ -473,58 +473,58 @@ INGREDIENTS = [
     name: "Espinaca",
     remote_image_url: "https://assets.bonappetit.com/photos/57ad42411b33404414975574/16:9/w_1200,c_limit/sauteed-spinach-with-soy-and-sesame.jpg"
   },
-
+  # Arreglar fotos.
   {
     name: "Chorizo",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "http://d26lpennugtm8s.cloudfront.net/stores/562/484/products/35-chorizo-especial11-20536b77423e160f0115119522834356-640-0.jpg"
   },
 
   {
     name: "Champiñones",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://estaticos.muyinteresante.es/media/cache/680x_thumb/uploads/images/gallery/5548e20741444aef0ed38ec2/sistema-inmune.jpg"
   },
 
   {
     name: "Milanesa de pollo",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "http://carnesneme.es/wp-content/uploads/2017/01/milanesas1-3565b87b5f37bb144b14941859058980-640-0.jpeg"
   },
 
   {
     name: "Queso manchengo",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://www.chapela.es/wp-content/uploads/2017/11/Queso-semicurado-web-min.png"
   },
 
   {
     name: "Pan molido",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://alazan.com.mx/wp-content/uploads/2018/04/pan-molido.jpg"
   },
   {
     name: "Arroz Carnioli",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://production-media.gousto.co.uk/cms/ingredient-image/150g-sushi-rice-v2-x200.jpg"
   },
   {
     name: "Caldo de verduras",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://www.totalnutrition.com.ar/contenidos/wp-content/uploads/2018/06/sopa-de-verduras-png-1.png"
   },
   {
     name: "Brocoli",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://cdn.imgbin.com/13/20/21/imgbin-broccoli-wPFYcbT7JadCG940pF0bJfsvZ.jpg"
   },
   {
     name: "Pechuga de pollo",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://assets.bonappetit.com/photos/5ce689b1ccd61f96344c2f86/1:1/h_276,c_limit/Basically_chickenbreast.jpg"
   },
   {
     name: "Papas pequeñas",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://production-media.gousto.co.uk/cms/ingredient-image/sweet-potato-x200.jpg"
   },
   {
-    name: "Tomates chery",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    name: "Tomates cherry",
+    remote_image_url: "https://comprafresca.es/603-tm_large_default/tomate-cherry.jpg"
   },
   {
     name: "Hongos secos",
-    remote_image_url: "https://png.pngtree.com/svg/20160918/unavailable_450421.png"
+    remote_image_url: "https://http2.mlstatic.com/hongos-secos-chilenos-x-10-kg-D_NQ_NP_958672-MLA31180780262_062019-Q.jpg"
   },
 ]
 
@@ -549,121 +549,121 @@ COOKWARES = [
   { name: "Sarten", remote_image_url: "https://assets.bonappetit.com/photos/596940c66c75df51bc0b91c2/1:1/h_276,c_limit/basically-equipment-medium-skillet.jpg" }
 ]
 
-USERS = [
-  {
-    first_name: 'Alejo',
-    last_name: 'Chaves',
-    permision_level: 5,
-    email: 'alejo@easychef.com',
-    password: 'asdasd',
-    avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDMY14Q5-3615c3435408-512'
-  },
+# USERS = [
+#   {
+#     first_name: 'Alejo',
+#     last_name: 'Chaves',
+#     permision_level: 5,
+#     email: 'alejo@easychef.com',
+#     password: 'asdasd',
+#     avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDMY14Q5-3615c3435408-512'
+#   },
 
-  {
-    first_name: 'Santiago',
-    last_name: 'Llapur',
-    permision_level: 5,
-    email: 'santiago@easychef.com',
-    password: 'asdasd',
-    avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDKPE0D6-3ae91634e71a-72'
-  },
+#   {
+#     first_name: 'Santiago',
+#     last_name: 'Llapur',
+#     permision_level: 5,
+#     email: 'santiago@easychef.com',
+#     password: 'asdasd',
+#     avatar_image: 'https://ca.slack-edge.com/T02NE0241-UNDKPE0D6-3ae91634e71a-72'
+#   },
 
-  {
-    first_name: 'Enzo',
-    last_name: 'Monteverdi',
-    permision_level: 5,
-    email: 'enzo@easychef.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDJE9Y1J-2cd2134f004a-72'
-  },
+#   {
+#     first_name: 'Enzo',
+#     last_name: 'Monteverdi',
+#     permision_level: 5,
+#     email: 'enzo@easychef.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDJE9Y1J-2cd2134f004a-72'
+#   },
 
-  {
-    first_name: 'Andres',
-    last_name: 'Cerutti',
-    permision_level: 5,
-    email: 'andres@easychef.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDCB0BTN-6e9c411fc926-512'
-  },
+#   {
+#     first_name: 'Andres',
+#     last_name: 'Cerutti',
+#     permision_level: 5,
+#     email: 'andres@easychef.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UNDCB0BTN-6e9c411fc926-512'
+#   },
 
-  {
-    first_name: 'Sebastian',
-    last_name: 'Buffo',
-    permision_level: 1,
-    email: 'sebastian@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-U56TR1Q0M-fef167a62a5a-72'
-  },
+#   {
+#     first_name: 'Sebastian',
+#     last_name: 'Buffo',
+#     permision_level: 1,
+#     email: 'sebastian@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-U56TR1Q0M-fef167a62a5a-72'
+#   },
 
-  {
-    first_name: 'Fernando',
-    last_name: 'Silva',
-    permision_level: 1,
-    email: 'fernando@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UK7E344JG-407beaec7aee-72'
-  },
+#   {
+#     first_name: 'Fernando',
+#     last_name: 'Silva',
+#     permision_level: 1,
+#     email: 'fernando@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UK7E344JG-407beaec7aee-72'
+#   },
 
-  {
-    first_name: 'Guillermo',
-    last_name: 'Varela',
-    permision_level: 1,
-    email: 'guillermo@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UD4D68QS0-591cb8267b1c-72'
-  },
+#   {
+#     first_name: 'Guillermo',
+#     last_name: 'Varela',
+#     permision_level: 1,
+#     email: 'guillermo@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UD4D68QS0-591cb8267b1c-72'
+#   },
 
-  {
-    first_name: 'Felipe',
-    last_name: 'Hernandez',
-    permision_level: 1,
-    email: 'felipe@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UP3R424M7-0dc8c8f737e5-512'
-  },
+#   {
+#     first_name: 'Felipe',
+#     last_name: 'Hernandez',
+#     permision_level: 1,
+#     email: 'felipe@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UP3R424M7-0dc8c8f737e5-512'
+#   },
 
-  {
-    first_name: 'Luis',
-    last_name: 'Zhang',
-    permision_level: 1,
-    email: 'luis@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UK84XQMRN-c12de7874ee2-512'
-  },
+#   {
+#     first_name: 'Luis',
+#     last_name: 'Zhang',
+#     permision_level: 1,
+#     email: 'luis@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UK84XQMRN-c12de7874ee2-512'
+#   },
 
-  {
-    first_name: 'Gerardo',
-    last_name: 'Raiden',
-    permision_level: 1,
-    email: 'gerardo@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://ca.slack-edge.com/T02NE0241-UKCMT2EHY-f941ee395885-512'
-  },
-  {
-    first_name: 'Magali',
-    last_name: 'Pinto',
-    permision_level: 1,
-    email: 'magali@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://media.licdn.com/dms/image/C5603AQEnNutafbuCIw/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=cu0Sr4GREXoTsnf6aEEFeTZkbJl5UTNM8OFf7uOMTfY'
-  },
-  {
-    first_name: 'Natalia',
-    last_name: 'Mori',
-    permision_level: 1,
-    email: 'natalia@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://media.licdn.com/dms/image/C4D03AQFSjBw42GW_Yg/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=40QOkGKTLBzqRGxgU_L0Ipn15OPBcfwqri15rgBhzjw'
-  },
-  {
-    first_name: 'Catalina',
-    last_name: 'FoodTrack',
-    permision_level: 1,
-    email: 'catalina@gmail.com',
-    password: 'asdasd',
-    avatar_image:'https://icon-library.net/images/no-profile-picture-icon-female/no-profile-picture-icon-female-3.jpg'
-  }
-]
+#   {
+#     first_name: 'Gerardo',
+#     last_name: 'Raiden',
+#     permision_level: 1,
+#     email: 'gerardo@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://ca.slack-edge.com/T02NE0241-UKCMT2EHY-f941ee395885-512'
+#   },
+#   {
+#     first_name: 'Magali',
+#     last_name: 'Pinto',
+#     permision_level: 1,
+#     email: 'magali@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://media.licdn.com/dms/image/C5603AQEnNutafbuCIw/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=cu0Sr4GREXoTsnf6aEEFeTZkbJl5UTNM8OFf7uOMTfY'
+#   },
+#   {
+#     first_name: 'Natalia',
+#     last_name: 'Mori',
+#     permision_level: 1,
+#     email: 'natalia@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://media.licdn.com/dms/image/C4D03AQFSjBw42GW_Yg/profile-displayphoto-shrink_200_200/0?e=1578528000&v=beta&t=40QOkGKTLBzqRGxgU_L0Ipn15OPBcfwqri15rgBhzjw'
+#   },
+#   {
+#     first_name: 'Catalina',
+#     last_name: 'FoodTrack',
+#     permision_level: 1,
+#     email: 'catalina@gmail.com',
+#     password: 'asdasd',
+#     avatar_image:'https://icon-library.net/images/no-profile-picture-icon-female/no-profile-picture-icon-female-3.jpg'
+#   }
+# ]
 
 BRANDS = [
   {
@@ -676,9 +676,9 @@ BRANDS = [
                     name: 'Mano Rota',
                     remote_image_url: 'https://tendencias.tv/wp-content/uploads/2016/07/MANO-ROTA.jpg',
                     address_attributes: {
-                                          address: "Cdad. de La Paz 569",
-                                          latitude: -34.572223,
-                                          longitude: -58.444355,
+                                          address: "Adolfo Alsina 2000",
+                                          latitude: -34.6115,
+                                          longitude: -58.3921,
                                         }
                   },
                 ],
@@ -706,7 +706,7 @@ BRANDS = [
                                     ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Sarten"],
               categories: ["Opciones Saludables", "Los más pedidos"],
-              guides: { video: "aEaCZfucmGQ",
+              guides: { video: "_wU4o-WhNnQ",
                         steps: [
                                 { order: 1, content: "Pelar y cortan los champiñones." },
                                 { order: 2, content: "En un sartén cocinar el chorizo por 3 minutos, agregar la cebolla y los dientes de ajo." },
@@ -724,7 +724,7 @@ BRANDS = [
               kit_orders: [
                             {
                               kit_name: "Pollo relleno de queso fundido y chorizo",
-                              user_email: "andres@easychef.com",
+                              user_email: "natalia@gmail.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               status: 0,
@@ -738,7 +738,7 @@ BRANDS = [
                               review: {
                                         content: "Excelente calidad, pude comer muy bien",
                                         rating: 5,
-                                        remote_image_url: "https://www.videococina.eu/wp-content/uploads/2019/11/1572965894_maxresdefault-720x380.jpg"
+                                        remote_image_url: "https://www.te.gob.mx/blog/reyes/media/layout/images/img_no_disponible.png"
                                       }
                             },
                           ],
@@ -755,7 +755,7 @@ BRANDS = [
               cooking_ingredients: [
                                       { quantity: 100, unit: 'g', name: "Arroz Carnioli" },
                                       { quantity: 1, unit: 'u', name: "Cebolla" },
-                                      { quantity: 1, unit: 'u', name: "Dientes de ajo" },
+                                      { quantity: 1, unit: 'u', name: "Diente de ajo" },
                                       { quantity: 200, unit: 'g', name: "Champiñones" },
                                       { quantity: 50, unit: 'g', name: "Hongos secos" },
                                       { quantity: 100, unit: 'ml', name: "Vino blanco" },
@@ -763,7 +763,7 @@ BRANDS = [
                                 ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano", "Sarten", "Olla", "Cuchara"],
               categories: ["Opciones Saludables"],
-              guides: { video: "pKzoVDMqcKk",
+              guides: { video: "WRslIFqxNy0",
                         steps: [
                                   { order: 1, content: "En sartén, rehogar el ajo y la cebolla. Agregar los champiñones fileteados y los hongos de pino picados." },
                                   { order: 2, content: "Agregar el arroz. Cuando dore, añadir el vino blanco. Bajar el fuego y agregar de a poco el caldo caliente a medida que lo vaya necesitando. Condimentar." },
@@ -774,7 +774,7 @@ BRANDS = [
               kit_orders: [
                             {
                               kit_name: "Risotto de hongos",
-                              user_email: "enzo@easychef.com",
+                              user_email: "luis@gmail.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               status: 1,
@@ -788,7 +788,7 @@ BRANDS = [
                               review: {
                                         content: "Un plato muy loco e innovador",
                                         rating: 5,
-                                        remote_image_url: "https://locosxlaparrilla.com/wp-content/uploads/2015/02/Receta-recetas-locos-x-la-parrilla-locosxlaparrilla-receta-risotto-hongos-risotto-hongos-receta-risotto-risotto.jpg"
+                                        remote_image_url: "https://www.te.gob.mx/blog/reyes/media/layout/images/img_no_disponible.png"
                                       }
                             },
                           ],
@@ -804,15 +804,15 @@ BRANDS = [
                     name: 'Abantal',
                     remote_image_url: 'https://www.diariodesevilla.es/2019/09/17/con_cuchillo_y_tenedor/cosas_de_come/mesa-junto-cocina_1392470814_107011889_1994x1024.jpg',
                     address_attributes: {
-                                          address: "Av. del Libertador 4625",
-                                          latitude: -34.565529,
-                                          longitude: -58.432580,
+                                          address: "Talcahuano 900",
+                                          latitude: -34.6006,
+                                          longitude: -58.3853,
                                         }
                   },
                 ],
     kits: [
             { general_information: {
-                                      name: 'Houstons Barbecue Ribs',
+                                      name: 'Costillar de cerdo',
                                       stock: 15,
                                       price: 500,
                                       size: 1,
@@ -843,8 +843,8 @@ BRANDS = [
                       },
               kit_orders: [
                               {
-                                kit_name: "Houstons Barbecue Ribs",
-                                user_email: "santiago@easychef.com",
+                                kit_name: "Costillar de cerdo",
+                                user_email: "gerardo@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 3,
@@ -863,8 +863,8 @@ BRANDS = [
                               },
 
                               {
-                                kit_name: "Houstons Barbecue Ribs",
-                                user_email: "enzo@easychef.com",
+                                kit_name: "Costillar de cerdo",
+                                user_email: "sebastian@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 4,
@@ -883,8 +883,8 @@ BRANDS = [
                               },
 
                               {
-                                kit_name: "Houstons Barbecue Ribs",
-                                user_email: "alejo@easychef.com",
+                                kit_name: "Costillar de cerdo",
+                                user_email: "felipe@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 5,
@@ -919,13 +919,13 @@ BRANDS = [
                                       { quantity: 1, unit: 'u', name: "Pechuga de pollo" },
                                       { quantity: 5, unit: 'u', name: "Papas pequeñas" },
                                       { quantity: 2, unit: 'u', name: "Huevos" },
-                                      { quantity: 400, unit: 'g', name: "Tomates chery" },
+                                      { quantity: 400, unit: 'g', name: "Tomates cherry" },
                                       { quantity: 0.5, unit: 'u', name: "Palta" },
                                       { quantity: 0.5, unit: 'u', name: "Limon" },
                                     ],
               cooking_cookwares: ["Cuchillo de chef", "Tabla para cortar", "Bowl chico", "Bowl mediano"],
               categories: ["Los más pedidos", "Opciones Saludables"],
-              guides: { video: "CNI_7DLckE4",
+              guides: { video: "9R-TJj5hk1o",
                         steps: [
                                   { order: 1, content: "Separar el brócoli." },
                                   { order: 2, content: "Cocer el brócoli de 2 a 3 minutos" },
@@ -944,7 +944,7 @@ BRANDS = [
               kit_orders: [
                               {
                                 kit_name: "Croquetas de Pollo y Brócoli",
-                                user_email: "santiago@easychef.com",
+                                user_email: "magali@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 1,
                                 status: 0,
@@ -958,7 +958,7 @@ BRANDS = [
                                 review: {
                                           content: "Buenisimo!",
                                           rating: 4,
-                                          remote_image_url: "http://yoelijounavidasana.es/wp-content/uploads/2016/03/Screenshot_2016-03-29-12-05-47-1-300x285.png"
+                                          remote_image_url: "https://www.te.gob.mx/blog/reyes/media/layout/images/img_no_disponible.png"
                                         }
                               },
                             ],
@@ -968,15 +968,15 @@ BRANDS = [
 
   {
     brand: {
-      name: 'La Parolaccia',
-      remote_logo_url: 'http://www.laparolaccia.com/img/logo.png'
+      name: 'Ristorante La Pineta',
+      remote_logo_url: 'https://i.imgur.com/VdMltvq.png'
     },
     restaurants: [
                   {
-                    name: 'La Parolaccia Puerto Madero',
-                    remote_image_url: 'https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,q_auto:eco,w_1280/v1/restaurant_photos/s//2800/13106/restaurante_la-parolaccia-casa-tua-puerto-madero_puerto-madero_01.jpg',
+                    name: 'Ristorante La Pineta',
+                    remote_image_url: 'https://i.imgur.com/VdMltvq.png',
                     address_attributes: {
-                                          address: "Av. Alicia Moreau de Justo 1052",
+                                          address: "Av. Alicia Moreau de Justo 1200",
                                           latitude: -34.609958,
                                           longitude: -58.366284,
                                         }
@@ -1016,7 +1016,7 @@ BRANDS = [
               kit_orders: [
                               {
                                 kit_name: "Pastel de Platano y Carne de Cerdo",
-                                user_email: "enzo@easychef.com",
+                                user_email: "sebastian@gmail.com",
                                 check_out_session_id: "pending",
                                 amount: 2,
                                 status: 3,
@@ -1126,40 +1126,21 @@ BRANDS = [
                                           remote_image_url: "https://i.ytimg.com/vi/nbow5w3qccM/hqdefault.jpg"
                                         }
                               },
-                              {
-                                kit_name: "Spaghetti con Salsa de Remolacha",
-                                user_email: "fernando@gmail.com",
-                                check_out_session_id: "pending",
-                                amount: 1,
-                                status: 3,
-                                code: "395729",
-                                date_delivery: "2019/11/18 08:00",
-                                address_attributes: {
-                                                      address: "Juncal 839, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina",
-                                                      latitude: -34.592724,
-                                                      longitude: -58.379128,
-                                                    },
-                                review: {
-                                          content: "Muy divertida la experiencia de cocinar este plato, lo voy a volver a hacer.",
-                                          rating: 4,
-                                          remote_image_url: "https://www.tictacyummy.com/wp-content/uploads/2017/05/IMG_0595.jpg"
-                                        }
-                              },
                           ],
             },
           ]
   },
   {
     brand: {
-      name: 'The Food Truck Store',
-      remote_logo_url: 'https://instagram.faep8-1.fna.fbcdn.net/vp/f613968b2ae692dee98d0a9f7e39530a/5E68EADF/t51.2885-19/s150x150/70700038_2595207333855439_4866673626880933888_n.jpg?_nc_ht=instagram.faep8-1.fna.fbcdn.net'
+      name: 'Buenos Aires Rock',
+      remote_logo_url: 'https://i.imgur.com/ZuopTOE.png'
     },
     restaurants: [
                     {
-                    name: 'The Food Truck Store Recoleta',
-                    remote_image_url: 'http://www.burger-life.com/wp-content/uploads/2018/07/the_burger_life_Jul-06-202654.jpg',
+                    name: 'Buenos Aires Rock',
+                    remote_image_url: 'https://i.imgur.com/ZuopTOE.png',
                     address_attributes: {
-                                          address: "Avenida Callao 2092, Ciudad Autónoma de Buenos Aires",
+                                          address: "Avenida Callao 2100, Ciudad Autónoma de Buenos Aires",
                                           latitude: -34.586584,
                                           longitude: -58.386296,
                                         }
@@ -1195,7 +1176,7 @@ BRANDS = [
               kit_orders: [
                             {
                               kit_name: "Sandwich de Espinaca",
-                              user_email: "andres@easychef.com",
+                              user_email: "guillermo@gmail.com",
                               check_out_session_id: "pending",
                               amount: 1,
                               status: 1,
@@ -1218,19 +1199,18 @@ BRANDS = [
   },
 ]
 
-puts "creating users"
-USERS.each do |user|
-  u = User.create!(user)
-  u.remote_avatar_image_url = user[:avatar_image]
-  u.save!
-end
+puts "NOT creating users"
+# USERS.each do |user|
+#   u = User.create!(user)
+#   u.remote_avatar_image_url = user[:avatar_image]
+#   u.save!
+# end
 
 puts 'creating ingredients'
 
 INGREDIENTS.each do |information|
   ingredient = Ingredient.new(information)
   # ingredient.remote_image_url = information[:image]
-  puts " creating #{information[:name]}"
   ingredient.save!
 end
 
