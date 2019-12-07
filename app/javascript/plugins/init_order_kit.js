@@ -23,7 +23,7 @@ const calculateKit = () => {
   }
 
   if (amount) {
-    amount.addEventListener("click", event => updatePrice())
+    amount.addEventListener("change", event => updatePrice())
     address.addEventListener("keyup", event => updatePrice())
 
   }
