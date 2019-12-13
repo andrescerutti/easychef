@@ -9,7 +9,7 @@ class KitsController < ApplicationController
     # @restaurants = Restaurant.geocoded
     @user = current_user
     @search = params[:query][:address]
-    addresses = Address.restaurants.near(@search, 5)
+    addresses = Address.restaurants.near(@search, 10)
     return redirect_to wrong_address_path(query: @search) if addresses.empty?
     @restaurants = addresses.map do |address|
       address.addressable
