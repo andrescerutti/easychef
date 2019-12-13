@@ -19,23 +19,66 @@
   </div>
 </div>
 
-<div class="container">
-  <h4 class="my-5 font-weight-bold">¿Que hay en nuestro menú?</h4>
-  <div class="row">
-        <% @categories.first(6).each_with_index do |category, index| %>
-          <% if [1, 2, 5].include? index %>
-            <%= link_to category_kits_path(name: category.name), class: "bd-highlight col-md-4 mt-3 text-decoration-none" do  %>
-              <div class="" %>
-                <%= render("components/card-category", {category: "#{category.name}", img: "#{category.name.downcase.tr(' ',"_")}.jpg"}) %>
-              </div>
-            <% end %>
-          <% else %>
-          <%= link_to category_kits_path(name: category.name), class: "bd-highlight col-md-8 mt-3 text-decoration-none" do  %>
-            <div class="" %>
-              <%= render("components/card-category", {category: "#{category.name}", img: "#{category.name.downcase.tr(' ',"_")}.jpg"}) %>
-            </div>
-          <% end %>
-        <% end %>
-      <% end %>
+
+
+<div class="container mx-auto">
+  <div class="landing">
+    <img src="https://i.imgur.com/EC739GR.png" alt="" class= "landing-image">
+    <div class="col-md-6 col-sm-12 landing-text">
+      <h3 class="landing-title">Elegí tus platos</h3>
+      <p class="landing-paragraph">Nuestros ingredientes provistos por nuestros restaurants de alta calidad incluyen todo tipo de variedades de comida, desde vegetariana, hasta comida rápida, valorada por nuestros clientes.</p>
+    </div>
+  </div>
+
+  <div class="landing-reverse">
+    <div class ="col-md-6 col-sm-12 landing-text">
+      <h3 class="landing-title">Abrí tu caja</h3>
+      <p class="landing-paragraph">Garantizamos la frescura de todos nuestros ingredientes, que son enviados en nuestras cajas a la puerta de tu casa.</p>
+    </div>
+    <img src="https://i.imgur.com/jfiffVc.png" alt="" class= "landing-image-reverse">
+  </div>
+
+  <div class="landing">
+    <img src="https://i.imgur.com/nlEMOkN.png" alt="" class= "landing-image">
+    <div class ="col-md-6 col-sm-12 landing-text">
+      <h3 class="landing-title">Creá magia</h3>
+      <p class="landing-paragraph">Siguiendo nuestras instrucciones paso por paso vas a experimentar la magia de cocinar platos de los chefs de los restaurants más reconocidos.</p>
+    </div>
   </div>
 </div>
+
+ <!-- ---- -->
+<div class="container mx-auto" id="information-background">
+  <div class="container text-center" id="information-container">
+
+    <h3 id="info-header">QUE HAY DENTRO DE UNA CAJA DE EASYCHEF</h3>
+    <div class="information">
+      <div class="information-content">
+        <img src="https://i.imgur.com/iA9yClb.png" alt="" class="information-image">
+        <h4 class="information-title">Recetas deliciosas y saludables</h4>
+        <p class="information-description"> Con nuestras instrucciones paso a paso nunca perderás el ritmo</p>
+      </div>
+
+      <div class="information-content">
+        <img src="https://i.imgur.com/mfCLdoK.png" alt="" class="information-image">
+        <h4 class="information-title" style="font-size: 20px">Ingredientes de calidad obtenidos responsablemente</h4>
+        <p class="information-description">De producción fresca, sustentable, y exclusiva</p>
+      </div>
+    </div>
+
+    <div class="information">
+      <div class="information-content">
+        <img src="https://i.imgur.com/w8HpFYt.png" alt="" class="information-image">
+        <h4 class="information-title" style="font-size: 20px">Cantidades justas y necesarias</h4>
+        <p class="information-description">Para evitar desperdicios</p>
+      </div>
+
+      <div class="information-content">
+        <img src="https://i.imgur.com/40VQBjQ.png" alt="" class="information-image">
+        <h4 class="information-title">Paquetes eco-friendly</h4>
+        <p class="information-description">Nuestra visión es reducir gastos para contribuir con el medioambiente</p>
+      </div>
+    </div>
+  </div>
+</div>
+

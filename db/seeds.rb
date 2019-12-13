@@ -504,7 +504,7 @@ INGREDIENTS = [
   },
   {
     name: "Caldo de verduras",
-    remote_image_url: "https://www.totalnutrition.com.ar/contenidos/wp-content/uploads/2018/06/sopa-de-verduras-png-1.png"
+    remote_image_url: "https://i.imgur.com/X99twmu.png"
   },
   {
     name: "Brocoli",
@@ -676,9 +676,9 @@ BRANDS = [
                     name: 'Mano Rota',
                     remote_image_url: 'https://tendencias.tv/wp-content/uploads/2016/07/MANO-ROTA.jpg',
                     address_attributes: {
-                                          address: "Adolfo Alsina 2000",
-                                          latitude: -34.6115,
-                                          longitude: -58.3921,
+                                          address: "Paraguay 4801, Buenos Aires, Ciudad Autónoma de Buenos Aires",
+                                          latitude: -34.582034,
+                                          longitude: -58.427546,
                                         }
                   },
                 ],
@@ -804,9 +804,9 @@ BRANDS = [
                     name: 'Abantal',
                     remote_image_url: 'https://www.diariodesevilla.es/2019/09/17/con_cuchillo_y_tenedor/cosas_de_come/mesa-junto-cocina_1392470814_107011889_1994x1024.jpg',
                     address_attributes: {
-                                          address: "Talcahuano 900",
-                                          latitude: -34.6006,
-                                          longitude: -58.3853,
+                                          address: "Soler 4202",
+                                          latitude: -34.589695,
+                                          longitude: -58.421230,
                                         }
                   },
                 ],
@@ -976,9 +976,9 @@ BRANDS = [
                     name: 'Ristorante La Pineta',
                     remote_image_url: 'https://i.imgur.com/VdMltvq.png',
                     address_attributes: {
-                                          address: "Av. Alicia Moreau de Justo 1200",
-                                          latitude: -34.609958,
-                                          longitude: -58.366284,
+                                          address: "Aráoz 2499",
+                                          latitude: -34.585781,
+                                          longitude: -58.415291,
                                         }
                   },
                 ],
@@ -1140,9 +1140,9 @@ BRANDS = [
                     name: 'Buenos Aires Rock',
                     remote_image_url: 'https://i.imgur.com/ZuopTOE.png',
                     address_attributes: {
-                                          address: "Avenida Callao 2100, Ciudad Autónoma de Buenos Aires",
-                                          latitude: -34.586584,
-                                          longitude: -58.386296,
+                                          address: "Paraguay 3857, Buenos Aires, Ciudad Autónoma de Buenos Aires",
+                                          latitude: -34.590727,
+                                          longitude: -58.415909,
                                         }
                   },
                 ],

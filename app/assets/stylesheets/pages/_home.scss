@@ -32,3 +32,145 @@ body{
   width: 100%;
   height: 600px;
 }
+
+.landing {
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-reverse {
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-image {
+  height: 310px;
+  margin-left: 68px;
+}
+
+.landing-image-reverse {
+  height: 310px;
+  margin-right: 55px;
+}
+
+.landing-text {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.landing-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #303236;
+  margin: 15px 0px;
+  line-height: normal;
+}
+
+.landing-paragraph {
+  font-size: 18px;
+  color: #6a6d75;
+  font-weight: 400;
+}
+
+.information {
+  display: flex;
+  justify-content: space-around;
+}
+
+#info-header {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#information-background {
+  background-image: url('https://images.unsplash.com/photo-1568046097340-56eb1e93bc1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 140px;
+}
+
+#information-container {
+  background-color: #FFFFFF;
+  padding: 50px 80px 0px 80px;
+}
+
+.information-content {
+  width: 348px;
+  height: 289px;
+  padding: 50px;
+}
+
+.information-title {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 15px 0px 9px 0px;
+  font-weight: 700;
+}
+
+.information-description {
+  font-size: 18px;
+  line-height: 26px;
+  color: #6a6d75;
+  font-weight: 400;
+}
+
+.information-image {
+  width: 50px;
+  height: 50px;
+}
+
+@media( max-width: 768px){
+  .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .landing-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .landing-image {
+    height: 250px;
+    margin-left: 32px;
+    width: 290px;
+  }
+
+  .landing-image-reverse {
+    height: 250px;
+    width: 235px;
+    margin-right: 0px;
+    margin-left: 67px;
+  }
+
+  .landing-text {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+  }
+
+  #info-header {
+    padding-top: 30px;
+  }
+
+  #information-background {
+    background-image: none;
+    padding: 0px;
+    margin-top: 10px;
+  }
+
+  #information-container {
+    background-color: #FAFAFA;
+    padding: 0px;
+  }
+}
